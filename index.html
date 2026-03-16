@@ -74,7 +74,7 @@
 
     /* HERO */
     #home{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
-    .hero-bg{position:absolute;inset:0;background-image:url('wakana_exterior.jpg');background-size:cover;background-position:center 30%;transform:scale(1.04);transition:transform 8s ease}
+    .hero-bg{position:absolute;inset:0;background-image:url('images/hero.jpg');background-size:cover;background-position:center 30%;transform:scale(1.04);transition:transform 8s ease}
     .hero-bg.loaded{transform:scale(1)}
     .hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,20,16,.1) 0%,rgba(26,20,16,.2) 40%,rgba(26,20,16,.72) 100%)}
     .hero-content{position:relative;padding:0 1.5rem 6rem;animation:fadeUp 1.2s .2s both}
@@ -479,7 +479,7 @@
       </div>
       <div class="room-card fade-in">
         <div class="room-img">
-          <img src="washitsu.jpg" alt="和室 畳の部屋" loading="lazy">
+          <img src="images/room.jpg" alt="和室 畳の部屋" loading="lazy">
           <div class="room-badge" data-lang="ja">和室 1部屋</div>
           <div class="room-badge" data-lang="en">1 Private Room</div>
         </div>
@@ -529,28 +529,28 @@
         <div class="divider"></div>
       </div>
       <div class="gallery-grid fade-in">
-        <div class="gallery-item" onclick="openLightbox('photo2_garden_sunset.jpg')">
-          <img src="photo2_garden_sunset.jpg" alt="日本庭園と夕日" loading="lazy">
+        <div class="gallery-item" onclick="openLightbox('images/gallery-1.jpg')">
+          <img src="images/gallery-1.jpg" alt="日本庭園と夕日" loading="lazy">
           <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">日本庭園</span><span class="gallery-label" data-lang="en">Garden</span></div>
         </div>
-        <div class="gallery-item" onclick="openLightbox('photo5_daffodil.jpg')">
-          <img src="photo5_daffodil.jpg" alt="春の庭・水仙" loading="lazy">
+        <div class="gallery-item" onclick="openLightbox('images/gallery-2.jpg')">
+          <img src="images/gallery-2.jpg" alt="春の庭・水仙" loading="lazy">
           <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">春の庭</span><span class="gallery-label" data-lang="en">Spring</span></div>
         </div>
-        <div class="gallery-item" onclick="openLightbox('photo4_rice_spring.jpg')">
-          <img src="photo4_rice_spring.jpg" alt="春の田んぼと鳥海山" loading="lazy">
+        <div class="gallery-item" onclick="openLightbox('images/exterior.jpg')">
+          <img src="images/exterior.jpg" alt="春の田んぼと鳥海山" loading="lazy">
           <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">鳥海山</span><span class="gallery-label" data-lang="en">Mt. Chokai</span></div>
         </div>
-        <div class="gallery-item" onclick="openLightbox('photo1_rice_summer.jpg')">
-          <img src="photo1_rice_summer.jpg" alt="夏の田んぼ" loading="lazy">
+        <div class="gallery-item" onclick="openLightbox('images/garden.jpg')">
+          <img src="images/garden.jpg" alt="夏の田んぼ" loading="lazy">
           <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">夏の庄内</span><span class="gallery-label" data-lang="en">Summer</span></div>
         </div>
-        <div class="gallery-item" onclick="openLightbox('photo6_snow.jpg')">
-          <img src="photo6_snow.jpg" alt="冬の雪景色と鳥海山" loading="lazy">
+        <div class="gallery-item" onclick="openLightbox('images/hero.jpg')">
+          <img src="images/hero.jpg" alt="冬の雪景色と鳥海山" loading="lazy">
           <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">冬の雪景色</span><span class="gallery-label" data-lang="en">Winter</span></div>
         </div>
-        <div class="gallery-item" onclick="openLightbox('photo3_lounge.jpg')">
-          <img src="photo3_lounge.jpg" alt="リビング" loading="lazy">
+        <div class="gallery-item" onclick="openLightbox('images/room.jpg')">
+          <img src="images/room.jpg" alt="リビング" loading="lazy">
           <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">リビング</span><span class="gallery-label" data-lang="en">Lounge</span></div>
         </div>
       </div>
@@ -696,29 +696,25 @@
   <section id="calendar">
     <div class="section-inner">
       <div class="section-header fade-in">
-        <span class="section-en">Availability</span>
-        <h2 class="section-title" data-lang="ja">空き状況カレンダー</h2>
-        <h2 class="section-title" data-lang="en">Availability Calendar</h2>
+        <span class="section-en">Reservation</span>
+        <h2 class="section-title" data-lang="ja">ご予約</h2>
+        <h2 class="section-title" data-lang="en">Book Now</h2>
         <div class="divider"></div>
       </div>
-      <div class="calendar-wrap fade-in">
-        <div class="calendar-legend">
-          <span class="legend-item"><span class="dot available"></span><span data-lang="ja">空き</span><span data-lang="en">Available</span></span>
-          <span class="legend-item"><span class="dot booked"></span><span data-lang="ja">予約済</span><span data-lang="en">Booked</span></span>
-          <span class="legend-item"><span class="dot selected"></span><span data-lang="ja">選択中</span><span data-lang="en">Selected</span></span>
-        </div>
-        <div class="cal-nav">
-          <button class="cal-btn" onclick="prevMonth()">‹</button>
-          <span class="cal-month-label" id="calLabel"></span>
-          <button class="cal-btn" onclick="nextMonth()">›</button>
-        </div>
-        <div class="cal-grid" id="calGrid"></div>
-        <div class="cal-selected-info" id="calInfo" data-lang="ja">日程を選択してください</div>
-        <div class="cal-selected-info" id="calInfoEn" data-lang="en">Select a check-in date</div>
-        <div class="cal-cta">
-          <a href="#contact" class="cal-cta-btn" id="calCtaBtn" data-lang="ja">この日程で予約する</a>
-          <a href="#contact" class="cal-cta-btn" id="calCtaBtnEn" data-lang="en">Book this date</a>
-        </div>
+      <div class="calendar-wrap fade-in" style="text-align: center; padding: 3rem 1.5rem;">
+        <p data-lang="ja" style="font-size: 1rem; line-height: 2; margin-bottom: 2rem; color: var(--ink-soft);">
+          ご予約はAirbnbにて承っております。<br>
+          下記のボタンより空室状況の確認と予約が可能です。
+        </p>
+        <p data-lang="en" style="font-size: 1rem; line-height: 2; margin-bottom: 2rem; color: var(--ink-soft);">
+          Please book through Airbnb.<br>
+          Check availability and make a reservation below.
+        </p>
+        <a href="https://www.airbnb.jp/" target="_blank" rel="noopener" 
+           style="display: inline-block; background: var(--rust); color: #fff; padding: 1rem 2.5rem; font-size: .9rem; letter-spacing: .2em; font-family: 'Shippori Mincho', serif; transition: all .3s; text-decoration: none;">
+          <span data-lang="ja">📅 Airbnbで予約する</span>
+          <span data-lang="en">📅 Book on Airbnb</span>
+        </a>
       </div>
     </div>
   </section>
@@ -743,8 +739,8 @@
             <li>
               <span class="access-label" data-lang="ja">電　車</span>
               <span class="access-label" data-lang="en">Train</span>
-              <span data-lang="ja">JR「鶴岡」駅より無料送迎（要予約）／タクシー約15分</span>
-              <span data-lang="en">Free transfer from JR Tsuruoka Sta. / Taxi approx. 15 min</span>
+              <span data-lang="ja">JR「鶴岡」駅より無料送迎（要予約）／タクシー約10分</span>
+              <span data-lang="en">Free transfer from JR Tsuruoka Sta. / Taxi approx. 10 min</span>
             </li>
             <li>
               <span class="access-label" data-lang="ja">お車</span>
@@ -777,7 +773,6 @@
           <p data-lang="ja">はじめての方もお気軽に。心よりお待ち申し上げております。</p>
           <p data-lang="en">First time visiting? No worries. We're happy to answer any questions.</p>
           <div class="contact-detail">
-            <a href="tel:0235000000" class="contact-tel">📞 0235-00-0000</a>
             <p><strong>Email</strong>wakana@example.com</p>
             <p><strong data-lang="ja">受付</strong><strong data-lang="en">Hours</strong>&nbsp;9:00〜21:00</p>
           </div>
@@ -919,58 +914,6 @@
       '2026-03-05','2026-03-06',
       '2026-03-15','2026-03-16','2026-03-17','2026-03-18','2026-03-22'
     ];
-    let currentYear, currentMonth;
-    const today = new Date();
-    currentYear = today.getFullYear();
-    currentMonth = today.getMonth();
-    let selectedDate = null;
-    function pad(n) { return String(n).padStart(2,'0'); }
-    function dateStr(y,m,d) { return y+'-'+pad(m+1)+'-'+pad(d); }
-    function renderCalendar() {
-      const months = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
-      document.getElementById('calLabel').textContent = currentYear+'年 '+months[currentMonth];
-      const grid = document.getElementById('calGrid');
-      grid.innerHTML = '';
-      ['日','月','火','水','木','金','土'].forEach((h,i) => {
-        const el = document.createElement('div');
-        el.className = 'cal-day-header ' + (['sun','','','','','','sat'][i]);
-        el.textContent = h; grid.appendChild(el);
-      });
-      const firstDay = new Date(currentYear, currentMonth, 1).getDay();
-      const daysInMonth = new Date(currentYear, currentMonth+1, 0).getDate();
-      for (let i=0; i<firstDay; i++) {
-        const el = document.createElement('div'); el.className='cal-day empty'; grid.appendChild(el);
-      }
-      const todayDate = new Date(today.getFullYear(), today.getMonth(), today.getDate());
-      for (let d=1; d<=daysInMonth; d++) {
-        const ds = dateStr(currentYear, currentMonth, d);
-        const cellDate = new Date(currentYear, currentMonth, d);
-        const el = document.createElement('div');
-        el.textContent = d;
-        if (cellDate < todayDate) { el.className='cal-day past'; }
-        else if (bookedDates.includes(ds)) { el.className='cal-day booked'; }
-        else {
-          el.className = ds===selectedDate ? 'cal-day selected' : 'cal-day available';
-          el.addEventListener('click', () => selectDate(ds));
-        }
-        if (ds===dateStr(today.getFullYear(),today.getMonth(),today.getDate())) el.classList.add('today');
-        grid.appendChild(el);
-      }
-    }
-    function selectDate(ds) {
-      selectedDate = ds;
-      const d = ds.replace(/-/g,'/');
-      document.getElementById('calInfo').textContent = d+' をチェックイン日として選択しました';
-      document.getElementById('calInfoEn').textContent = 'Selected check-in: '+d;
-      const input = document.getElementById('checkinDate');
-      if (input) input.value = ds;
-      document.getElementById('calCtaBtn').classList.add('active');
-      document.getElementById('calCtaBtnEn').classList.add('active');
-      renderCalendar();
-    }
-    function prevMonth() { currentMonth--; if(currentMonth<0){currentMonth=11;currentYear--;} renderCalendar(); }
-    function nextMonth() { currentMonth++; if(currentMonth>11){currentMonth=0;currentYear++;} renderCalendar(); }
-    renderCalendar();
   </script>
 </body>
 </html>
