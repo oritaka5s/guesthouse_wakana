@@ -197,21 +197,18 @@
 
     /* CONTACT */
     #contact{background:var(--washi-dark)}
-    .contact-wrap{display:flex;flex-direction:column;gap:3rem}
+    .contact-cta-wrap{display:flex;flex-direction:column;gap:3rem}
     .contact-info h3{font-size:1.4rem;letter-spacing:.2em;margin-bottom:1rem;line-height:1.6}
     .contact-info p{font-size:1.05rem;line-height:2.2;color:var(--ink-soft);margin-bottom:2rem}
     .contact-detail{background:var(--washi);padding:1.5rem;border-left:3px solid var(--rust)}
     .contact-detail p{margin:.8rem 0;font-size:1rem}
     .contact-detail strong{color:var(--rust);display:inline-block;min-width:5rem}
-    form{flex:1}
-    .form-group{margin-bottom:1.5rem}
-    .form-label{display:block;font-size:1rem;margin-bottom:.5rem;letter-spacing:.1em}
-    .form-label .required{color:var(--rust);margin-left:.3rem}
-    .form-input,.form-textarea,.form-select{width:100%;padding:.9rem 1rem;border:1px solid var(--mist);background:var(--washi);font-family:inherit;font-size:1rem;transition:border-color .3s}
-    .form-input:focus,.form-textarea:focus,.form-select:focus{outline:none;border-color:var(--rust)}
-    .form-textarea{min-height:150px;resize:vertical}
-    .form-submit{width:100%;background:var(--rust);color:#fff;border:none;padding:1rem;font-size:1.05rem;letter-spacing:.2em;font-family:'Shippori Mincho',serif;cursor:pointer;transition:all .3s}
-    .form-submit:hover{background:var(--rust-dark)}
+    .contact-form-replacement{flex:1}
+    .contact-form-card{background:var(--washi);padding:3rem 2rem;text-align:center;box-shadow:var(--shadow-sm)}
+    .contact-form-lead{font-size:1.05rem;line-height:2.2;color:var(--ink-soft);margin-bottom:2.5rem}
+    .btn-reserve-large{display:inline-block;background:var(--rust);color:#fff;padding:1.2rem 3.5rem;font-size:1.15rem;letter-spacing:.25em;font-family:'Shippori Mincho',serif;transition:all .3s;text-decoration:none;animation:pulse 2.5s infinite}
+    .btn-reserve-large:hover{background:var(--rust-dark);transform:translateY(-3px);box-shadow:0 8px 30px rgba(139,58,42,.25)}
+    .contact-form-sub{font-size:.85rem;color:var(--ink-soft);margin-top:1.2rem;letter-spacing:.1em}
 
     /* FOOTER */
     footer{background:var(--ink);color:var(--washi);padding:3rem 1.5rem 2rem;text-align:center}
@@ -238,7 +235,7 @@
       .access-wrap{flex-direction:row;gap:4rem}
       .access-map{flex:1;height:360px}
       .access-info{flex:1}
-      .contact-wrap{flex-direction:row}
+      .contact-cta-wrap{flex-direction:row}
       .contact-info{flex:0 0 300px}
       footer{padding-bottom:4rem}
     }
@@ -260,7 +257,7 @@
 
   <div class="sticky-cta" id="stickyCta">
     <div class="sticky-cta-text"><strong>¥8,000</strong> / 泊〜</div>
-    <a href="#contact" class="sticky-cta-btn" onclick="closeMobileNav()">今すぐ予約</a>
+    <a href="https://docs.google.com/forms/d/e/XXXXX/viewform" target="_blank" rel="noopener" class="sticky-cta-btn" onclick="closeMobileNav()">宿泊予約はこちら</a>
   </div>
 
   <div class="lightbox" id="lightbox">
@@ -275,7 +272,7 @@
       <li><a href="#gallery">写真</a></li>
       <li><a href="#rates">料金</a></li>
       <li><a href="#access">アクセス</a></li>
-      <li><a href="#contact" class="nav-reserve">ご予約</a></li>
+      <li><a href="https://docs.google.com/forms/d/e/XXXXX/viewform" target="_blank" rel="noopener" class="nav-reserve">予約する</a></li>
     </ul>
     <button class="nav-hamburger" id="hamburger" onclick="toggleMobileNav()">
       <span></span><span></span><span></span>
@@ -288,7 +285,7 @@
     <a href="#rates" onclick="closeMobileNav()">料金</a>
     <a href="#calendar" onclick="closeMobileNav()">空き状況</a>
     <a href="#access" onclick="closeMobileNav()">アクセス</a>
-    <a href="#contact" class="drawer-reserve" onclick="closeMobileNav()">ご予約・お問い合わせ</a>
+    <a href="https://docs.google.com/forms/d/e/XXXXX/viewform" target="_blank" rel="noopener" class="drawer-reserve" onclick="closeMobileNav()">宿泊予約はこちら</a>
   </div>
 
   <!-- HERO -->
@@ -301,7 +298,7 @@
       <p class="hero-subtitle">ゲストハウス和歌奈</p>
       <p class="hero-desc">庄内の里山に佇む、ホームステイ型の宿。ホストと過ごす温かな滞在。ヒノキ風呂と日本庭園が、旅の疲れを静かに癒します。</p>
       <div class="hero-ctas">
-        <a href="#contact" class="btn-hero-primary">📅 今すぐ予約する</a>
+        <a href="https://docs.google.com/forms/d/e/XXXXX/viewform" target="_blank" rel="noopener" class="btn-hero-primary">📅 宿泊予約はこちら</a>
         <a href="#gallery" class="btn-hero-secondary">写真を見る →</a>
       </div>
     </div>
@@ -407,7 +404,7 @@
             </div>
           </div>
           <div class="room-cta">
-            <a href="#contact" class="btn-room">予約する →</a>
+            <a href="https://docs.google.com/forms/d/e/XXXXX/viewform" target="_blank" rel="noopener" class="btn-room">宿泊予約はこちら →</a>
           </div>
         </div>
       </div>
@@ -456,8 +453,8 @@
           <div class="gallery-overlay"><span class="gallery-label">夕景</span></div>
         </div>
         <div class="gallery-item" onclick="openLightbox('images/gallery-2.jpg')">
-          <img src="images/gallery-2.jpg" alt="春の庭・水仙" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label">春の庭</span></div>
+          <img src="images/gallery-2.jpg" alt="冬の庭・雪景色" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-label">冬の庭</span></div>
         </div>
       </div>
     </div>
@@ -492,7 +489,7 @@
         <p class="rate-note">チェックイン 15:00〜　／　チェックアウト 〜10:00<br>※早期・遅延はご相談ください</p>
       </div>
       <div class="book-wrap fade-in">
-        <a href="#contact" class="btn-gold">ご予約・お問い合わせ</a>
+        <a href="https://docs.google.com/forms/d/e/XXXXX/viewform" target="_blank" rel="noopener" class="btn-gold">宿泊予約はこちら</a>
       </div>
     </div>
   </section>
@@ -518,8 +515,8 @@
           <div class="flow-num-wrap"><span class="flow-num">02</span></div>
           <div class="flow-body">
             <div class="flow-icon-s">📩</div>
-            <h3 class="flow-title">フォームからご予約</h3>
-            <p class="flow-desc">フォームからご予約ください。2営業日以内にご連絡いたします。ご不明な点がございましたら、お気軽にお問い合わせください。</p>
+            <h3 class="flow-title">Googleフォームからご予約</h3>
+            <p class="flow-desc">「宿泊予約はこちら」ボタンからGoogleフォームにてご予約ください。2営業日以内にメールでご連絡いたします。</p>
           </div>
         </div>
         <div class="flow-item fade-in">
@@ -595,8 +592,8 @@
         <h2 class="section-title">ご予約・お問い合わせ</h2>
         <div class="divider"></div>
       </div>
-      <div class="contact-wrap">
-        <div class="contact-info fade-in">
+      <div class="contact-cta-wrap fade-in">
+        <div class="contact-info">
           <h3>ご予約・ご質問は<br>お気軽にどうぞ</h3>
           <p>はじめての方もお気軽にお問い合わせください。心よりお待ち申し上げております。</p>
           <div class="contact-detail">
@@ -604,41 +601,13 @@
             <p><strong>受付</strong>9:00〜21:00</p>
           </div>
         </div>
-        <form class="fade-in" onsubmit="handleSubmit(event)">
-          <div class="form-group">
-            <label class="form-label">お名前<span class="required">*</span></label>
-            <input type="text" class="form-input" required>
+        <div class="contact-form-replacement">
+          <div class="contact-form-card">
+            <p class="contact-form-lead">ご予約は下記のGoogleフォームより承っております。<br>ご希望の日程・人数をお送りいただければ、<br>2営業日以内にメールでご連絡いたします。</p>
+            <a href="https://docs.google.com/forms/d/e/XXXXX/viewform" target="_blank" rel="noopener" class="btn-reserve-large">📅 宿泊予約はこちら</a>
+            <p class="contact-form-sub">※ Googleフォームが開きます</p>
           </div>
-          <div class="form-group">
-            <label class="form-label">メールアドレス<span class="required">*</span></label>
-            <input type="email" class="form-input" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label">チェックイン希望日</label>
-            <input type="date" class="form-input" id="checkinDate">
-          </div>
-          <div class="form-group">
-            <label class="form-label">泊数</label>
-            <select class="form-select">
-              <option>1泊</option>
-              <option>2泊</option>
-              <option>3泊</option>
-              <option>4泊以上</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label">送迎ご希望</label>
-            <select class="form-select">
-              <option>希望する（鶴岡駅からの無料送迎）</option>
-              <option>希望しない</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label">ご質問・ご要望</label>
-            <textarea class="form-textarea"></textarea>
-          </div>
-          <button type="submit" class="form-submit">送　信</button>
-        </form>
+        </div>
       </div>
     </div>
   </section>
@@ -711,14 +680,5 @@
       if (e.target === e.currentTarget) closeLightbox();
     });
 
-    // FORM
-    function handleSubmit(e) {
-      e.preventDefault();
-      const btn = e.target.querySelector('.form-submit');
-      btn.textContent = '✓ 送信完了';
-      btn.style.background = '#4a5c3e';
-      setTimeout(() => alert('お問い合わせを承りました。2営業日以内にご連絡いたします。'), 100);
-    }
+    // FORM (removed - now using Google Form)
   </script>
-</body>
-</html>
