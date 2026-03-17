@@ -74,7 +74,7 @@
 
     /* HERO */
     #home{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
-    .hero-bg{position:absolute;inset:0;background-image:url('images/hero.jpg');background-size:cover;background-position:center 30%;transform:scale(1.04);transition:transform 8s ease}
+    .hero-bg{position:absolute;inset:0;background-image:url('images/exterior.jpg');background-size:cover;background-position:center 30%;transform:scale(1.04);transition:transform 8s ease}
     .hero-bg.loaded{transform:scale(1)}
     .hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,20,16,.1) 0%,rgba(26,20,16,.2) 40%,rgba(26,20,16,.72) 100%)}
     .hero-content{position:relative;padding:0 1.5rem 6rem;animation:fadeUp 1.2s .2s both}
@@ -482,7 +482,7 @@
       </div>
       <div class="room-card fade-in">
         <div class="room-img">
-          <img src="images/room.jpg" alt="和室 畳の部屋" loading="lazy">
+          <img src="images/living.jpg" alt="和室 畳の部屋" loading="lazy">
           <div class="room-badge" data-lang="ja">和室 1部屋</div>
           <div class="room-badge" data-lang="en">1 Private Room</div>
         </div>
@@ -532,25 +532,33 @@
         <div class="divider"></div>
       </div>
       <div class="gallery-grid fade-in">
-        <div class="gallery-item" onclick="openLightbox('images/gallery-1.jpg')">
-          <img src="images/gallery-1.jpg" alt="日本庭園と夕日" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">日本庭園</span><span class="gallery-label" data-lang="en">Garden</span></div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox('images/gallery-2.jpg')">
-          <img src="images/gallery-2.jpg" alt="春の庭・水仙" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">春の庭</span><span class="gallery-label" data-lang="en">Spring</span></div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox('images/exterior.jpg')">
-          <img src="images/exterior.jpg" alt="外観" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">外観</span><span class="gallery-label" data-lang="en">Exterior</span></div>
+        <div class="gallery-item" onclick="openLightbox('images/chokai_mountain.jpg')">
+          <img src="images/chokai_mountain.jpg" alt="鳥海山と田んぼ" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">鳥海山</span><span class="gallery-label" data-lang="en">Mt. Chokai</span></div>
         </div>
         <div class="gallery-item" onclick="openLightbox('images/garden.jpg')">
           <img src="images/garden.jpg" alt="日本庭園" loading="lazy">
           <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">庭園</span><span class="gallery-label" data-lang="en">Garden</span></div>
         </div>
-        <div class="gallery-item" onclick="openLightbox('images/room.jpg')">
-          <img src="images/room.jpg" alt="和室" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">和室</span><span class="gallery-label" data-lang="en">Room</span></div>
+        <div class="gallery-item" onclick="openLightbox('images/exterior.jpg')">
+          <img src="images/exterior.jpg" alt="外観" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">外観</span><span class="gallery-label" data-lang="en">Exterior</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/living.jpg')">
+          <img src="images/living.jpg" alt="リビング" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">リビング</span><span class="gallery-label" data-lang="en">Living</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/bonfire.jpg')">
+          <img src="images/bonfire.jpg" alt="焚き火スペース" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">焚き火</span><span class="gallery-label" data-lang="en">Bonfire</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/kitchen.jpg')">
+          <img src="images/kitchen.jpg" alt="キッチン" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">キッチン</span><span class="gallery-label" data-lang="en">Kitchen</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/winter_mountain.jpg')">
+          <img src="images/winter_mountain.jpg" alt="冬の鳥海山" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">冬景色</span><span class="gallery-label" data-lang="en">Winter</span></div>
         </div>
       </div>
     </div>
@@ -663,8 +671,8 @@
             <div class="flow-icon-s">📩</div>
             <h3 class="flow-title" data-lang="ja">フォームからご予約</h3>
             <h3 class="flow-title" data-lang="en">Send a Request</h3>
-            <p class="flow-desc" data-lang="ja">フォームまたはお電話でご予約ください。2営業日以内にご連絡いたします。</p>
-            <p class="flow-desc" data-lang="en">Fill in the form or call. We'll reply within 2 business days.</p>
+            <p class="flow-desc" data-lang="ja">フォームからご予約ください。2営業日以内にご連絡いたします。</p>
+            <p class="flow-desc" data-lang="en">Fill in the form. We'll reply within 2 business days.</p>
           </div>
         </div>
         <div class="flow-item fade-in">
@@ -917,5 +925,3 @@
 </body>
 </html>
 
-
-  
