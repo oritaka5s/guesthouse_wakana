@@ -6,14 +6,9 @@
   <title>ゲストハウス wakana | 山形・鶴岡 ホストと過ごすゲストハウス ヒノキ風呂・日本庭園</title>
   <meta name="description" content="山形県鶴岡市のホームステイ型ゲストハウス。ホストと暮らすように泊まれる和室。本格ヒノキ風呂・日本庭園・鶴岡駅無料送迎。1泊¥8,000〜。">
   <meta name="keywords" content="ゲストハウス 鶴岡, 民泊 庄内, ホームステイ 山形, ヒノキ風呂, 日本庭園, wakana">
-  <meta property="og:title" content="ゲストハウス wakana | 山形・鶴岡">
-  <meta property="og:description" content="庄内の里山に佇むホームステイ型ゲストハウス。ホストと暮らすように滞在できる和室。ヒノキ風呂と日本庭園で、静かな時間を。">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://guesthouse-wakana.netlify.app/">
-  <link rel="canonical" href="https://guesthouse-wakana.netlify.app/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Shippori+Mincho:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Shippori+Mincho:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root{--ink:#1a1410;--ink-soft:#3d3328;--washi:#f7f2ea;--washi-dark:#ede6d8;--sand:#e6ddc8;--rust:#8b3a2a;--rust-dark:#6e2e1e;--rust-light:rgba(139,58,42,.08);--moss:#4a5c3e;--gold:#b8963e;--gold-light:rgba(184,150,62,.15);--mist:#d4cfc5;--shadow-sm:0 2px 12px rgba(26,20,16,.08);--shadow-md:0 8px 40px rgba(26,20,16,.12);--nav-h:64px}
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -29,23 +24,22 @@
     @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(139,58,42,.4)}50%{box-shadow:0 0 0 10px rgba(139,58,42,0)}}
     .fade-in{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
     .fade-in.visible{opacity:1;transform:translateY(0)}
-    .fade-in-d1{transition-delay:.1s}.fade-in-d2{transition-delay:.2s}.fade-in-d3{transition-delay:.3s}
 
     /* STICKY CTA */
     .sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--rust);display:flex;align-items:center;justify-content:center;gap:1rem;padding:.9rem 1.5rem;transform:translateY(100%);transition:transform .4s cubic-bezier(.4,0,.2,1);box-shadow:0 -4px 30px rgba(26,20,16,.2)}
     .sticky-cta.show{transform:translateY(0)}
-    .sticky-cta-text{color:rgba(255,255,255,.85);font-size:.78rem;letter-spacing:.1em}
-    .sticky-cta-text strong{color:#fff;font-size:1.05rem}
-    .sticky-cta-btn{background:#fff;color:var(--rust);border:none;padding:.65rem 1.8rem;font-size:.82rem;letter-spacing:.2em;font-weight:600;font-family:'Shippori Mincho',serif;transition:all .2s;white-space:nowrap}
+    .sticky-cta-text{color:rgba(255,255,255,.85);font-size:.9rem;letter-spacing:.1em}
+    .sticky-cta-text strong{color:#fff;font-size:1.1rem}
+    .sticky-cta-btn{background:#fff;color:var(--rust);border:none;padding:.7rem 2rem;font-size:.9rem;letter-spacing:.2em;font-weight:600;font-family:'Shippori Mincho',serif;transition:all .2s;white-space:nowrap}
     .sticky-cta-btn:hover{background:var(--gold);color:#fff}
 
     /* NAV */
     nav{position:fixed;top:0;left:0;right:0;z-index:150;height:var(--nav-h);display:flex;justify-content:space-between;align-items:center;padding:0 1.5rem;background:rgba(247,242,234,.96);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--mist);transition:box-shadow .3s}
     nav.scrolled{box-shadow:var(--shadow-sm)}
     .nav-logo{font-family:'Shippori Mincho',serif;font-size:1.3rem;letter-spacing:.3em;color:var(--rust);line-height:1}
-    .nav-logo span{font-family:'EB Garamond',serif;font-style:italic;font-size:.7rem;color:var(--gold);letter-spacing:.15em;display:block;margin-top:1px}
+    .nav-logo span{font-size:.7rem;color:var(--gold);letter-spacing:.15em;display:block;margin-top:1px}
     .nav-links{display:flex;gap:1.4rem}
-    .nav-links a{font-size:.72rem;letter-spacing:.18em;color:var(--ink-soft);transition:color .2s;position:relative;padding-bottom:2px}
+    .nav-links a{font-size:.8rem;letter-spacing:.18em;color:var(--ink-soft);transition:color .2s;position:relative;padding-bottom:2px}
     .nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1px;background:var(--rust);transition:width .3s}
     .nav-links a:hover{color:var(--rust)}
     .nav-links a:hover::after{width:100%}
@@ -61,211 +55,175 @@
     .nav-drawer.open{transform:translateX(0)}
     .nav-drawer a{font-family:'Shippori Mincho',serif;font-size:1.3rem;letter-spacing:.25em;padding:1rem 0;border-bottom:1px solid var(--mist);color:var(--ink)}
     .nav-drawer .drawer-reserve{margin-top:2rem;background:var(--rust);color:#fff;text-align:center;padding:1rem;font-size:1rem;letter-spacing:.3em}
-    .lang-switch{display:flex;align-items:center;margin-left:.8rem}
-    .lang-btn{background:none;border:1px solid var(--mist);padding:.3rem .55rem;font-size:.65rem;letter-spacing:.1em;color:var(--ink-soft);transition:all .2s;cursor:pointer}
-    .lang-btn:first-child{border-right:none}
-    .lang-btn.active{background:var(--rust);color:#fff;border-color:var(--rust)}
-    [data-lang="en"]{display:none}
-    body.lang-en [data-lang="ja"]{display:none}
-    body.lang-en [data-lang="en"]{display:block}
-    span[data-lang="en"]{display:none}
-    body.lang-en span[data-lang="ja"]{display:none}
-    body.lang-en span[data-lang="en"]{display:inline}
 
     /* HERO */
     #home{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
-    .hero-bg{position:absolute;inset:0;background-image:url('images/exterior.jpg');background-size:cover;background-position:center 30%;transform:scale(1.04);transition:transform 8s ease}
+    .hero-bg{position:absolute;inset:0;background-image:url('images/hero.jpg');background-size:cover;background-position:center 30%;transform:scale(1.04);transition:transform 8s ease}
     .hero-bg.loaded{transform:scale(1)}
     .hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,20,16,.1) 0%,rgba(26,20,16,.2) 40%,rgba(26,20,16,.72) 100%)}
     .hero-content{position:relative;padding:0 1.5rem 6rem;animation:fadeUp 1.2s .2s both}
-    .hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(184,150,62,.2);border:1px solid rgba(184,150,62,.45);backdrop-filter:blur(4px);padding:.4rem 1rem;margin-bottom:1.2rem;font-family:'EB Garamond',serif;font-style:italic;font-size:.8rem;letter-spacing:.25em;color:var(--gold)}
+    .hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(184,150,62,.2);border:1px solid rgba(184,150,62,.45);backdrop-filter:blur(4px);padding:.5rem 1.2rem;margin-bottom:1.2rem;font-size:.85rem;letter-spacing:.25em;color:var(--gold)}
     .hero-title{font-family:'Shippori Mincho',serif;font-size:clamp(3.5rem,14vw,8rem);font-weight:600;letter-spacing:.3em;line-height:.9;color:#fff;margin-bottom:.5rem}
-    .hero-subtitle{font-family:'EB Garamond',serif;font-size:clamp(.85rem,2.5vw,1.1rem);letter-spacing:.5em;color:var(--gold);margin-bottom:1.2rem}
-    .hero-desc{font-size:1rem;letter-spacing:.1em;line-height:2.2;color:rgba(247,242,234,.88);margin-bottom:2rem;max-width:360px}
+    .hero-subtitle{font-size:clamp(.9rem,2.5vw,1.1rem);letter-spacing:.4em;color:var(--gold);margin-bottom:1.2rem}
+    .hero-desc{font-size:1.05rem;letter-spacing:.1em;line-height:2.2;color:rgba(247,242,234,.9);margin-bottom:2rem;max-width:380px}
     .hero-ctas{display:flex;gap:.8rem;flex-wrap:wrap}
-    .btn-hero-primary{display:inline-flex;align-items:center;gap:.5rem;background:var(--rust);color:#fff;padding:.9rem 2rem;font-size:.95rem;letter-spacing:.25em;font-family:'Shippori Mincho',serif;transition:all .3s;animation:pulse 2.5s 2s infinite}
+    .btn-hero-primary{display:inline-flex;align-items:center;gap:.5rem;background:var(--rust);color:#fff;padding:1rem 2.2rem;font-size:1rem;letter-spacing:.25em;font-family:'Shippori Mincho',serif;transition:all .3s;animation:pulse 2.5s 2s infinite}
     .btn-hero-primary:hover{background:var(--rust-dark);transform:translateY(-2px)}
-    .btn-hero-secondary{display:inline-flex;align-items:center;gap:.5rem;border:1px solid rgba(247,242,234,.6);color:rgba(247,242,234,.9);padding:.9rem 2rem;font-size:.95rem;letter-spacing:.25em;font-family:'Shippori Mincho',serif;transition:all .3s}
+    .btn-hero-secondary{display:inline-flex;align-items:center;gap:.5rem;border:1px solid rgba(247,242,234,.6);color:rgba(247,242,234,.9);padding:1rem 2.2rem;font-size:1rem;letter-spacing:.25em;font-family:'Shippori Mincho',serif;transition:all .3s}
     .btn-hero-secondary:hover{background:rgba(247,242,234,.15)}
     .hero-trust{position:absolute;top:calc(var(--nav-h) + 1.2rem);right:1.5rem;display:flex;flex-direction:column;gap:.5rem;animation:fadeIn 1s 1s both}
-    .trust-item{background:rgba(247,242,234,.12);backdrop-filter:blur(6px);border:1px solid rgba(247,242,234,.2);padding:.5rem .8rem;display:flex;align-items:center;gap:.4rem;font-size:.7rem;letter-spacing:.1em;color:rgba(247,242,234,.9)}
-    .scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.4rem;animation:bounce 2s 2s infinite;color:rgba(247,242,234,.5);font-size:.65rem;letter-spacing:.3em}
+    .trust-item{background:rgba(247,242,234,.12);backdrop-filter:blur(6px);border:1px solid rgba(247,242,234,.2);padding:.6rem .9rem;display:flex;align-items:center;gap:.4rem;font-size:.75rem;letter-spacing:.1em;color:rgba(247,242,234,.9)}
+    .scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.4rem;animation:bounce 2s 2s infinite;color:rgba(247,242,234,.5);font-size:.7rem;letter-spacing:.3em}
     .scroll-hint::after{content:'';width:1px;height:40px;background:linear-gradient(to bottom,rgba(247,242,234,.5),transparent)}
 
     /* TRUST BAR */
-    .trust-bar{background:var(--ink);padding:1.2rem 1.5rem}
-    .trust-bar-inner{max-width:900px;margin:0 auto;display:flex;justify-content:center;flex-wrap:wrap;gap:1rem 2rem}
-    .trust-bar-item{display:flex;align-items:center;gap:.5rem;color:rgba(247,242,234,.8);font-size:.76rem;letter-spacing:.12em}
-    .trust-bar-item .icon{color:var(--gold);font-size:1rem}
+    .trust-bar{background:var(--ink);padding:1.5rem 1.5rem}
+    .trust-bar-inner{max-width:900px;margin:0 auto;display:flex;justify-content:center;flex-wrap:wrap;gap:1rem 2.5rem}
+    .trust-bar-item{display:flex;align-items:center;gap:.5rem;color:rgba(247,242,234,.85);font-size:.85rem;letter-spacing:.12em}
+    .trust-bar-item .icon{color:var(--gold);font-size:1.1rem}
 
     /* SECTION */
     section{padding:5rem 0}
     .section-inner{max-width:1000px;margin:0 auto;padding:0 1.5rem}
-    .section-header{text-align:center;margin-bottom:3rem}
-    .section-en{font-family:'EB Garamond',serif;font-style:italic;font-size:.82rem;letter-spacing:.4em;color:var(--gold);display:block;margin-bottom:.6rem}
-    .section-title{font-family:'Shippori Mincho',serif;font-size:clamp(1.5rem,4vw,2rem);letter-spacing:.25em;color:var(--ink);line-height:1.4}
-    .divider{width:40px;height:1px;background:var(--rust);margin:1rem auto 0}
+    .section-header{text-align:center;margin-bottom:3.5rem}
+    .section-en{font-size:.85rem;letter-spacing:.4em;color:var(--gold);display:block;margin-bottom:.8rem}
+    .section-title{font-family:'Shippori Mincho',serif;font-size:clamp(1.6rem,4vw,2.2rem);letter-spacing:.25em;color:var(--ink);line-height:1.4}
+    .divider{width:40px;height:1px;background:var(--rust);margin:1.2rem auto 0}
 
     /* FEATURES */
     #features{background:var(--sand)}
-    .features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
-    .feature-item{background:var(--washi);padding:1.8rem 1.4rem;transition:transform .3s,box-shadow .3s;position:relative;overflow:hidden}
+    .features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}
+    .feature-item{background:var(--washi);padding:2rem 1.6rem;transition:transform .3s,box-shadow .3s;position:relative;overflow:hidden}
     .feature-item::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--rust);transition:height .4s}
     .feature-item:hover::before{height:100%}
     .feature-item:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
-    .feature-icon{font-size:2rem;margin-bottom:.8rem}
-    .feature-title{font-family:'Shippori Mincho',serif;font-size:.93rem;letter-spacing:.18em;margin-bottom:.6rem}
-    .feature-desc{font-size:1rem;line-height:1.9;color:#6a5e52}
+    .feature-icon{font-size:2.2rem;margin-bottom:1rem}
+    .feature-title{font-family:'Shippori Mincho',serif;font-size:1.05rem;letter-spacing:.18em;margin-bottom:.8rem}
+    .feature-desc{font-size:1.05rem;line-height:2;color:#6a5e52}
+
+    /* INTRO */
+    #intro{padding:5rem 0}
+    .intro-box{background:var(--washi-dark);padding:2.5rem 2rem;max-width:800px;margin:0 auto}
+    .intro-box h3{font-size:1.3rem;letter-spacing:.2em;margin-bottom:1.5rem;color:var(--rust)}
+    .intro-box p{font-size:1.05rem;line-height:2.2;margin-bottom:1.2rem}
+    .intro-list{margin-top:2rem;background:var(--washi);padding:1.5rem;border-left:3px solid var(--rust)}
+    .intro-list li{font-size:1rem;line-height:2;padding:.4rem 0;position:relative;padding-left:1.5rem}
+    .intro-list li::before{content:'✓';position:absolute;left:0;color:var(--rust);font-weight:bold}
+    .intro-note{margin-top:1rem;font-size:.95rem;color:var(--ink-soft);line-height:1.9}
+    .intro-note strong{color:var(--rust)}
 
     /* ROOMS */
-    #rooms{background:var(--washi)}
-    .room-card{overflow:hidden;box-shadow:var(--shadow-md);background:#fff}
-    .room-img{position:relative;height:56vw;max-height:440px;overflow:hidden}
-    .room-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.4,0,.2,1)}
-    .room-card:hover .room-img img{transform:scale(1.03)}
-    .room-badge{position:absolute;top:1rem;left:1rem;background:var(--rust);color:#fff;font-size:.72rem;letter-spacing:.2em;padding:.35rem .8rem}
-    .room-info{padding:1.8rem 1.5rem}
-    .room-en{font-family:'EB Garamond',serif;font-style:italic;font-size:.8rem;color:var(--gold);letter-spacing:.2em;margin-bottom:.4rem}
-    .room-name{font-family:'Shippori Mincho',serif;font-size:1.4rem;letter-spacing:.2em;margin-bottom:.8rem}
-    .room-desc{font-size:.83rem;line-height:2;color:#6a5e52;margin-bottom:1.2rem}
-    .room-amenities{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.2rem}
-    .amenity-tag{background:var(--rust-light);color:var(--rust);font-size:.71rem;letter-spacing:.1em;padding:.3rem .7rem}
-    .room-footer{display:flex;align-items:center;justify-content:space-between;padding-top:1.2rem;border-top:1px solid var(--mist)}
-    .room-price-label{font-size:.7rem;color:#8a7e74;letter-spacing:.1em}
-    .room-price{font-family:'Shippori Mincho',serif;font-size:1.5rem;color:var(--rust);letter-spacing:.05em}
-    .room-price span{font-size:.8rem;color:#8a7e74}
-    .room-meta-mini{font-size:.7rem;color:#8a7e74;letter-spacing:.08em}
-    .btn-room-reserve{display:inline-flex;align-items:center;gap:.4rem;background:var(--rust);color:#fff;padding:.7rem 1.4rem;font-size:.78rem;letter-spacing:.2em;font-family:'Shippori Mincho',serif;transition:all .2s;white-space:nowrap}
-    .btn-room-reserve:hover{background:var(--rust-dark)}
+    .room-card{background:var(--washi);box-shadow:var(--shadow-sm);overflow:hidden;margin-bottom:2rem}
+    .room-img{position:relative;height:320px;overflow:hidden}
+    .room-img img{width:100%;height:100%;object-fit:cover}
+    .room-badge{position:absolute;top:1.5rem;left:1.5rem;background:rgba(139,58,42,.9);color:#fff;padding:.6rem 1.2rem;font-size:.85rem;letter-spacing:.2em}
+    .room-info{padding:2rem}
+    .room-en{font-size:.75rem;letter-spacing:.3em;color:var(--gold);margin-bottom:.5rem}
+    .room-name{font-family:'Shippori Mincho',serif;font-size:1.5rem;letter-spacing:.2em;margin-bottom:1rem}
+    .room-desc{font-size:1.05rem;line-height:2.2;color:var(--ink-soft);margin-bottom:1.5rem}
+    .room-amenities{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin-bottom:1.5rem}
+    .room-amenities li{font-size:.95rem;display:flex;align-items:center;gap:.5rem}
+    .room-price-wrap{border-top:1px solid var(--mist);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center}
+    .room-price-label{font-size:.85rem;color:var(--ink-soft)}
+    .room-price{font-family:'Shippori Mincho',serif;font-size:1.8rem;color:var(--rust);font-weight:600}
+    .room-price span{font-size:1rem;font-weight:400}
+    .room-checkin{font-size:.9rem;color:var(--ink-soft);margin-top:.5rem}
+    .room-cta{margin-top:1.5rem}
+    .btn-room{display:inline-block;background:var(--rust);color:#fff;padding:.9rem 2rem;font-size:.95rem;letter-spacing:.2em;transition:all .3s;width:100%;text-align:center}
+    .btn-room:hover{background:var(--rust-dark)}
 
     /* GALLERY */
-    #gallery{background:var(--sand);padding:5rem 0}
-    .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);grid-auto-rows:46vw;gap:.5rem}
-    .gallery-item{overflow:hidden;cursor:pointer;position:relative}
-    .gallery-item:first-child{grid-column:span 2;height:56vw;grid-row:span 1}
-    .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-    .gallery-item:hover img{transform:scale(1.05)}
-    .gallery-overlay{position:absolute;inset:0;background:rgba(26,20,16,0);transition:background .3s;display:flex;align-items:center;justify-content:center}
-    .gallery-item:hover .gallery-overlay{background:rgba(26,20,16,.2)}
-    .gallery-label{opacity:0;color:#fff;font-size:.78rem;letter-spacing:.2em;transition:opacity .3s}
-    .gallery-item:hover .gallery-label{opacity:1}
-    .lightbox{position:fixed;inset:0;z-index:300;background:rgba(10,8,6,.95);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s}
-    .lightbox.open{opacity:1;pointer-events:all}
-    .lightbox img{max-width:92vw;max-height:88vh;object-fit:contain}
-    .lightbox-close{position:absolute;top:1.2rem;right:1.5rem;background:none;border:none;color:rgba(247,242,234,.7);font-size:2.5rem;line-height:1}
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
+    .gallery-item{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:4/3}
+    .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+    .gallery-item:hover img{transform:scale(1.1)}
+    .gallery-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,20,16,.7),transparent);display:flex;align-items:flex-end;padding:1rem;opacity:0;transition:opacity .3s}
+    .gallery-item:hover .gallery-overlay{opacity:1}
+    .gallery-label{color:#fff;font-size:.9rem;letter-spacing:.2em}
 
-    /* REVIEWS */
-    #reviews{background:var(--washi)}
-    .reviews-scroll{display:flex;gap:1rem;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;padding-bottom:1rem}
-    .reviews-scroll::-webkit-scrollbar{height:4px}
-    .reviews-scroll::-webkit-scrollbar-track{background:var(--mist)}
-    .reviews-scroll::-webkit-scrollbar-thumb{background:var(--rust)}
-    .review-card{flex:0 0 82vw;max-width:360px;scroll-snap-align:start;background:var(--washi-dark);padding:1.5rem;position:relative}
-    .review-stars{color:var(--gold);font-size:.9rem;letter-spacing:.1em;margin-bottom:.8rem}
-    .review-text{font-size:.82rem;line-height:2;color:var(--ink-soft);margin-bottom:1rem}
-    .review-author{font-size:.72rem;color:#8a7e74;letter-spacing:.1em}
-    .review-quote{position:absolute;top:.8rem;right:1.2rem;font-family:'EB Garamond',serif;font-size:3rem;color:var(--gold);opacity:.15;line-height:1}
+    /* LIGHTBOX */
+    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:300;display:none;align-items:center;justify-content:center;padding:2rem}
+    .lightbox.open{display:flex}
+    .lightbox img{max-width:90%;max-height:90%;object-fit:contain}
+    .lightbox-close{position:absolute;top:2rem;right:2rem;background:none;border:none;color:#fff;font-size:3rem;cursor:pointer;line-height:1}
 
     /* RATES */
-    #rates{background:var(--ink)}
-    #rates .section-title{color:var(--washi)}
-    #rates .section-en{color:var(--gold)}
-    #rates .divider{background:var(--gold)}
-    .rate-card{border:1px solid rgba(184,150,62,.4);background:rgba(184,150,62,.06);padding:2rem 1.5rem;max-width:480px;margin:0 auto}
-    .rate-type{font-family:'EB Garamond',serif;font-style:italic;font-size:.8rem;letter-spacing:.3em;color:var(--gold);margin-bottom:.3rem}
-    .rate-name{font-family:'Shippori Mincho',serif;font-size:1.1rem;letter-spacing:.2em;color:var(--washi);margin-bottom:1rem}
-    .rate-price-row{display:flex;align-items:baseline;gap:.5rem;margin-bottom:.3rem}
-    .rate-price{font-family:'Shippori Mincho',serif;font-size:2.2rem;color:var(--washi)}
-    .rate-price-unit{font-size:.83rem;color:var(--mist)}
-    .rate-savings{display:inline-block;background:var(--gold-light);color:var(--gold);font-size:.72rem;letter-spacing:.1em;padding:.25rem .6rem;margin-bottom:1.2rem}
-    .rate-includes{list-style:none;font-size:.78rem;color:var(--mist);line-height:2.2;border-top:1px solid rgba(255,255,255,.08);padding-top:1.2rem;margin-top:1.2rem}
-    .rate-includes li{display:flex;align-items:center;gap:.5rem}
-    .rate-includes li::before{content:'✓';color:var(--gold);font-size:.73rem}
-    .rate-note{font-size:.74rem;color:rgba(184,150,62,.7);margin-top:1.2rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.08);line-height:1.9}
-    .book-wrap{text-align:center;margin-top:2.5rem}
-    .btn-gold{display:inline-block;background:var(--gold);color:var(--ink);padding:1rem 3rem;font-family:'Shippori Mincho',serif;font-size:.85rem;letter-spacing:.3em;font-weight:600;transition:all .3s}
-    .btn-gold:hover{background:#cfa840;transform:translateY(-2px);box-shadow:0 8px 24px rgba(184,150,62,.3)}
+    #rates{background:var(--washi-dark)}
+    .rate-box{background:var(--washi);padding:2.5rem 2rem;max-width:700px;margin:0 auto;box-shadow:var(--shadow-sm)}
+    .rate-header{text-align:center;border-bottom:2px solid var(--mist);padding-bottom:1.5rem;margin-bottom:2rem}
+    .rate-type{font-size:.85rem;letter-spacing:.3em;color:var(--gold);margin-bottom:.5rem}
+    .rate-name{font-family:'Shippori Mincho',serif;font-size:1.4rem;letter-spacing:.2em;color:var(--ink)}
+    .rate-price-box{text-align:center;margin-bottom:2rem}
+    .rate-price{font-family:'Shippori Mincho',serif;font-size:3rem;color:var(--rust);font-weight:600;line-height:1}
+    .rate-price-unit{font-size:1.1rem;font-weight:400;color:var(--ink-soft)}
+    .rate-badge{display:inline-block;background:var(--gold-light);color:var(--rust);padding:.4rem 1rem;font-size:.85rem;letter-spacing:.2em;margin-top:1rem}
+    .rate-amenities{margin-bottom:2rem}
+    .rate-amenities li{font-size:1rem;line-height:2.2;padding-left:1.5rem;position:relative}
+    .rate-amenities li::before{content:'•';position:absolute;left:0;color:var(--rust)}
+    .rate-note{font-size:.95rem;line-height:2;color:var(--ink-soft);text-align:center;margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--mist)}
+    .book-wrap{text-align:center;margin-top:2rem}
+    .btn-gold{display:inline-block;background:var(--gold);color:#fff;padding:1rem 3rem;font-size:1rem;letter-spacing:.2em;transition:all .3s}
+    .btn-gold:hover{background:#a07e35}
 
     /* FLOW */
-    #flow{background:var(--washi)}
-    .flow-steps{display:flex;flex-direction:column;gap:0;position:relative}
-    .flow-steps::before{content:'';position:absolute;top:0;left:2rem;bottom:0;width:1px;background:var(--mist)}
-    .flow-item{display:flex;gap:1.2rem;padding:1.5rem 0;position:relative}
-    .flow-num-wrap{flex-shrink:0;width:4rem;height:4rem;background:var(--washi);border:1px solid var(--mist);display:flex;align-items:center;justify-content:center;position:relative;z-index:1}
-    .flow-num{font-family:'EB Garamond',serif;font-size:1.3rem;color:var(--gold)}
-    .flow-body{padding-top:.5rem}
-    .flow-icon-s{font-size:1.2rem;margin-bottom:.3rem}
-    .flow-title{font-family:'Shippori Mincho',serif;font-size:1rem;letter-spacing:.15em;margin-bottom:.4rem}
-    .flow-desc{font-size:.77rem;line-height:1.9;color:#6a5e52}
+    .flow-steps{max-width:800px;margin:0 auto}
+    .flow-item{display:flex;gap:2rem;margin-bottom:3rem;position:relative}
+    .flow-item:not(:last-child)::after{content:'';position:absolute;left:1.5rem;top:4rem;width:2px;height:calc(100% + 1rem);background:var(--mist)}
+    .flow-num-wrap{flex-shrink:0}
+    .flow-num{display:flex;align-items:center;justify-content:center;width:3rem;height:3rem;background:var(--rust);color:#fff;font-family:'Shippori Mincho',serif;font-size:1.2rem;font-weight:600;position:relative;z-index:1}
+    .flow-body{flex:1}
+    .flow-icon-s{font-size:2rem;margin-bottom:.8rem}
+    .flow-title{font-family:'Shippori Mincho',serif;font-size:1.2rem;letter-spacing:.15em;margin-bottom:.8rem}
+    .flow-desc{font-size:1.05rem;line-height:2;color:var(--ink-soft)}
 
     /* CALENDAR */
     #calendar{background:var(--sand)}
-    .calendar-wrap{max-width:480px;margin:0 auto}
-    .calendar-legend{display:flex;gap:1.5rem;justify-content:center;margin-bottom:1.2rem;font-size:.75rem;color:#6a5e52}
-    .legend-item{display:flex;align-items:center;gap:.4rem}
-    .dot{width:10px;height:10px;border-radius:50%;display:inline-block}
-    .dot.available{background:var(--moss)}.dot.booked{background:var(--mist);border:1px solid #aaa}.dot.selected{background:var(--rust)}
-    .cal-nav{display:flex;align-items:center;justify-content:center;gap:1.5rem;margin-bottom:1rem}
-    .cal-btn{background:none;border:1px solid var(--mist);width:34px;height:34px;font-size:1.1rem;color:var(--ink);transition:all .2s}
-    .cal-btn:hover{border-color:var(--rust);color:var(--rust)}
-    .cal-month-label{font-family:'Shippori Mincho',serif;font-size:1rem;letter-spacing:.2em;min-width:140px;text-align:center}
-    .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
-    .cal-day-header{text-align:center;font-size:.7rem;letter-spacing:.05em;color:#8a7e74;padding:.4rem 0}
-    .cal-day-header.sun{color:var(--rust)}.cal-day-header.sat{color:#3a5c8a}
-    .cal-day{text-align:center;padding:.5rem 0;font-size:.8rem;cursor:pointer;transition:all .15s;min-height:34px;display:flex;align-items:center;justify-content:center}
-    .cal-day.empty{cursor:default}
-    .cal-day.available{background:rgba(74,92,62,.12);color:var(--ink)}
-    .cal-day.available:hover{background:var(--moss);color:#fff}
-    .cal-day.booked{background:var(--mist);color:#aaa;cursor:not-allowed;text-decoration:line-through}
-    .cal-day.selected{background:var(--rust);color:#fff}
-    .cal-day.past{color:#ccc;cursor:default}
-    .cal-day.today{font-weight:bold;outline:1px solid var(--gold)}
-    .cal-selected-info{margin-top:1rem;text-align:center;font-size:.82rem;color:var(--rust);letter-spacing:.1em;min-height:1.5rem}
-    .cal-cta{margin-top:1.5rem;text-align:center}
-    .cal-cta-btn{display:inline-block;background:var(--rust);color:#fff;padding:.85rem 2.5rem;font-family:'Shippori Mincho',serif;font-size:.83rem;letter-spacing:.25em;transition:all .2s;opacity:.4;pointer-events:none}
-    .cal-cta-btn.active{opacity:1;pointer-events:all}
-    .cal-cta-btn.active:hover{background:var(--rust-dark)}
+    .calendar-wrap{max-width:600px;margin:0 auto;text-align:center;padding:3rem 1.5rem}
+    .calendar-wrap p{font-size:1.1rem;line-height:2.2;margin-bottom:2rem;color:var(--ink-soft)}
+    .calendar-wrap a{display:inline-block;background:var(--rust);color:#fff;padding:1.1rem 2.5rem;font-size:1.05rem;letter-spacing:.2em;font-family:'Shippori Mincho',serif;transition:all .3s;text-decoration:none}
+    .calendar-wrap a:hover{background:var(--rust-dark);transform:translateY(-2px)}
 
     /* ACCESS */
-    #access{background:var(--washi)}
     .access-wrap{display:flex;flex-direction:column;gap:2rem}
-    .access-map{height:280px;overflow:hidden}
-    .access-map iframe{width:100%;height:100%;border:0;display:block}
-    .access-info h3{font-family:'Shippori Mincho',serif;font-size:1rem;letter-spacing:.2em;margin-bottom:1.5rem;line-height:1.8}
-    .access-list li{display:flex;gap:1rem;padding:.8rem 0;border-bottom:1px solid var(--mist);font-size:.81rem;line-height:1.8}
-    .access-label{color:var(--rust);font-size:.7rem;letter-spacing:.08em;min-width:80px;padding-top:2px;flex-shrink:0}
-    .access-dir-btn{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.2rem;background:var(--moss);color:#fff;padding:.7rem 1.4rem;font-size:.77rem;letter-spacing:.15em;transition:background .2s}
-    .access-dir-btn:hover{background:#3a4c2e}
+    .access-map{width:100%;height:400px;border:1px solid var(--mist)}
+    .access-map iframe{width:100%;height:100%}
+    .access-info h3{font-size:1.2rem;letter-spacing:.15em;margin-bottom:1.5rem;color:var(--rust)}
+    .access-list{margin-top:1.5rem}
+    .access-list li{margin-bottom:1.5rem;display:flex;gap:1rem}
+    .access-label{flex-shrink:0;font-weight:600;font-size:1rem;color:var(--rust);min-width:4rem}
+    .access-list li > span:not(.access-label){font-size:1.05rem;line-height:2}
+    .access-dir-btn{display:inline-block;margin-top:1.5rem;border:1px solid var(--rust);color:var(--rust);padding:.8rem 2rem;font-size:.95rem;letter-spacing:.15em;transition:all .3s}
+    .access-dir-btn:hover{background:var(--rust);color:#fff}
 
     /* CONTACT */
-    #contact{background:var(--sand)}
-    .contact-wrap{display:flex;flex-direction:column;gap:2.5rem}
-    .contact-info h3{font-family:'Shippori Mincho',serif;font-size:1.1rem;letter-spacing:.2em;margin-bottom:1rem;line-height:1.8}
-    .contact-info p{font-size:.82rem;line-height:2.1;color:#6a5e52;margin-bottom:1.5rem}
-    .contact-detail{font-size:.79rem;line-height:2.8}
-    .contact-detail strong{color:var(--rust);letter-spacing:.08em;display:inline-block;width:78px;font-weight:400}
-    .contact-tel{display:inline-flex;align-items:center;gap:.4rem;font-size:1.3rem;font-family:'EB Garamond',serif;color:var(--rust);margin-top:.5rem}
-    .form-group{margin-bottom:1.2rem}
-    .form-group label{display:block;font-size:.73rem;letter-spacing:.18em;color:var(--rust);margin-bottom:.4rem}
-    .form-group label .req{color:var(--rust);margin-left:.2rem}
-    .form-group input,.form-group textarea,.form-group select{width:100%;padding:.75rem 1rem;border:1px solid var(--mist);background:var(--washi);font-family:'Noto Serif JP',serif;font-size:.85rem;color:var(--ink);outline:none;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none}
-    .form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--rust);box-shadow:0 0 0 3px var(--rust-light)}
-    .form-group textarea{height:100px;resize:vertical}
-    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
-    .form-submit{width:100%;padding:1rem;background:var(--rust);color:#fff;border:none;font-family:'Shippori Mincho',serif;font-size:.88rem;letter-spacing:.3em;transition:background .2s}
+    #contact{background:var(--washi-dark)}
+    .contact-wrap{display:flex;flex-direction:column;gap:3rem}
+    .contact-info h3{font-size:1.4rem;letter-spacing:.2em;margin-bottom:1rem;line-height:1.6}
+    .contact-info p{font-size:1.05rem;line-height:2.2;color:var(--ink-soft);margin-bottom:2rem}
+    .contact-detail{background:var(--washi);padding:1.5rem;border-left:3px solid var(--rust)}
+    .contact-detail p{margin:.8rem 0;font-size:1rem}
+    .contact-detail strong{color:var(--rust);display:inline-block;min-width:5rem}
+    form{flex:1}
+    .form-group{margin-bottom:1.5rem}
+    .form-label{display:block;font-size:1rem;margin-bottom:.5rem;letter-spacing:.1em}
+    .form-label .required{color:var(--rust);margin-left:.3rem}
+    .form-input,.form-textarea,.form-select{width:100%;padding:.9rem 1rem;border:1px solid var(--mist);background:var(--washi);font-family:inherit;font-size:1rem;transition:border-color .3s}
+    .form-input:focus,.form-textarea:focus,.form-select:focus{outline:none;border-color:var(--rust)}
+    .form-textarea{min-height:150px;resize:vertical}
+    .form-submit{width:100%;background:var(--rust);color:#fff;border:none;padding:1rem;font-size:1.05rem;letter-spacing:.2em;font-family:'Shippori Mincho',serif;cursor:pointer;transition:all .3s}
     .form-submit:hover{background:var(--rust-dark)}
 
     /* FOOTER */
-    footer{background:var(--ink);padding:3rem 1.5rem 5rem;text-align:center}
-    .footer-logo{font-family:'Shippori Mincho',serif;font-size:1.6rem;letter-spacing:.4em;color:var(--washi);margin-bottom:.3rem}
-    .footer-sub{font-family:'EB Garamond',serif;font-style:italic;font-size:.8rem;color:var(--gold);letter-spacing:.3em;margin-bottom:1.8rem}
-    .footer-nav{display:flex;justify-content:center;flex-wrap:wrap;gap:.8rem 1.5rem;margin-bottom:2rem}
-    .footer-nav a{color:var(--mist);font-size:.72rem;letter-spacing:.15em;transition:color .2s}
+    footer{background:var(--ink);color:var(--washi);padding:3rem 1.5rem 2rem;text-align:center}
+    .footer-logo{font-family:'Shippori Mincho',serif;font-size:1.8rem;letter-spacing:.4em;color:var(--washi);margin-bottom:.5rem}
+    .footer-sub{font-size:.85rem;color:var(--gold);letter-spacing:.3em;margin-bottom:2rem}
+    .footer-nav{display:flex;justify-content:center;flex-wrap:wrap;gap:.8rem 1.8rem;margin-bottom:2.5rem}
+    .footer-nav a{color:var(--mist);font-size:.8rem;letter-spacing:.15em;transition:color .2s}
     .footer-nav a:hover{color:var(--gold)}
-    .footer-divider{width:40px;height:1px;background:rgba(255,255,255,.1);margin:0 auto 1.5rem}
-    .footer-copy{font-size:.68rem;color:#5a5048;letter-spacing:.12em}
+    .footer-divider{width:40px;height:1px;background:rgba(255,255,255,.1);margin:0 auto 2rem}
+    .footer-copy{font-size:.75rem;color:#5a5048;letter-spacing:.12em}
 
-    /* DESKTOP */
+    /* RESPONSIVE */
     @media(min-width:768px){
       :root{--nav-h:70px}
       nav{padding:0 3rem}
@@ -276,14 +234,12 @@
       .hero-trust{top:calc(var(--nav-h) + 2rem);right:3rem}
       .section-inner{padding:0 3rem}
       .features-grid{grid-template-columns:repeat(4,1fr)}
-      .gallery-grid{grid-template-columns:repeat(4,1fr);grid-auto-rows:240px}
-      .gallery-item:first-child{grid-column:span 2;grid-row:span 2;height:auto}
+      .gallery-grid{grid-template-columns:repeat(4,1fr)}
       .access-wrap{flex-direction:row;gap:4rem}
-      .access-map{flex:1;height:340px}
+      .access-map{flex:1;height:360px}
       .access-info{flex:1}
       .contact-wrap{flex-direction:row}
-      .contact-info{flex:0 0 280px}
-      .flow-steps::before{left:2.5rem}
+      .contact-info{flex:0 0 300px}
       footer{padding-bottom:4rem}
     }
     @media(min-width:1024px){
@@ -293,10 +249,10 @@
     @media(max-width:767px){
       .nav-links{display:none}
       .nav-hamburger{display:flex}
-      .lang-switch{display:none}
       body{font-size:17px}
-      .feature-desc{font-size:1.05rem}
-      .hero-desc{font-size:1.05rem}
+      .feature-desc,.hero-desc{font-size:1.05rem}
+      .gallery-grid{grid-template-columns:repeat(2,1fr)}
+      .hero-trust{display:none}
     }
   </style>
 </head>
@@ -304,9 +260,7 @@
 
   <div class="sticky-cta" id="stickyCta">
     <div class="sticky-cta-text"><strong>¥8,000</strong> / 泊〜</div>
-    <a href="#contact" class="sticky-cta-btn" onclick="closeMobileNav()">
-      <span data-lang="ja">今すぐ予約</span><span data-lang="en">Reserve Now</span>
-    </a>
+    <a href="#contact" class="sticky-cta-btn" onclick="closeMobileNav()">今すぐ予約</a>
   </div>
 
   <div class="lightbox" id="lightbox">
@@ -315,61 +269,46 @@
   </div>
 
   <nav id="mainNav">
-    <div class="nav-logo">wakana<span>Guest House WAKANA</span></div>
+    <div class="nav-logo">wakana<span>ゲストハウス和歌奈</span></div>
     <ul class="nav-links">
-      <li><a href="#rooms"><span data-lang="ja">お部屋</span><span data-lang="en">Room</span></a></li>
-      <li><a href="#gallery"><span data-lang="ja">写真</span><span data-lang="en">Gallery</span></a></li>
-      <li><a href="#rates"><span data-lang="ja">料金</span><span data-lang="en">Rates</span></a></li>
-      <li><a href="#access"><span data-lang="ja">アクセス</span><span data-lang="en">Access</span></a></li>
-      <li><a href="#contact" class="nav-reserve"><span data-lang="ja">ご予約</span><span data-lang="en">Book</span></a></li>
+      <li><a href="#rooms">お部屋</a></li>
+      <li><a href="#gallery">写真</a></li>
+      <li><a href="#rates">料金</a></li>
+      <li><a href="#access">アクセス</a></li>
+      <li><a href="#contact" class="nav-reserve">ご予約</a></li>
     </ul>
-    <div class="lang-switch">
-      <button class="lang-btn active" onclick="setLang('ja')">JP</button>
-      <button class="lang-btn" onclick="setLang('en')">EN</button>
-    </div>
-    <button class="nav-hamburger" id="hamburger" onclick="toggleMobileNav()" aria-label="メニュー">
+    <button class="nav-hamburger" id="hamburger" onclick="toggleMobileNav()">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
   <div class="nav-drawer" id="navDrawer">
-    <a href="#rooms" onclick="closeMobileNav()"><span data-lang="ja">お部屋</span><span data-lang="en">Room</span></a>
-    <a href="#gallery" onclick="closeMobileNav()"><span data-lang="ja">ギャラリー</span><span data-lang="en">Gallery</span></a>
-    <a href="#rates" onclick="closeMobileNav()"><span data-lang="ja">料金</span><span data-lang="en">Rates</span></a>
-    <a href="#calendar" onclick="closeMobileNav()"><span data-lang="ja">空き状況</span><span data-lang="en">Availability</span></a>
-    <a href="#access" onclick="closeMobileNav()"><span data-lang="ja">アクセス</span><span data-lang="en">Access</span></a>
-    <a href="#contact" class="drawer-reserve" onclick="closeMobileNav()">
-      <span data-lang="ja">ご予約・お問い合わせ</span><span data-lang="en">Book / Contact</span>
-    </a>
-    <div style="display:flex;gap:0;margin-top:1.5rem">
-      <button class="lang-btn active" id="drawerLangJa" onclick="setLang('ja')" style="flex:1;padding:.6rem;font-size:.85rem">JP</button>
-      <button class="lang-btn" id="drawerLangEn" onclick="setLang('en')" style="flex:1;padding:.6rem;font-size:.85rem">EN</button>
-    </div>
+    <a href="#rooms" onclick="closeMobileNav()">お部屋</a>
+    <a href="#gallery" onclick="closeMobileNav()">写真</a>
+    <a href="#rates" onclick="closeMobileNav()">料金</a>
+    <a href="#calendar" onclick="closeMobileNav()">空き状況</a>
+    <a href="#access" onclick="closeMobileNav()">アクセス</a>
+    <a href="#contact" class="drawer-reserve" onclick="closeMobileNav()">ご予約・お問い合わせ</a>
   </div>
 
   <!-- HERO -->
   <section id="home">
     <div class="hero-bg" id="heroBg"></div>
     <div class="hero-overlay"></div>
-    <div class="hero-trust">
-      <div class="trust-item"><span>🏡</span><span data-lang="ja">ホスト同居型</span><span data-lang="en">Host Homestay</span></div>
-      <div class="trust-item"><span>🛁</span><span data-lang="ja">ヒノキ風呂</span><span data-lang="en">Hinoki Bath</span></div>
-      <div class="trust-item"><span>🚗</span><span data-lang="ja">無料送迎</span><span data-lang="en">Free Transfer</span></div>
-    </div>
     <div class="hero-content">
-      <p class="hero-badge">― Guest House in Tsuruoka, Yamagata ―</p>
+      <div class="hero-badge">🏡 ホスト同居型ゲストハウス</div>
       <h1 class="hero-title">wakana</h1>
-      <p class="hero-subtitle">G U E S T &nbsp; H O U S E</p>
-      <p class="hero-desc" data-lang="ja">庄内の里山に佇む、ホームステイ型の宿。<br>ホストと過ごす温かな滞在。ヒノキ風呂と<br>日本庭園が、旅の疲れを静かに癒します。</p>
-      <p class="hero-desc" data-lang="en">A homestay guesthouse in the hills of Tsuruoka.<br>Stay with a local host. Unwind in a hinoki<br>bath beside a Japanese garden.</p>
+      <p class="hero-subtitle">ゲストハウス和歌奈</p>
+      <p class="hero-desc">庄内の里山に佇む、ホームステイ型の宿。ホストと過ごす温かな滞在。ヒノキ風呂と日本庭園が、旅の疲れを静かに癒します。</p>
       <div class="hero-ctas">
-        <a href="#contact" class="btn-hero-primary">
-          <span data-lang="ja">📅 今すぐ予約する</span><span data-lang="en">📅 Reserve Now</span>
-        </a>
-        <a href="#gallery" class="btn-hero-secondary">
-          <span data-lang="ja">写真を見る →</span><span data-lang="en">See Photos →</span>
-        </a>
+        <a href="#contact" class="btn-hero-primary">📅 今すぐ予約する</a>
+        <a href="#gallery" class="btn-hero-secondary">写真を見る →</a>
       </div>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-item">🛁 本格ヒノキ風呂</div>
+      <div class="trust-item">🌿 日本庭園</div>
+      <div class="trust-item">🚗 鶴岡駅 無料送迎</div>
     </div>
     <div class="scroll-hint">SCROLL</div>
   </section>
@@ -377,95 +316,59 @@
   <!-- TRUST BAR -->
   <div class="trust-bar">
     <div class="trust-bar-inner">
-      <div class="trust-bar-item"><span class="icon">★</span><span data-lang="ja">ホストと過ごすゲストハウス</span><span data-lang="en">Host Homestay Style</span></div>
-      <div class="trust-bar-item"><span class="icon">🛁</span><span data-lang="ja">本格ヒノキ風呂</span><span data-lang="en">Authentic Hinoki Bath</span></div>
-      <div class="trust-bar-item"><span class="icon">🌿</span><span data-lang="ja">日本庭園</span><span data-lang="en">Japanese Garden</span></div>
-      <div class="trust-bar-item"><span class="icon">🚗</span><span data-lang="ja">鶴岡駅 無料送迎</span><span data-lang="en">Free Station Transfer</span></div>
-      <div class="trust-bar-item"><span class="icon">💴</span><span data-lang="ja">¥8,000〜 / 泊</span><span data-lang="en">From ¥8,000/night</span></div>
+      <div class="trust-bar-item"><span class="icon">★</span>ホストと過ごすゲストハウス</div>
+      <div class="trust-bar-item"><span class="icon">🛁</span>本格ヒノキ風呂</div>
+      <div class="trust-bar-item"><span class="icon">🌿</span>日本庭園</div>
+      <div class="trust-bar-item"><span class="icon">🚗</span>鶴岡駅 無料送迎</div>
+      <div class="trust-bar-item"><span class="icon">💴</span>¥8,000〜 / 泊</div>
     </div>
   </div>
 
-  <!-- HOMESTAY NOTICE — ホスト同居型であることを明示 -->
-  <section id="homestay-style" style="background:var(--washi);padding:3.5rem 0 0">
+  <!-- INTRO -->
+  <section id="intro">
     <div class="section-inner">
-      <div class="homestay-notice fade-in">
-        <div class="hn-icon">🏠</div>
-        <div class="hn-body">
-          <h2 class="hn-title" data-lang="ja">ホストと過ごす、ホームステイスタイルの宿です</h2>
-          <h2 class="hn-title" data-lang="en">A Homestay-Style Guesthouse — Your Host Lives On-Site</h2>
-          <p class="hn-desc" data-lang="ja">
-            wakana はオーナー（ホスト）が同じ建物に住みながら運営するゲストハウスです。<br>
-            ご宿泊いただくのは<strong>和室1部屋</strong>で、ヒノキ風呂・キッチン・リビング・日本庭園はホストと共用でお使いいただきます。<br>
-            完全な貸し切りではありませんが、その分ホストから鶴岡・庄内の旬な情報をたっぷり聞けるのが魅力です。
-          </p>
-          <p class="hn-desc" data-lang="en">
-            wakana is run by a resident host who lives in the same building.<br>
-            You'll have your own <strong>private tatami room</strong>, while the hinoki bath, kitchen, living room, and garden are shared with your host.<br>
-            It's not a private rental — but that's the point. Your host is a great resource for local tips, food, and culture.
-          </p>
-          <div class="hn-tags">
-            <span class="hn-tag hn-tag--ok" data-lang="ja">✓ 和室 個室（鍵付き）</span>
-            <span class="hn-tag hn-tag--ok" data-lang="ja">✓ ヒノキ風呂・庭園・キッチン利用可</span>
-            <span class="hn-tag hn-tag--ok" data-lang="ja">✓ ホストから地元情報が聞ける</span>
-            <span class="hn-tag hn-tag--no" data-lang="ja">✗ 建物の完全貸し切りではありません</span>
-            <span class="hn-tag hn-tag--ok" data-lang="en">✓ Private tatami room (lockable)</span>
-            <span class="hn-tag hn-tag--ok" data-lang="en">✓ Hinoki bath, garden &amp; kitchen access</span>
-            <span class="hn-tag hn-tag--ok" data-lang="en">✓ Local insights from your host</span>
-            <span class="hn-tag hn-tag--no" data-lang="en">✗ Not a whole-house rental</span>
-          </div>
+      <div class="intro-box fade-in">
+        <h3>ホストと過ごす、ホームステイスタイルの宿です</h3>
+        <p>wakana はオーナー（ホスト）が同じ建物に住みながら運営するゲストハウスです。ご宿泊いただくのは和室1部屋で、ヒノキ風呂・キッチン・リビング・日本庭園はホストと共用でお使いいただけます。</p>
+        <p>完全な貸し切りではありませんが、その分ホストから鶴岡・庄内の旬な情報をたっぷり聞けるのが魅力です。地元の人だからこそ知っている、とっておきのお店や季節の見どころをお教えします。</p>
+        <div class="intro-list">
+          <li>和室の個室（鍵付き）でプライベートも確保</li>
+          <li>ヒノキ風呂・庭園・キッチンをご自由にご利用可能</li>
+          <li>ホストから地元の観光情報やおすすめグルメを直接聞ける</li>
         </div>
+        <p class="intro-note"><strong>※ ご注意：</strong>建物の完全貸し切りではありません。ホストと交流しながら過ごすスタイルをご理解の上、ご予約ください。</p>
       </div>
     </div>
   </section>
 
-  <style>
-    .homestay-notice{display:flex;gap:1.5rem;background:var(--washi-dark);border:1px solid var(--mist);border-left:4px solid var(--moss);padding:2rem 1.5rem}
-    .hn-icon{font-size:2.5rem;flex-shrink:0;line-height:1;padding-top:.2rem}
-    .hn-title{font-family:'Shippori Mincho',serif;font-size:1.05rem;letter-spacing:.15em;color:var(--ink);margin-bottom:.8rem;line-height:1.7}
-    .hn-desc{font-size:.82rem;line-height:2.1;color:#5a4e44;margin-bottom:1rem}
-    .hn-desc strong{color:var(--ink);font-weight:600}
-    .hn-tags{display:flex;flex-wrap:wrap;gap:.5rem}
-    .hn-tag{font-size:.73rem;letter-spacing:.08em;padding:.3rem .8rem}
-    .hn-tag--ok{background:rgba(74,92,62,.1);color:var(--moss)}
-    .hn-tag--no{background:rgba(139,58,42,.08);color:var(--rust)}
-    @media(max-width:480px){.homestay-notice{flex-direction:column;gap:1rem}.hn-icon{font-size:2rem}}
-  </style>
+  <!-- FEATURES -->
   <section id="features">
     <div class="section-inner">
       <div class="section-header fade-in">
         <span class="section-en">Features</span>
-        <h2 class="section-title" data-lang="ja">wakana の特徴</h2>
-        <h2 class="section-title" data-lang="en">Why wakana</h2>
+        <h2 class="section-title">wakana の特徴</h2>
         <div class="divider"></div>
       </div>
       <div class="features-grid">
-        <div class="feature-item fade-in fade-in-d1">
+        <div class="feature-item fade-in">
           <div class="feature-icon">🏡</div>
-          <h3 class="feature-title" data-lang="ja">ホストと暮らすように泊まる</h3>
-          <h3 class="feature-title" data-lang="en">Live Like a Local</h3>
-          <p class="feature-desc" data-lang="ja">オーナーと同じ建物で過ごす、ホームステイスタイルの滞在。観光情報やご当地グルメもお気軽にどうぞ。</p>
-          <p class="feature-desc" data-lang="en">Stay in the same home as your host. Ask them about local tips, food, and hidden gems in Tsuruoka.</p>
+          <h3 class="feature-title">ホストと暮らすように泊まる</h3>
+          <p class="feature-desc">オーナーと同じ建物で過ごす、ホームステイスタイルの滞在。観光情報やご当地グルメもお気軽にどうぞ。</p>
         </div>
-        <div class="feature-item fade-in fade-in-d2">
+        <div class="feature-item fade-in">
           <div class="feature-icon">🛁</div>
-          <h3 class="feature-title" data-lang="ja">本格ヒノキ風呂</h3>
-          <h3 class="feature-title" data-lang="en">Hinoki Wood Bath</h3>
-          <p class="feature-desc" data-lang="ja">ヒノキの香りが漂う贅沢な浴槽。旅の疲れをゆっくりほぐしてください。</p>
-          <p class="feature-desc" data-lang="en">Soak in the soothing scent of Japanese cypress. Pure relaxation.</p>
+          <h3 class="feature-title">本格ヒノキ風呂</h3>
+          <p class="feature-desc">ヒノキの香りが漂う贅沢な浴槽。旅の疲れをゆっくりほぐしてください。庭を眺めながらの入浴は格別です。</p>
         </div>
-        <div class="feature-item fade-in fade-in-d1">
+        <div class="feature-item fade-in">
           <div class="feature-icon">🌿</div>
-          <h3 class="feature-title" data-lang="ja">四季の日本庭園</h3>
-          <h3 class="feature-title" data-lang="en">Japanese Garden</h3>
-          <p class="feature-desc" data-lang="ja">春の水仙、夏の緑、秋の紅葉、冬の雪景色。四季折々の美しさをお楽しみください。</p>
-          <p class="feature-desc" data-lang="en">Experience the garden through all four seasons.</p>
+          <h3 class="feature-title">四季の日本庭園</h3>
+          <p class="feature-desc">春の水仙、夏の緑、秋の紅葉、冬の雪景色。季節ごとに表情を変える庭園をお楽しみください。</p>
         </div>
-        <div class="feature-item fade-in fade-in-d2">
+        <div class="feature-item fade-in">
           <div class="feature-icon">🚗</div>
-          <h3 class="feature-title" data-lang="ja">鶴岡駅 無料送迎</h3>
-          <h3 class="feature-title" data-lang="en">Free Station Transfer</h3>
-          <p class="feature-desc" data-lang="ja">JR鶴岡駅からの無料送迎サービス。ご予約時にお申し付けください。</p>
-          <p class="feature-desc" data-lang="en">Complimentary transfer from Tsuruoka Station. Just let us know when you book.</p>
+          <h3 class="feature-title">鶴岡駅 無料送迎</h3>
+          <p class="feature-desc">JR鶴岡駅からの無料送迎サービス。ご予約時にお申し付けください。お車でお越しの方は無料駐車場もございます。</p>
         </div>
       </div>
     </div>
@@ -476,46 +379,35 @@
     <div class="section-inner">
       <div class="section-header fade-in">
         <span class="section-en">Room</span>
-        <h2 class="section-title" data-lang="ja">お部屋</h2>
-        <h2 class="section-title" data-lang="en">The Room</h2>
+        <h2 class="section-title">お部屋</h2>
         <div class="divider"></div>
       </div>
       <div class="room-card fade-in">
         <div class="room-img">
           <img src="images/living.jpg" alt="和室 畳の部屋" loading="lazy">
-          <div class="room-badge" data-lang="ja">和室 1部屋</div>
-          <div class="room-badge" data-lang="en">1 Private Room</div>
+          <div class="room-badge">和室 1部屋</div>
         </div>
         <div class="room-info">
           <p class="room-en">Japanese Style Room</p>
-          <h3 class="room-name" data-lang="ja">和室</h3>
-          <h3 class="room-name" data-lang="en">Washitsu</h3>
-          <p class="room-desc" data-lang="ja">畳の香り漂う和室で、ゆったりとお過ごしください。ヒノキ風呂・日本庭園・リビング・キッチンはホストと共用でご利用いただけます。</p>
-          <p class="room-desc" data-lang="en">A calm tatami room, just for you. Hinoki bath, garden, lounge &amp; kitchen are shared with your host.</p>
-          <div class="room-amenities">
-            <span class="amenity-tag" data-lang="ja">🛁 ヒノキ風呂（共用）</span>
-            <span class="amenity-tag" data-lang="ja">🌿 日本庭園（共用）</span>
-            <span class="amenity-tag" data-lang="ja">🍳 キッチン（共用）</span>
-            <span class="amenity-tag" data-lang="ja">📶 Wi-Fi</span>
-            <span class="amenity-tag" data-lang="ja">🚿 タオル完備</span>
-            <span class="amenity-tag" data-lang="ja">🚗 無料送迎</span>
-            <span class="amenity-tag" data-lang="en">🛁 Hinoki Bath (shared)</span>
-            <span class="amenity-tag" data-lang="en">🌿 Garden (shared)</span>
-            <span class="amenity-tag" data-lang="en">🍳 Kitchen (shared)</span>
-            <span class="amenity-tag" data-lang="en">📶 Wi-Fi</span>
-            <span class="amenity-tag" data-lang="en">🚗 Free Transfer</span>
-          </div>
-          <div class="room-footer">
+          <h3 class="room-name">和室</h3>
+          <p class="room-desc">畳の香り漂う和室で、ゆったりとお過ごしください。ヒノキ風呂・日本庭園・リビング・キッチンはホストと共用でご利用いただけます。窓からは四季折々の庭園が望めます。</p>
+          <ul class="room-amenities">
+            <li>🛁 ヒノキ風呂（共用）</li>
+            <li>🌿 日本庭園（共用）</li>
+            <li>🍳 キッチン（共用）</li>
+            <li>📶 Wi-Fi</li>
+            <li>🚿 タオル完備</li>
+            <li>🚗 無料送迎</li>
+          </ul>
+          <div class="room-price-wrap">
             <div>
-              <div class="room-price-label" data-lang="ja">1泊あたり</div>
-              <div class="room-price-label" data-lang="en">Per night</div>
-              <div class="room-price">¥8,000<span data-lang="ja"> / 泊</span><span data-lang="en"> /night</span></div>
-              <div class="room-meta-mini" data-lang="ja">CI 15:00 / CO 10:00</div>
-              <div class="room-meta-mini" data-lang="en">CI 15:00 / CO 10:00</div>
+              <p class="room-price-label">1泊あたり</p>
+              <p class="room-price">¥8,000<span> / 泊</span></p>
+              <p class="room-checkin">チェックイン 15:00 / チェックアウト 10:00</p>
             </div>
-            <a href="#contact" class="btn-room-reserve">
-              <span data-lang="ja">予約する →</span><span data-lang="en">Book Now →</span>
-            </a>
+          </div>
+          <div class="room-cta">
+            <a href="#contact" class="btn-room">予約する →</a>
           </div>
         </div>
       </div>
@@ -527,73 +419,45 @@
     <div class="section-inner">
       <div class="section-header fade-in">
         <span class="section-en">Gallery</span>
-        <h2 class="section-title" data-lang="ja">ギャラリー</h2>
-        <h2 class="section-title" data-lang="en">Gallery</h2>
+        <h2 class="section-title">ギャラリー</h2>
         <div class="divider"></div>
       </div>
       <div class="gallery-grid fade-in">
         <div class="gallery-item" onclick="openLightbox('images/chokai_mountain.jpg')">
           <img src="images/chokai_mountain.jpg" alt="鳥海山と田んぼ" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">鳥海山</span><span class="gallery-label" data-lang="en">Mt. Chokai</span></div>
+          <div class="gallery-overlay"><span class="gallery-label">鳥海山</span></div>
         </div>
         <div class="gallery-item" onclick="openLightbox('images/garden.jpg')">
           <img src="images/garden.jpg" alt="日本庭園" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">庭園</span><span class="gallery-label" data-lang="en">Garden</span></div>
+          <div class="gallery-overlay"><span class="gallery-label">庭園</span></div>
         </div>
         <div class="gallery-item" onclick="openLightbox('images/exterior.jpg')">
           <img src="images/exterior.jpg" alt="外観" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">外観</span><span class="gallery-label" data-lang="en">Exterior</span></div>
+          <div class="gallery-overlay"><span class="gallery-label">外観</span></div>
         </div>
         <div class="gallery-item" onclick="openLightbox('images/living.jpg')">
           <img src="images/living.jpg" alt="リビング" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">リビング</span><span class="gallery-label" data-lang="en">Living</span></div>
+          <div class="gallery-overlay"><span class="gallery-label">リビング</span></div>
         </div>
         <div class="gallery-item" onclick="openLightbox('images/bonfire.jpg')">
           <img src="images/bonfire.jpg" alt="焚き火スペース" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">焚き火</span><span class="gallery-label" data-lang="en">Bonfire</span></div>
+          <div class="gallery-overlay"><span class="gallery-label">焚き火</span></div>
         </div>
         <div class="gallery-item" onclick="openLightbox('images/kitchen.jpg')">
           <img src="images/kitchen.jpg" alt="キッチン" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">キッチン</span><span class="gallery-label" data-lang="en">Kitchen</span></div>
+          <div class="gallery-overlay"><span class="gallery-label">キッチン</span></div>
         </div>
         <div class="gallery-item" onclick="openLightbox('images/winter_mountain.jpg')">
           <img src="images/winter_mountain.jpg" alt="冬の鳥海山" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">冬景色</span><span class="gallery-label" data-lang="en">Winter</span></div>
+          <div class="gallery-overlay"><span class="gallery-label">冬景色</span></div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- REVIEWS -->
-  <section id="reviews">
-    <div class="section-inner">
-      <div class="section-header fade-in">
-        <span class="section-en">Guest Reviews</span>
-        <h2 class="section-title" data-lang="ja">お客様の声</h2>
-        <h2 class="section-title" data-lang="en">Guest Reviews</h2>
-        <div class="divider"></div>
-      </div>
-      <div class="reviews-scroll fade-in">
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text" data-lang="ja">ヒノキ風呂が最高でした。庭を眺めながらゆっくりでき、日常を忘れられます。また来ます。</p>
-          <p class="review-text" data-lang="en">The hinoki bath was incredible. Gazing at the garden while soaking – I completely forgot everyday stress. Will definitely return.</p>
-          <p class="review-author">M.T. — 2024年11月</p>
-          <span class="review-quote">"</span>
+        <div class="gallery-item" onclick="openLightbox('images/gallery-1.jpg')">
+          <img src="images/gallery-1.jpg" alt="日本庭園と夕日" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-label">夕景</span></div>
         </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text" data-lang="ja">静かで落ち着いた環境に感動。オーナーさんが親切で、鶴岡の観光スポットをたくさん教えてくれました。</p>
-          <p class="review-text" data-lang="en">Beautifully quiet. The host was incredibly kind and gave us great local tips for exploring Tsuruoka.</p>
-          <p class="review-author">K.S. — 2024年9月</p>
-          <span class="review-quote">"</span>
-        </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text" data-lang="ja">ホストさんがとても親切で、地元のおすすめスポットをたくさん教えてもらいました。庭の景色が季節ごとに変わるのも魅力的です。</p>
-          <p class="review-text" data-lang="en">Our host was so welcoming and full of local recommendations. The seasonal garden views are absolutely stunning.</p>
-          <p class="review-author">A.W. — 2025年3月</p>
-          <span class="review-quote">"</span>
+        <div class="gallery-item" onclick="openLightbox('images/gallery-2.jpg')">
+          <img src="images/gallery-2.jpg" alt="春の庭・水仙" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-label">春の庭</span></div>
         </div>
       </div>
     </div>
@@ -603,44 +467,32 @@
   <section id="rates">
     <div class="section-inner">
       <div class="section-header fade-in">
-        <span class="section-en">Rates &amp; Reservation</span>
-        <h2 class="section-title" data-lang="ja">料金・ご予約</h2>
-        <h2 class="section-title" data-lang="en">Rates &amp; Booking</h2>
+        <span class="section-en">Rates & Reservation</span>
+        <h2 class="section-title">料金・ご予約</h2>
         <div class="divider"></div>
       </div>
-      <div class="rate-card fade-in">
-        <p class="rate-type">Japanese Style Room — Host Homestay</p>
-        <h3 class="rate-name" data-lang="ja">和室 1部屋プラン</h3>
-        <h3 class="rate-name" data-lang="en">Washitsu Room Plan</h3>
-        <div class="rate-price-row">
-          <span class="rate-price">¥8,000</span>
-          <span class="rate-price-unit" data-lang="ja">/ 泊〜（税込）</span>
-          <span class="rate-price-unit" data-lang="en">/ night (tax incl.)</span>
+      <div class="rate-box fade-in">
+        <div class="rate-header">
+          <p class="rate-type">Japanese Style Room — Host Homestay</p>
+          <h3 class="rate-name">和室 1部屋プラン</h3>
         </div>
-        <span class="rate-savings" data-lang="ja">✓ ホストと過ごすホームステイスタイル</span>
-        <span class="rate-savings" data-lang="en">✓ Host homestay style</span>
-        <ul class="rate-includes">
-          <li data-lang="ja">和室（畳）個室 ※ホストと同居</li>
-          <li data-lang="ja">ヒノキ風呂（ホストと共用）</li>
-          <li data-lang="ja">日本庭園</li>
-          <li data-lang="ja">リビング・キッチン完備</li>
-          <li data-lang="ja">Wi-Fi（無料）</li>
-          <li data-lang="ja">タオル・アメニティ完備</li>
-          <li data-lang="ja">鶴岡駅 無料送迎（要予約）</li>
-          <li data-lang="en">Private tatami room (host on-site)</li>
-          <li data-lang="en">Hinoki wood bath (shared with host)</li>
-          <li data-lang="en">Japanese garden access</li>
-          <li data-lang="en">Living room &amp; kitchen</li>
-          <li data-lang="en">Free Wi-Fi</li>
-          <li data-lang="en">Towels &amp; amenities</li>
-          <li data-lang="en">Free transfer from Tsuruoka Station</li>
+        <div class="rate-price-box">
+          <p class="rate-price">¥8,000<span class="rate-price-unit"> / 泊〜（税込）</span></p>
+          <div class="rate-badge">✓ ホストと過ごすホームステイスタイル</div>
+        </div>
+        <ul class="rate-amenities">
+          <li>和室（畳）個室 ※ホストと同居</li>
+          <li>ヒノキ風呂（ホストと共用）</li>
+          <li>日本庭園</li>
+          <li>リビング・キッチン完備</li>
+          <li>Wi-Fi（無料）</li>
+          <li>タオル・アメニティ完備</li>
+          <li>鶴岡駅 無料送迎（要予約）</li>
         </ul>
-        <p class="rate-note" data-lang="ja">チェックイン 15:00〜　／　チェックアウト 〜10:00<br>※早期・遅延はご相談ください</p>
-        <p class="rate-note" data-lang="en">Check-in from 15:00 / Check-out by 10:00<br>※ Early/late available on request</p>
+        <p class="rate-note">チェックイン 15:00〜　／　チェックアウト 〜10:00<br>※早期・遅延はご相談ください</p>
       </div>
       <div class="book-wrap fade-in">
-        <a href="#contact" class="btn-gold" data-lang="ja">ご予約・お問い合わせ</a>
-        <a href="#contact" class="btn-gold" data-lang="en">Book / Enquire</a>
+        <a href="#contact" class="btn-gold">ご予約・お問い合わせ</a>
       </div>
     </div>
   </section>
@@ -650,8 +502,7 @@
     <div class="section-inner">
       <div class="section-header fade-in">
         <span class="section-en">How to Book</span>
-        <h2 class="section-title" data-lang="ja">ご予約の流れ</h2>
-        <h2 class="section-title" data-lang="en">Booking Steps</h2>
+        <h2 class="section-title">ご予約の流れ</h2>
         <div class="divider"></div>
       </div>
       <div class="flow-steps">
@@ -659,40 +510,32 @@
           <div class="flow-num-wrap"><span class="flow-num">01</span></div>
           <div class="flow-body">
             <div class="flow-icon-s">📅</div>
-            <h3 class="flow-title" data-lang="ja">空き日程を確認</h3>
-            <h3 class="flow-title" data-lang="en">Check Availability</h3>
-            <p class="flow-desc" data-lang="ja">下部のカレンダーで空き状況をご確認ください。</p>
-            <p class="flow-desc" data-lang="en">Use the availability calendar below to find your dates.</p>
+            <h3 class="flow-title">空き日程を確認</h3>
+            <p class="flow-desc">下部のカレンダーで空き状況をご確認ください。ご希望の日程がございましたら、お早めのご予約をおすすめします。</p>
           </div>
         </div>
         <div class="flow-item fade-in">
           <div class="flow-num-wrap"><span class="flow-num">02</span></div>
           <div class="flow-body">
             <div class="flow-icon-s">📩</div>
-            <h3 class="flow-title" data-lang="ja">フォームからご予約</h3>
-            <h3 class="flow-title" data-lang="en">Send a Request</h3>
-            <p class="flow-desc" data-lang="ja">フォームからご予約ください。2営業日以内にご連絡いたします。</p>
-            <p class="flow-desc" data-lang="en">Fill in the form. We'll reply within 2 business days.</p>
+            <h3 class="flow-title">フォームからご予約</h3>
+            <p class="flow-desc">フォームからご予約ください。2営業日以内にご連絡いたします。ご不明な点がございましたら、お気軽にお問い合わせください。</p>
           </div>
         </div>
         <div class="flow-item fade-in">
           <div class="flow-num-wrap"><span class="flow-num">03</span></div>
           <div class="flow-body">
             <div class="flow-icon-s">🚗</div>
-            <h3 class="flow-title" data-lang="ja">チェックイン（15:00〜）</h3>
-            <h3 class="flow-title" data-lang="en">Check In (from 15:00)</h3>
-            <p class="flow-desc" data-lang="ja">鶴岡駅からの送迎をご希望の方は事前にお申し付けください。</p>
-            <p class="flow-desc" data-lang="en">Need a station pickup? Just let us know in advance.</p>
+            <h3 class="flow-title">チェックイン（15:00〜）</h3>
+            <p class="flow-desc">鶴岡駅からの送迎をご希望の方は事前にお申し付けください。当日はゆっくりとお寛ぎください。</p>
           </div>
         </div>
         <div class="flow-item fade-in">
           <div class="flow-num-wrap"><span class="flow-num">04</span></div>
           <div class="flow-body">
             <div class="flow-icon-s">🏠</div>
-            <h3 class="flow-title" data-lang="ja">ゆっくりとお過ごしください</h3>
-            <h3 class="flow-title" data-lang="en">Settle In &amp; Relax</h3>
-            <p class="flow-desc" data-lang="ja">ヒノキ風呂・庭園・キッチンをご自由にお使いください。ご不明な点はホストにお気軽に。</p>
-            <p class="flow-desc" data-lang="en">Hinoki bath, garden, and kitchen are all available. Ask your host anything — we're here to help.</p>
+            <h3 class="flow-title">ゆっくりとお過ごしください</h3>
+            <p class="flow-desc">ヒノキ風呂・庭園・キッチンをご自由にお使いください。ご不明な点はホストにお気軽にお声がけください。</p>
           </div>
         </div>
       </div>
@@ -704,24 +547,12 @@
     <div class="section-inner">
       <div class="section-header fade-in">
         <span class="section-en">Reservation</span>
-        <h2 class="section-title" data-lang="ja">ご予約</h2>
-        <h2 class="section-title" data-lang="en">Book Now</h2>
+        <h2 class="section-title">ご予約</h2>
         <div class="divider"></div>
       </div>
-      <div class="calendar-wrap fade-in" style="text-align: center; padding: 3rem 1.5rem;">
-        <p data-lang="ja" style="font-size: 1.1rem; line-height: 2; margin-bottom: 2rem; color: var(--ink-soft);">
-          ご予約はAirRESERVEにて承っております。<br>
-          下記のボタンより空室状況の確認と予約が可能です。
-        </p>
-        <p data-lang="en" style="font-size: 1.1rem; line-height: 2; margin-bottom: 2rem; color: var(--ink-soft);">
-          Please book through AirRESERVE.<br>
-          Check availability and make a reservation below.
-        </p>
-        <a href="https://airrsv.net/guesthouse-wakana/calendar" target="_blank" rel="noopener" 
-           style="display: inline-block; background: var(--rust); color: #fff; padding: 1.1rem 2.5rem; font-size: 1rem; letter-spacing: .2em; font-family: 'Shippori Mincho', serif; transition: all .3s; text-decoration: none;">
-          <span data-lang="ja">📅 予約カレンダーを見る</span>
-          <span data-lang="en">📅 View Availability</span>
-        </a>
+      <div class="calendar-wrap fade-in">
+        <p>ご予約はAirRESERVEにて承っております。<br>下記のボタンより空室状況の確認と予約が可能です。</p>
+        <a href="https://airrsv.net/guesthouse-wakana/calendar" target="_blank" rel="noopener">📅 予約カレンダーを見る</a>
       </div>
     </div>
   </section>
@@ -731,8 +562,7 @@
     <div class="section-inner">
       <div class="section-header fade-in">
         <span class="section-en">Access</span>
-        <h2 class="section-title" data-lang="ja">アクセス</h2>
-        <h2 class="section-title" data-lang="en">Access</h2>
+        <h2 class="section-title">アクセス</h2>
         <div class="divider"></div>
       </div>
       <div class="access-wrap">
@@ -740,25 +570,18 @@
           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d194.47795362191195!2d139.81271913773594!3d38.748856063080716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sjp!4v1771854525264!5m2!1sen!2sjp" width="100%" height="100%" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="wakana アクセスマップ"></iframe>
         </div>
         <div class="access-info fade-in">
-          <h3 data-lang="ja">〒997-0XXX<br>山形県鶴岡市高田下村25-2</h3>
-          <h3 data-lang="en">25-2 Takata-shimomura, Tsuruoka, Yamagata</h3>
+          <h3>〒997-0XXX<br>山形県鶴岡市高田下村25-2</h3>
           <ul class="access-list">
             <li>
-              <span class="access-label" data-lang="ja">電　車</span>
-              <span class="access-label" data-lang="en">Train</span>
-              <span data-lang="ja">JR「鶴岡」駅より無料送迎（要予約）／タクシー約10分</span>
-              <span data-lang="en">Free transfer from JR Tsuruoka Sta. / Taxi approx. 10 min</span>
+              <span class="access-label">電　車</span>
+              <span>JR「鶴岡」駅より無料送迎（要予約）／タクシー約10分</span>
             </li>
             <li>
-              <span class="access-label" data-lang="ja">お車</span>
-              <span class="access-label" data-lang="en">By Car</span>
-              <span data-lang="ja">山形道「鶴岡IC」より約20分 ／ 無料駐車場（2台）</span>
-              <span data-lang="en">20 min from Tsuruoka IC / Free parking for 2 cars</span>
+              <span class="access-label">お車</span>
+              <span>山形道「鶴岡IC」より約20分 ／ 無料駐車場（2台）</span>
             </li>
           </ul>
-          <a href="https://maps.google.com?q=38.748856,139.812719" target="_blank" rel="noopener" class="access-dir-btn">
-            <span data-lang="ja">🗺 Google マップで開く</span><span data-lang="en">🗺 Open in Google Maps</span>
-          </a>
+          <a href="https://maps.google.com?q=38.748856,139.812719" target="_blank" rel="noopener" class="access-dir-btn">🗺 Google マップで開く</a>
         </div>
       </div>
     </div>
@@ -768,95 +591,85 @@
   <section id="contact">
     <div class="section-inner">
       <div class="section-header fade-in">
-        <span class="section-en">Reservation &amp; Contact</span>
-        <h2 class="section-title" data-lang="ja">ご予約・お問い合わせ</h2>
-        <h2 class="section-title" data-lang="en">Book / Enquire</h2>
+        <span class="section-en">Reservation & Contact</span>
+        <h2 class="section-title">ご予約・お問い合わせ</h2>
         <div class="divider"></div>
       </div>
       <div class="contact-wrap">
         <div class="contact-info fade-in">
-          <h3 data-lang="ja">ご予約・ご質問は<br>お気軽にどうぞ</h3>
-          <h3 data-lang="en">We'd love<br>to hear from you</h3>
-          <p data-lang="ja">はじめての方もお気軽に。心よりお待ち申し上げております。</p>
-          <p data-lang="en">First time visiting? No worries. We're happy to answer any questions.</p>
+          <h3>ご予約・ご質問は<br>お気軽にどうぞ</h3>
+          <p>はじめての方もお気軽にお問い合わせください。心よりお待ち申し上げております。</p>
           <div class="contact-detail">
             <p><strong>Email</strong>wakana@example.com</p>
-            <p><strong data-lang="ja">受付</strong><strong data-lang="en">Hours</strong>&nbsp;9:00〜21:00</p>
+            <p><strong>受付</strong>9:00〜21:00</p>
           </div>
         </div>
         <form class="fade-in" onsubmit="handleSubmit(event)">
-          <div class="form-row">
-            <div class="form-group">
-              <label data-lang="ja">お名前 <span class="req">*</span></label>
-              <label data-lang="en">Name <span class="req">*</span></label>
-              <input type="text" placeholder="山田 太郎" required>
-            </div>
-            <div class="form-group">
-              <label data-lang="ja">メールアドレス <span class="req">*</span></label>
-              <label data-lang="en">Email <span class="req">*</span></label>
-              <input type="email" placeholder="example@mail.com" required>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label data-lang="ja">チェックイン希望日</label>
-              <label data-lang="en">Check-in Date</label>
-              <input type="date" id="checkinDate">
-            </div>
-            <div class="form-group">
-              <label data-lang="ja">泊数</label>
-              <label data-lang="en">Nights</label>
-              <select>
-                <option>1泊</option><option>2泊</option><option>3泊</option><option>4泊以上</option>
-              </select>
-            </div>
+          <div class="form-group">
+            <label class="form-label">お名前<span class="required">*</span></label>
+            <input type="text" class="form-input" required>
           </div>
           <div class="form-group">
-            <label data-lang="ja">送迎ご希望</label>
-            <label data-lang="en">Transfer Request</label>
-            <select>
-              <option data-lang="ja">希望する（鶴岡駅からの無料送迎）</option>
-              <option data-lang="ja">希望しない</option>
-              <option data-lang="en">Yes – free transfer from Tsuruoka Station</option>
-              <option data-lang="en">No – I have my own transport</option>
+            <label class="form-label">メールアドレス<span class="required">*</span></label>
+            <input type="email" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">チェックイン希望日</label>
+            <input type="date" class="form-input" id="checkinDate">
+          </div>
+          <div class="form-group">
+            <label class="form-label">泊数</label>
+            <select class="form-select">
+              <option>1泊</option>
+              <option>2泊</option>
+              <option>3泊</option>
+              <option>4泊以上</option>
             </select>
           </div>
           <div class="form-group">
-            <label data-lang="ja">ご質問・ご要望</label>
-            <label data-lang="en">Message</label>
-            <textarea placeholder="ご自由にどうぞ"></textarea>
+            <label class="form-label">送迎ご希望</label>
+            <select class="form-select">
+              <option>希望する（鶴岡駅からの無料送迎）</option>
+              <option>希望しない</option>
+            </select>
           </div>
-          <button type="submit" class="form-submit">
-            <span data-lang="ja">送　信</span><span data-lang="en">Send</span>
-          </button>
+          <div class="form-group">
+            <label class="form-label">ご質問・ご要望</label>
+            <textarea class="form-textarea"></textarea>
+          </div>
+          <button type="submit" class="form-submit">送　信</button>
         </form>
       </div>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <p class="footer-logo">wakana</p>
-    <p class="footer-sub">Guest House WAKANA, Tsuruoka, Yamagata</p>
-    <ul class="footer-nav">
-      <li><a href="#home"><span data-lang="ja">ホーム</span><span data-lang="en">Home</span></a></li>
-      <li><a href="#rooms"><span data-lang="ja">お部屋</span><span data-lang="en">Room</span></a></li>
-      <li><a href="#gallery"><span data-lang="ja">写真</span><span data-lang="en">Gallery</span></a></li>
-      <li><a href="#rates"><span data-lang="ja">料金</span><span data-lang="en">Rates</span></a></li>
-      <li><a href="#calendar"><span data-lang="ja">空き状況</span><span data-lang="en">Availability</span></a></li>
-      <li><a href="#access"><span data-lang="ja">アクセス</span><span data-lang="en">Access</span></a></li>
-      <li><a href="#contact"><span data-lang="ja">ご予約</span><span data-lang="en">Book</span></a></li>
-    </ul>
+    <div class="footer-logo">wakana</div>
+    <div class="footer-sub">ゲストハウス和歌奈</div>
+    <nav class="footer-nav">
+      <a href="#home">ホーム</a>
+      <a href="#rooms">お部屋</a>
+      <a href="#gallery">写真</a>
+      <a href="#rates">料金</a>
+      <a href="#calendar">空き状況</a>
+      <a href="#access">アクセス</a>
+      <a href="#contact">ご予約</a>
+    </nav>
     <div class="footer-divider"></div>
     <p class="footer-copy">© 2025 Guest House WAKANA. All rights reserved.</p>
   </footer>
 
   <script>
     // NAV SCROLL
-    const mainNav = document.getElementById('mainNav');
-    const stickyCta = document.getElementById('stickyCta');
     window.addEventListener('scroll', () => {
+      document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // STICKY CTA
+    window.addEventListener('scroll', () => {
+      const stickyCta = document.getElementById('stickyCta');
       const y = window.scrollY;
-      mainNav.classList.toggle('scrolled', y > 20);
       const heroH = document.getElementById('home').offsetHeight;
       stickyCta.classList.toggle('show', y > heroH * 0.6);
     });
@@ -876,14 +689,6 @@
       document.getElementById('hamburger').classList.remove('open');
       document.getElementById('navDrawer').classList.remove('open');
       document.body.style.overflow = '';
-    }
-
-    // LANG SWITCH
-    function setLang(lang) {
-      document.body.classList.toggle('lang-en', lang === 'en');
-      document.querySelectorAll('.lang-btn, #drawerLangJa, #drawerLangEn').forEach(b => {
-        b.classList.toggle('active', (lang === 'ja') === (b.textContent.trim() === 'JP'));
-      });
     }
 
     // FADE-IN
@@ -912,16 +717,8 @@
       const btn = e.target.querySelector('.form-submit');
       btn.textContent = '✓ 送信完了';
       btn.style.background = '#4a5c3e';
-      setTimeout(() => alert('お問い合わせを承りました。2営業日以内にご連絡いたします。\nThank you! We will be in touch within 2 business days.'), 100);
+      setTimeout(() => alert('お問い合わせを承りました。2営業日以内にご連絡いたします。'), 100);
     }
-
-    // CALENDAR
-    const bookedDates = [
-      '2026-02-25','2026-02-26','2026-02-27',
-      '2026-03-05','2026-03-06',
-      '2026-03-15','2026-03-16','2026-03-17','2026-03-18','2026-03-22'
-    ];
   </script>
 </body>
 </html>
-
