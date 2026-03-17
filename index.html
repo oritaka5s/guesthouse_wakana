@@ -18,7 +18,7 @@
     :root{--ink:#1a1410;--ink-soft:#3d3328;--washi:#f7f2ea;--washi-dark:#ede6d8;--sand:#e6ddc8;--rust:#8b3a2a;--rust-dark:#6e2e1e;--rust-light:rgba(139,58,42,.08);--moss:#4a5c3e;--gold:#b8963e;--gold-light:rgba(184,150,62,.15);--mist:#d4cfc5;--shadow-sm:0 2px 12px rgba(26,20,16,.08);--shadow-md:0 8px 40px rgba(26,20,16,.12);--nav-h:64px}
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{font-family:'Noto Serif JP',serif;background:var(--washi);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    body{font-family:'Noto Serif JP',serif;background:var(--washi);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased;font-size:18px}
     img{max-width:100%;display:block}
     a{color:inherit;text-decoration:none}
     ul{list-style:none}
@@ -81,11 +81,11 @@
     .hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(184,150,62,.2);border:1px solid rgba(184,150,62,.45);backdrop-filter:blur(4px);padding:.4rem 1rem;margin-bottom:1.2rem;font-family:'EB Garamond',serif;font-style:italic;font-size:.8rem;letter-spacing:.25em;color:var(--gold)}
     .hero-title{font-family:'Shippori Mincho',serif;font-size:clamp(3.5rem,14vw,8rem);font-weight:600;letter-spacing:.3em;line-height:.9;color:#fff;margin-bottom:.5rem}
     .hero-subtitle{font-family:'EB Garamond',serif;font-size:clamp(.85rem,2.5vw,1.1rem);letter-spacing:.5em;color:var(--gold);margin-bottom:1.2rem}
-    .hero-desc{font-size:.87rem;letter-spacing:.1em;line-height:2.2;color:rgba(247,242,234,.88);margin-bottom:2rem;max-width:360px}
+    .hero-desc{font-size:1rem;letter-spacing:.1em;line-height:2.2;color:rgba(247,242,234,.88);margin-bottom:2rem;max-width:360px}
     .hero-ctas{display:flex;gap:.8rem;flex-wrap:wrap}
-    .btn-hero-primary{display:inline-flex;align-items:center;gap:.5rem;background:var(--rust);color:#fff;padding:.9rem 2rem;font-size:.82rem;letter-spacing:.25em;font-family:'Shippori Mincho',serif;transition:all .3s;animation:pulse 2.5s 2s infinite}
+    .btn-hero-primary{display:inline-flex;align-items:center;gap:.5rem;background:var(--rust);color:#fff;padding:.9rem 2rem;font-size:.95rem;letter-spacing:.25em;font-family:'Shippori Mincho',serif;transition:all .3s;animation:pulse 2.5s 2s infinite}
     .btn-hero-primary:hover{background:var(--rust-dark);transform:translateY(-2px)}
-    .btn-hero-secondary{display:inline-flex;align-items:center;gap:.5rem;border:1px solid rgba(247,242,234,.6);color:rgba(247,242,234,.9);padding:.9rem 2rem;font-size:.82rem;letter-spacing:.25em;font-family:'Shippori Mincho',serif;transition:all .3s}
+    .btn-hero-secondary{display:inline-flex;align-items:center;gap:.5rem;border:1px solid rgba(247,242,234,.6);color:rgba(247,242,234,.9);padding:.9rem 2rem;font-size:.95rem;letter-spacing:.25em;font-family:'Shippori Mincho',serif;transition:all .3s}
     .btn-hero-secondary:hover{background:rgba(247,242,234,.15)}
     .hero-trust{position:absolute;top:calc(var(--nav-h) + 1.2rem);right:1.5rem;display:flex;flex-direction:column;gap:.5rem;animation:fadeIn 1s 1s both}
     .trust-item{background:rgba(247,242,234,.12);backdrop-filter:blur(6px);border:1px solid rgba(247,242,234,.2);padding:.5rem .8rem;display:flex;align-items:center;gap:.4rem;font-size:.7rem;letter-spacing:.1em;color:rgba(247,242,234,.9)}
@@ -115,7 +115,7 @@
     .feature-item:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
     .feature-icon{font-size:2rem;margin-bottom:.8rem}
     .feature-title{font-family:'Shippori Mincho',serif;font-size:.93rem;letter-spacing:.18em;margin-bottom:.6rem}
-    .feature-desc{font-size:.77rem;line-height:1.9;color:#6a5e52}
+    .feature-desc{font-size:1rem;line-height:1.9;color:#6a5e52}
 
     /* ROOMS */
     #rooms{background:var(--washi)}
@@ -294,6 +294,9 @@
       .nav-links{display:none}
       .nav-hamburger{display:flex}
       .lang-switch{display:none}
+      body{font-size:17px}
+      .feature-desc{font-size:1.05rem}
+      .hero-desc{font-size:1.05rem}
     }
   </style>
 </head>
@@ -538,20 +541,16 @@
           <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">春の庭</span><span class="gallery-label" data-lang="en">Spring</span></div>
         </div>
         <div class="gallery-item" onclick="openLightbox('images/exterior.jpg')">
-          <img src="images/exterior.jpg" alt="春の田んぼと鳥海山" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">鳥海山</span><span class="gallery-label" data-lang="en">Mt. Chokai</span></div>
+          <img src="images/exterior.jpg" alt="外観" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">外観</span><span class="gallery-label" data-lang="en">Exterior</span></div>
         </div>
         <div class="gallery-item" onclick="openLightbox('images/garden.jpg')">
-          <img src="images/garden.jpg" alt="夏の田んぼ" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">夏の庄内</span><span class="gallery-label" data-lang="en">Summer</span></div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox('images/hero.jpg')">
-          <img src="images/hero.jpg" alt="冬の雪景色と鳥海山" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">冬の雪景色</span><span class="gallery-label" data-lang="en">Winter</span></div>
+          <img src="images/garden.jpg" alt="日本庭園" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">庭園</span><span class="gallery-label" data-lang="en">Garden</span></div>
         </div>
         <div class="gallery-item" onclick="openLightbox('images/room.jpg')">
-          <img src="images/room.jpg" alt="リビング" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">リビング</span><span class="gallery-label" data-lang="en">Lounge</span></div>
+          <img src="images/room.jpg" alt="和室" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-label" data-lang="ja">和室</span><span class="gallery-label" data-lang="en">Room</span></div>
         </div>
       </div>
     </div>
@@ -702,18 +701,18 @@
         <div class="divider"></div>
       </div>
       <div class="calendar-wrap fade-in" style="text-align: center; padding: 3rem 1.5rem;">
-        <p data-lang="ja" style="font-size: 1rem; line-height: 2; margin-bottom: 2rem; color: var(--ink-soft);">
-          ご予約はAirbnbにて承っております。<br>
+        <p data-lang="ja" style="font-size: 1.1rem; line-height: 2; margin-bottom: 2rem; color: var(--ink-soft);">
+          ご予約はAirRESERVEにて承っております。<br>
           下記のボタンより空室状況の確認と予約が可能です。
         </p>
-        <p data-lang="en" style="font-size: 1rem; line-height: 2; margin-bottom: 2rem; color: var(--ink-soft);">
-          Please book through Airbnb.<br>
+        <p data-lang="en" style="font-size: 1.1rem; line-height: 2; margin-bottom: 2rem; color: var(--ink-soft);">
+          Please book through AirRESERVE.<br>
           Check availability and make a reservation below.
         </p>
-        <a href="https://www.airbnb.jp/" target="_blank" rel="noopener" 
-           style="display: inline-block; background: var(--rust); color: #fff; padding: 1rem 2.5rem; font-size: .9rem; letter-spacing: .2em; font-family: 'Shippori Mincho', serif; transition: all .3s; text-decoration: none;">
-          <span data-lang="ja">📅 Airbnbで予約する</span>
-          <span data-lang="en">📅 Book on Airbnb</span>
+        <a href="https://airrsv.net/guesthouse-wakana/calendar" target="_blank" rel="noopener" 
+           style="display: inline-block; background: var(--rust); color: #fff; padding: 1.1rem 2.5rem; font-size: 1rem; letter-spacing: .2em; font-family: 'Shippori Mincho', serif; transition: all .3s; text-decoration: none;">
+          <span data-lang="ja">📅 予約カレンダーを見る</span>
+          <span data-lang="en">📅 View Availability</span>
         </a>
       </div>
     </div>
@@ -918,3 +917,5 @@
 </body>
 </html>
 
+
+  
