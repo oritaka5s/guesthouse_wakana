@@ -252,7 +252,21 @@
       .feature-desc,.hero-desc{font-size:1.05rem}
       .gallery-grid{grid-template-columns:repeat(2,1fr)}
       .hero-trust{display:none}
+      /* モバイル文字量削減 */
+      .pc-only{display:none}
+      .sp-only{display:block}
+      span.sp-only{display:inline}
+      .intro-box p{font-size:.95rem;line-height:1.9}
+      .feature-desc{font-size:.9rem;line-height:1.8}
+      .flow-desc{font-size:.9rem;line-height:1.8}
+      .room-desc{font-size:.95rem;line-height:1.9}
+      .rate-amenities li{font-size:.9rem;line-height:1.9}
+      .contact-info p{font-size:.95rem}
+      section{padding:3.5rem 0}
+      .section-header{margin-bottom:2.5rem}
     }
+    /* デフォルトではsp-onlyを非表示 */
+    .sp-only{display:none}
   </style>
 </head>
 <body>
@@ -298,7 +312,8 @@
       <div class="hero-badge">🏡 ホスト同居型ゲストハウス</div>
       <h1 class="hero-title">wakana</h1>
       <p class="hero-subtitle">ゲストハウス和奏</p>
-      <p class="hero-desc">庄内平野の田園に佇む、ホームステイ型の宿。ホストと過ごす温かな滞在。ヒノキ風呂・サウナと日本庭園が、旅の疲れを静かに癒します。</p>
+      <p class="hero-desc pc-only">庄内平野の田園に佇む、ホームステイ型の宿。ホストと過ごす温かな滞在。ヒノキ風呂・サウナと日本庭園が、旅の疲れを静かに癒します。</p>
+      <p class="hero-desc sp-only">庄内平野の田園に佇む、ホームステイ型の宿。ヒノキ風呂・サウナと日本庭園でくつろぐ滞在を。</p>
       <div class="hero-ctas">
         <a href="https://airrsv.net/guesthouse-wakana/calendar" target="_blank" rel="noopener" class="btn-hero-primary">📅 予約カレンダーを見る</a>
         <a href="#gallery" class="btn-hero-secondary">写真を見る →</a>
@@ -313,13 +328,13 @@
       <div class="intro-box fade-in">
         <h3>ホストと過ごす、ホームステイスタイルの宿です</h3>
         <p>wakana はオーナー（ホスト）が同じ建物に住みながら運営するゲストハウスです。ご宿泊いただくのは和室1部屋で、ヒノキ風呂・サウナ・キッチン・リビング・日本庭園はホストと共用でお使いいただけます。</p>
-        <p>完全な貸し切りではありませんが、その分ホストから鶴岡・庄内の旬な情報をたっぷり聞けるのが魅力です。地元の人だからこそ知っている、とっておきのお店や季節の見どころをお教えします。</p>
+        <p class="pc-only">完全な貸し切りではありませんが、その分ホストから鶴岡・庄内の旬な情報をたっぷり聞けるのが魅力です。地元の人だからこそ知っている、とっておきのお店や季節の見どころをお教えします。</p>
         <div class="intro-list">
           <li>和室の個室でプライベート空間を確保</li>
           <li>ヒノキ風呂・サウナ・庭園・キッチンをご自由にご利用可能</li>
           <li>ホストから地元の観光情報やおすすめグルメを直接聞ける</li>
         </div>
-        <p class="intro-note"><strong>※ ご注意：</strong>建物の完全貸し切りではありません。ホストと交流しながら過ごすスタイルをご理解の上、ご予約ください。</p>
+        <p class="intro-note pc-only"><strong>※ ご注意：</strong>建物の完全貸し切りではありません。ホストと交流しながら過ごすスタイルをご理解の上、ご予約ください。</p>
       </div>
     </div>
   </section>
@@ -336,22 +351,26 @@
         <div class="feature-item fade-in">
           <div class="feature-icon">🏡</div>
           <h3 class="feature-title">ホストと暮らすように泊まる</h3>
-          <p class="feature-desc">オーナーと同じ建物で過ごす、ホームステイスタイルの滞在。観光情報やご当地グルメもお気軽にどうぞ。</p>
+          <p class="feature-desc pc-only">オーナーと同じ建物で過ごす、ホームステイスタイルの滞在。観光情報やご当地グルメもお気軽にどうぞ。</p>
+          <p class="feature-desc sp-only">ホームステイスタイルの滞在。地元情報もお気軽に。</p>
         </div>
         <div class="feature-item fade-in">
           <div class="feature-icon">🛁</div>
           <h3 class="feature-title">本格ヒノキ風呂</h3>
-          <p class="feature-desc">ヒノキの香りが漂う贅沢な浴槽。旅の疲れをゆっくりほぐしてください。庭を眺めながらの入浴は格別です。</p>
+          <p class="feature-desc pc-only">ヒノキの香りが漂う贅沢な浴槽。旅の疲れをゆっくりほぐしてください。庭を眺めながらの入浴は格別です。</p>
+          <p class="feature-desc sp-only">ヒノキの香り漂う贅沢な浴槽で、旅の疲れを癒します。</p>
         </div>
         <div class="feature-item fade-in">
           <div class="feature-icon">🌿</div>
           <h3 class="feature-title">四季の日本庭園</h3>
-          <p class="feature-desc">春の水仙、夏の緑、秋の紅葉、冬の雪景色。季節ごとに表情を変える庭園をお楽しみください。</p>
+          <p class="feature-desc pc-only">春の水仙、夏の緑、秋の紅葉、冬の雪景色。季節ごとに表情を変える庭園をお楽しみください。</p>
+          <p class="feature-desc sp-only">四季折々の美しさを楽しめる庭園。</p>
         </div>
         <div class="feature-item fade-in">
           <div class="feature-icon">🚗</div>
           <h3 class="feature-title">鶴岡駅 無料送迎</h3>
-          <p class="feature-desc">JR鶴岡駅からの無料送迎サービス。ご予約時にお申し付けください。お車でお越しの方は無料駐車場もございます。</p>
+          <p class="feature-desc pc-only">JR鶴岡駅からの無料送迎サービス。ご予約時にお申し付けください。お車でお越しの方は無料駐車場もございます。</p>
+          <p class="feature-desc sp-only">鶴岡駅から無料送迎。駐車場もあります。</p>
         </div>
       </div>
     </div>
@@ -373,7 +392,8 @@
         <div class="room-info">
           <p class="room-en">Japanese Style Room</p>
           <h3 class="room-name">和室</h3>
-          <p class="room-desc">畳の香り漂う和室で、ゆったりとお過ごしください。ヒノキ風呂・サウナ・日本庭園・リビング・キッチンはホストと共用でご利用いただけます。窓からは四季折々の庭園が望めます。</p>
+          <p class="room-desc pc-only">畳の香り漂う和室で、ゆったりとお過ごしください。ヒノキ風呂・サウナ・日本庭園・リビング・キッチンはホストと共用でご利用いただけます。窓からは四季折々の庭園が望めます。</p>
+          <p class="room-desc sp-only">畳の和室でゆったり。ヒノキ風呂・サウナ・庭園などはホストと共用です。</p>
           <ul class="room-amenities">
             <li>🛁 ヒノキ風呂（共用）</li>
             <li>🧖 サウナ（共用）</li>
@@ -463,7 +483,8 @@
           <div class="flow-body">
             <div class="flow-icon-s">📅</div>
             <h3 class="flow-title">空き日程を確認</h3>
-            <p class="flow-desc">下部のカレンダーで空き状況をご確認ください。ご希望の日程がございましたら、お早めのご予約をおすすめします。</p>
+            <p class="flow-desc pc-only">下部のカレンダーで空き状況をご確認ください。ご希望の日程がございましたら、お早めのご予約をおすすめします。</p>
+            <p class="flow-desc sp-only">カレンダーで空き状況をご確認ください。</p>
           </div>
         </div>
         <div class="flow-item fade-in">
@@ -479,7 +500,8 @@
           <div class="flow-body">
             <div class="flow-icon-s">🚗</div>
             <h3 class="flow-title">チェックイン（15:00〜20:00）</h3>
-            <p class="flow-desc">鶴岡駅からの送迎をご希望の方は事前にお申し付けください。当日はゆっくりとお寛ぎください。</p>
+            <p class="flow-desc pc-only">鶴岡駅からの送迎をご希望の方は事前にお申し付けください。当日はゆっくりとお寛ぎください。</p>
+            <p class="flow-desc sp-only">送迎ご希望の方は事前にお知らせください。</p>
           </div>
         </div>
         <div class="flow-item fade-in">
@@ -487,7 +509,8 @@
           <div class="flow-body">
             <div class="flow-icon-s">🏠</div>
             <h3 class="flow-title">ゆっくりとお過ごしください</h3>
-            <p class="flow-desc">ヒノキ風呂・サウナ・庭園・キッチンをご自由にお使いください。ご不明な点はホストにお気軽にお声がけください。</p>
+            <p class="flow-desc pc-only">ヒノキ風呂・サウナ・庭園・キッチンをご自由にお使いください。ご不明な点はホストにお気軽にお声がけください。</p>
+            <p class="flow-desc sp-only">ヒノキ風呂・サウナ・庭園をご自由にお楽しみください。</p>
           </div>
         </div>
       </div>
@@ -521,7 +544,8 @@
           <li>タオル・歯ブラシ完備（パジャマ等はご持参ください）</li>
           <li>鶴岡駅 無料送迎（要予約）</li>
         </ul>
-        <p class="rate-note">チェックイン 15:00〜20:00　／　チェックアウト 〜10:00<br>※早期・遅延はご相談ください</p>
+        <p class="rate-note pc-only">チェックイン 15:00〜20:00　／　チェックアウト 〜10:00<br>※早期・遅延はご相談ください</p>
+        <p class="rate-note sp-only">CI 15:00〜20:00 ／ CO 〜10:00</p>
       </div>
       <div class="book-wrap fade-in">
         <a href="https://airrsv.net/guesthouse-wakana/calendar" target="_blank" rel="noopener" class="btn-gold">予約カレンダーを見る</a>
@@ -554,7 +578,7 @@
       </div>
       <div class="access-wrap">
         <div class="access-map fade-in">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d194.47795362191195!2d139.81271913773594!3d38.748856063080716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sjp!4v1771854525264!5m2!1sen!2sjp" width="100%" height="100%" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="wakana アクセスマップ"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6230.0!2d139.81271913773594!3d38.748856063080716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sjp!4v1771854525264!5m2!1sen!2sjp" width="100%" height="100%" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="wakana アクセスマップ"></iframe>
         </div>
         <div class="access-info fade-in">
           <h3>〒997-0054<br>山形県鶴岡市高田下村25-2</h3>
@@ -585,7 +609,7 @@
       <div class="contact-cta-wrap fade-in">
         <div class="contact-info">
           <h3>ご予約・ご質問は<br>お気軽にどうぞ</h3>
-          <p>はじめての方もお気軽にお問い合わせください。心よりお待ち申し上げております。</p>
+          <p class="pc-only">はじめての方もお気軽にお問い合わせください。心よりお待ち申し上げております。</p>
           <div class="contact-detail">
             <p><strong>Email</strong>wakana@example.com</p>
           </div>
