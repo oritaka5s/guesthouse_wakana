@@ -135,8 +135,13 @@
     .btn-room:hover{background:var(--rust-dark)}
 
     /* GALLERY */
-    .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
-    .gallery-item{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:4/3}
+    .gallery-tabs{display:flex;justify-content:center;gap:.6rem;flex-wrap:wrap;margin-bottom:2rem}
+    .gallery-tab{background:none;border:1px solid var(--mist);color:var(--ink-soft);padding:.6rem 1.3rem;font-size:.85rem;letter-spacing:.12em;font-family:'Shippori Mincho',serif;transition:all .3s;cursor:pointer}
+    .gallery-tab:hover{border-color:var(--rust);color:var(--rust)}
+    .gallery-tab.active{background:var(--rust);color:#fff;border-color:var(--rust)}
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:0}
+    .gallery-item{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:4/3;transition:opacity .4s,transform .4s}
+    .gallery-item.hidden{display:none}
     .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
     .gallery-item:hover img{transform:scale(1.1)}
     .gallery-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,20,16,.7),transparent);display:flex;align-items:flex-end;padding:1rem;opacity:0;transition:opacity .3s}
@@ -251,6 +256,7 @@
       body{font-size:17px}
       .feature-desc,.hero-desc{font-size:1.05rem}
       .gallery-grid{grid-template-columns:repeat(2,1fr)}
+      .gallery-tab{font-size:.75rem;padding:.5rem .9rem}
       .hero-trust{display:none}
       /* モバイル文字量削減 */
       .pc-only{display:none}
@@ -427,42 +433,59 @@
         <h2 class="section-title">ギャラリー</h2>
         <div class="divider"></div>
       </div>
-      <div class="gallery-grid fade-in">
-        <div class="gallery-item" onclick="openLightbox('images/chokai_mountain.jpg')">
-          <img src="images/chokai_mountain.jpg" alt="鳥海山と田んぼ" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label">鳥海山</span></div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox('images/garden.jpg')">
+
+      <!-- タブ -->
+      <div class="gallery-tabs fade-in">
+        <button class="gallery-tab active" onclick="filterGallery('all')">すべて</button>
+        <button class="gallery-tab" onclick="filterGallery('garden')">庭園・外観</button>
+        <button class="gallery-tab" onclick="filterGallery('indoor')">お部屋・室内</button>
+        <button class="gallery-tab" onclick="filterGallery('outdoor')">焚き火・アウトドア</button>
+        <button class="gallery-tab" onclick="filterGallery('scenery')">周辺の風景</button>
+      </div>
+
+      <div class="gallery-grid fade-in" id="galleryGrid">
+        <!-- 庭園・外観 -->
+        <div class="gallery-item" data-category="garden" onclick="openLightbox('images/garden.jpg')">
           <img src="images/garden.jpg" alt="日本庭園" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label">庭園</span></div>
+          <div class="gallery-overlay"><span class="gallery-label">日本庭園</span></div>
         </div>
-        <div class="gallery-item" onclick="openLightbox('images/exterior.jpg')">
+        <div class="gallery-item" data-category="garden" onclick="openLightbox('images/gallery-1.jpg')">
+          <img src="images/gallery-1.jpg" alt="庭園の夕景" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-label">庭園の夕景</span></div>
+        </div>
+        <div class="gallery-item" data-category="garden" onclick="openLightbox('images/gallery-2.jpg')">
+          <img src="images/gallery-2.jpg" alt="冬の庭" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-label">冬の庭</span></div>
+        </div>
+        <div class="gallery-item" data-category="garden" onclick="openLightbox('images/exterior.jpg')">
           <img src="images/exterior.jpg" alt="外観" loading="lazy">
           <div class="gallery-overlay"><span class="gallery-label">外観</span></div>
         </div>
-        <div class="gallery-item" onclick="openLightbox('images/living.jpg')">
+
+        <!-- お部屋・室内 -->
+        <div class="gallery-item" data-category="indoor" onclick="openLightbox('images/living.jpg')">
           <img src="images/living.jpg" alt="オーディオルーム" loading="lazy">
           <div class="gallery-overlay"><span class="gallery-label">オーディオルーム</span></div>
         </div>
-        <div class="gallery-item" onclick="openLightbox('images/bonfire.jpg')">
-          <img src="images/bonfire.jpg" alt="焚き火スペース" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label">焚き火</span></div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox('images/kitchen.jpg')">
+        <div class="gallery-item" data-category="indoor" onclick="openLightbox('images/kitchen.jpg')">
           <img src="images/kitchen.jpg" alt="キッチン" loading="lazy">
           <div class="gallery-overlay"><span class="gallery-label">キッチン</span></div>
         </div>
-        <div class="gallery-item" onclick="openLightbox('images/winter_mountain.jpg')">
+
+        <!-- 焚き火・アウトドア -->
+        <div class="gallery-item" data-category="outdoor" onclick="openLightbox('images/bonfire.jpg')">
+          <img src="images/bonfire.jpg" alt="焚き火スペース" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-label">焚き火</span></div>
+        </div>
+
+        <!-- 周辺の風景 -->
+        <div class="gallery-item" data-category="scenery" onclick="openLightbox('images/chokai_mountain.jpg')">
+          <img src="images/chokai_mountain.jpg" alt="鳥海山と田んぼ" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-label">鳥海山</span></div>
+        </div>
+        <div class="gallery-item" data-category="scenery" onclick="openLightbox('images/winter_mountain.jpg')">
           <img src="images/winter_mountain.jpg" alt="冬の鳥海山" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label">冬景色</span></div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox('images/gallery-1.jpg')">
-          <img src="images/gallery-1.jpg" alt="日本庭園と夕日" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label">夕景</span></div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox('images/gallery-2.jpg')">
-          <img src="images/gallery-2.jpg" alt="冬の庭・雪景色" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label">冬の庭</span></div>
+          <div class="gallery-overlay"><span class="gallery-label">冬の鳥海山</span></div>
         </div>
       </div>
     </div>
@@ -585,11 +608,11 @@
           <ul class="access-list">
             <li>
               <span class="access-label">電　車</span>
-              <span>JR「鶴岡」駅より無料送迎（要予約）／タクシー約9分</span>
+              <span>JR「鶴岡」駅より無料送迎（要予約）／タクシー約10分</span>
             </li>
             <li>
               <span class="access-label">お車</span>
-              <span>山形道「鶴岡IC」より約5分 ／ 無料駐車場（3台）</span>
+              <span>山形道「鶴岡IC」より約8分 ／ 無料駐車場（3台）</span>
             </li>
           </ul>
           <a href="https://maps.google.com?q=38.748856,139.812719" target="_blank" rel="noopener" class="access-dir-btn">🗺 Google マップで開く</a>
@@ -692,6 +715,21 @@
     document.getElementById('lightbox').addEventListener('click', e => {
       if (e.target === e.currentTarget) closeLightbox();
     });
+
+    // GALLERY FILTER
+    function filterGallery(category) {
+      const items = document.querySelectorAll('.gallery-item');
+      const tabs = document.querySelectorAll('.gallery-tab');
+      tabs.forEach(t => t.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+      items.forEach(item => {
+        if (category === 'all' || item.dataset.category === category) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    }
 
     // FORM (removed - now using Google Form)
   </script>
