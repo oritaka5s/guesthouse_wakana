@@ -190,7 +190,13 @@
     .calendar-wrap a{display:inline-block;background:var(--rust);color:#fff;padding:1.1rem 2.5rem;font-size:1.05rem;letter-spacing:.2em;font-family:'Shippori Mincho',serif;transition:all .3s;text-decoration:none}
     .calendar-wrap a:hover{background:var(--rust-dark);transform:translateY(-2px)}
 
-    /* ACCESS */
+/* CALENDAR EMBED */
+    #booking-calendar{padding:0 0 1rem}
+    .calendar-lead{font-size:1.05rem;line-height:2;color:var(--ink-soft);text-align:center;margin-bottom:1.5rem}
+    .calendar-embed-wrap iframe{border:none;display:block;width:100%;max-width:720px;margin:0 auto;height:900px}
+    .calendar-fallback{text-align:center;margin-top:1rem;font-size:.9rem;color:var(--ink-soft)}
+    .calendar-fallback a{color:var(--rust);text-decoration:underline}
+        /* ACCESS */
     .access-wrap{display:flex;flex-direction:column;gap:2rem}
     .access-map{width:100%;height:400px;border:1px solid var(--mist)}
     .access-map iframe{width:100%;height:100%}
@@ -609,9 +615,11 @@
         <h2 class="section-title">ご予約</h2>
         <div class="divider"></div>
       </div>
-      <div class="calendar-wrap fade-in">
-        <p>ご予約はAirRESERVEにて承っております。<br>下記のボタンより空室状況の確認と予約が可能です。</p>
-        <a href="https://airrsv.net/guesthouse-wakana/calendar" target="_blank" rel="noopener">📅 予約カレンダーを見る</a>
+      <div class="calendar-embed-wrap fade-in" id="booking-calendar">
+        <p class="calendar-lead">ご予約はAirRESERVEにて承っております。<br>下記のカレンダーより空室状況の確認と予約が可能です。</p>
+        <iframe type="text/html" frameborder="0" width="100%" height="900px" src="//airrsv.net/guesthouse-wakana/calendar/embed/" title="予約カレンダー"></iframe>
+        <div style="text-align:right;font-size:10px;color:#888;margin:8px auto 0;line-height:160%;max-width:720px;">このページは<a style="color:#888;text-decoration:underline;" href="https://airregi.jp/reserve/" target="_blank" rel="noopener">予約システム『Airリザーブ』</a>が提供しています</div>
+        <p class="calendar-fallback">カレンダーが表示されない場合は<a href="https://airrsv.net/guesthouse-wakana/calendar" target="_blank" rel="noopener">こちらの予約ページ</a>をご利用ください。</p>
       </div>
     </div>
   </section>
@@ -664,9 +672,12 @@
         </div>
         <div class="contact-form-replacement">
           <div class="contact-form-card">
-            <p class="contact-form-lead">ご予約はAirRESERVEにて承っております。<br>下記のボタンより空室状況の確認と予約が可能です。</p>
-            <a href="https://airrsv.net/guesthouse-wakana/calendar" target="_blank" rel="noopener" class="btn-reserve-large">📅 予約カレンダーを見る</a>
-            <p class="contact-form-sub">※ AirRESERVEの予約ページが開きます</p>
+            <p class="contact-form-lead">ご予約はAirRESERVEにて承っております。<br>下記のカレンダーより空室状況の確認と予約が可能です。</p>
+            <div style="margin:1.5rem 0;">
+              <iframe type="text/html" frameborder="0" width="100%" height="700px" src="//airrsv.net/guesthouse-wakana/calendar/embed/" title="予約カレンダー" style="border:none;display:block;max-width:600px;margin:0 auto;"></iframe>
+            </div>
+            <a href="https://airrsv.net/guesthouse-wakana/calendar" target="_blank" rel="noopener" class="btn-reserve-large">📅 別ページで予約する</a>
+            <p class="contact-form-sub">※ カレンダーが表示されない場合は上のボタンをご利用ください</p>
           </div>
         </div>
       </div>
