@@ -439,7 +439,6 @@
         <button class="gallery-tab active" onclick="filterGallery('all')">すべて</button>
         <button class="gallery-tab" onclick="filterGallery('garden')">庭園・外観</button>
         <button class="gallery-tab" onclick="filterGallery('indoor')">お部屋・室内</button>
-        <button class="gallery-tab" onclick="filterGallery('outdoor')">焚き火・アウトドア</button>
         <button class="gallery-tab" onclick="filterGallery('scenery')">周辺の風景</button>
       </div>
 
@@ -449,6 +448,18 @@
           <img src="images/garden.jpg" alt="日本庭園" loading="lazy">
           <div class="gallery-overlay"><span class="gallery-label">日本庭園</span></div>
         </div>
+        <div class="gallery-item" data-category="garden" onclick="openLightbox('images/IMG20240505070955.jpg')">
+          <img src="images/IMG20240505070955.jpg" alt="新緑の庭園" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-label">新緑の庭園</span></div>
+        </div>
+        <div class="gallery-item" data-category="garden" onclick="openLightbox('images/IMG20230403053248__1_.jpg')">
+          <img src="images/IMG20230403053248__1_.jpg" alt="庭園の夕日" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-label">庭園の夕日</span></div>
+        </div>
+        <div class="gallery-item" data-category="garden" onclick="openLightbox('images/DSC_0932-EFFECTS__2_.jpg')">
+          <img src="images/DSC_0932-EFFECTS__2_.jpg" alt="春の水仙" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-label">春の水仙</span></div>
+        </div>
         <div class="gallery-item" data-category="garden" onclick="openLightbox('images/gallery-1.jpg')">
           <img src="images/gallery-1.jpg" alt="庭園の夕景" loading="lazy">
           <div class="gallery-overlay"><span class="gallery-label">庭園の夕景</span></div>
@@ -456,6 +467,10 @@
         <div class="gallery-item" data-category="garden" onclick="openLightbox('images/gallery-2.jpg')">
           <img src="images/gallery-2.jpg" alt="冬の庭" loading="lazy">
           <div class="gallery-overlay"><span class="gallery-label">冬の庭</span></div>
+        </div>
+        <div class="gallery-item" data-category="garden" onclick="openLightbox('images/IMG20220713185327.jpg')">
+          <img src="images/IMG20220713185327.jpg" alt="建物外観" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-label">外観</span></div>
         </div>
         <div class="gallery-item" data-category="garden" onclick="openLightbox('images/exterior.jpg')">
           <img src="images/exterior.jpg" alt="外観" loading="lazy">
@@ -472,20 +487,26 @@
           <div class="gallery-overlay"><span class="gallery-label">キッチン</span></div>
         </div>
 
-        <!-- 焚き火・アウトドア -->
-        <div class="gallery-item" data-category="outdoor" onclick="openLightbox('images/bonfire.jpg')">
-          <img src="images/bonfire.jpg" alt="焚き火スペース" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label">焚き火</span></div>
-        </div>
-
         <!-- 周辺の風景 -->
+        <div class="gallery-item" data-category="scenery" onclick="openLightbox('images/IMG20250422072406.jpg')">
+          <img src="images/IMG20250422072406.jpg" alt="菜の花と鳥海山" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-label">菜の花と鳥海山</span></div>
+        </div>
+        <div class="gallery-item" data-category="scenery" onclick="openLightbox('images/DSC_0721__1_.JPG')">
+          <img src="images/DSC_0721__1_.JPG" alt="田植えと鳥海山" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-label">田植えと鳥海山</span></div>
+        </div>
         <div class="gallery-item" data-category="scenery" onclick="openLightbox('images/chokai_mountain.jpg')">
           <img src="images/chokai_mountain.jpg" alt="鳥海山と田んぼ" loading="lazy">
           <div class="gallery-overlay"><span class="gallery-label">鳥海山</span></div>
         </div>
+        <div class="gallery-item" data-category="scenery" onclick="openLightbox('images/IMG20250112155121.jpg')">
+          <img src="images/IMG20250112155121.jpg" alt="冬の鳥海山と雪景色" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-label">冬の鳥海山</span></div>
+        </div>
         <div class="gallery-item" data-category="scenery" onclick="openLightbox('images/winter_mountain.jpg')">
           <img src="images/winter_mountain.jpg" alt="冬の鳥海山" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label">冬の鳥海山</span></div>
+          <div class="gallery-overlay"><span class="gallery-label">冬景色</span></div>
         </div>
       </div>
     </div>
@@ -733,3 +754,4 @@
 
     // FORM (removed - now using Google Form)
   </script>
+  
