@@ -272,6 +272,20 @@
       .rate-box{padding:2rem 1.5rem}
       .lightbox-nav{width:36px;height:36px;font-size:1.2rem}
     }
+    /* FAQ */
+    #faq{background:var(--washi)}
+    .faq-list{max-width:720px;margin:0 auto}
+    .faq-item{border-bottom:1px solid var(--mist-light);padding:0}
+    .faq-item:first-child{border-top:1px solid var(--mist-light)}
+    .faq-q{width:100%;background:none;border:none;text-align:left;padding:1.4rem 2.5rem 1.4rem 0;font-family:'Shippori Mincho',serif;font-size:.92rem;letter-spacing:.08em;line-height:1.8;color:var(--ink);font-weight:500;position:relative;cursor:pointer;transition:color .2s}
+    .faq-q:hover{color:var(--rust)}
+    .faq-q::after{content:'+';position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:1.2rem;color:var(--ink-light);font-weight:300;transition:transform .3s var(--ease-out)}
+    .faq-item.open .faq-q::after{transform:translateY(-50%) rotate(45deg)}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease-out),padding .4s var(--ease-out)}
+    .faq-a-inner{padding:0 0 1.4rem;font-size:.88rem;line-height:2.2;color:var(--ink-soft)}
+    .faq-a-inner strong{color:var(--rust);font-weight:500}
+    .faq-category{font-family:'Shippori Mincho',serif;font-size:.78rem;letter-spacing:.25em;color:var(--gold);margin:2.5rem 0 1rem;padding-bottom:.5rem;border-bottom:1px solid var(--mist)}
+    .faq-category:first-child{margin-top:0}
   </style>
 </head>
 <body>
@@ -460,7 +474,6 @@
         <div class="gallery-item" data-category="garden" onclick="openLightbox(12)"><img src="images/IMG20240505070955%20(1).jpg" alt="庭園と縁側" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">庭園と縁側</span></div></div>
         <div class="gallery-item" data-category="scenery" onclick="openLightbox(13)"><img src="images/IMG20240615065733%20(2).jpg" alt="庄内平野の田園風景" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">庄内平野の田園</span></div></div>
         <div class="gallery-item" data-category="indoor" onclick="openLightbox(14)"><img src="images/PAP_0067%20(1).JPG" alt="ティータイム" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">ティータイム</span></div></div>
-        <div class="gallery-item" data-category="indoor" onclick="openLightbox(15)"><img src="images/IMG20220629065029%20(1).jpg" alt="紫陽花とリビング" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">紫陽花とリビング</span></div></div>
       </div>
     </div>
   </section>
@@ -592,6 +605,55 @@
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <span class="section-en">FAQ</span>
+        <h2 class="section-title">よくあるご質問</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="faq-list fade-in">
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">予約はどのようにすればいいですか？</button>
+          <div class="faq-a"><div class="faq-a-inner">サイト内の「予約フォームへ」ボタンからGoogleフォームでお申し込みください。空室状況を確認後、<strong>48時間以内</strong>に確定のご連絡をいたします。フォーム送信の時点では予約は確定しておりませんのでご了承ください。</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">ホスト同居とはどういう意味ですか？</button>
+          <div class="faq-a"><div class="faq-a-inner">オーナー（ホスト）が同じ建物に住みながら運営するスタイルです。お部屋は和室の個室ですが、ヒノキ風呂・サウナ・キッチン・リビング・日本庭園はホストとの共用になります。<strong>建物の完全貸し切りではありません</strong>のでご了承ください。</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">一人でも泊まれますか？女性一人でも安心ですか？</button>
+          <div class="faq-a"><div class="faq-a-inner">もちろんです。おひとり様のご利用も大歓迎で、一人旅の方も多くいらっしゃいます。お部屋は個室で、ホストも同じ建物におりますので、女性おひとりでも安心してお過ごしいただけます。</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">食事はついていますか？</button>
+          <div class="faq-a"><div class="faq-a-inner">基本的には素泊まりです。キッチンをご自由にお使いいただけますので、自炊も可能です。鶴岡には美味しいお店がたくさんありますので、ホストにおすすめを聞いてみてください。</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">最寄り駅からどうやって行けばいいですか？</button>
+          <div class="faq-a"><div class="faq-a-inner">JR鶴岡駅から<strong>無料送迎</strong>をご利用いただけます（要事前予約）。タクシーの場合は約10分です。お車の場合は山形道「鶴岡IC」より約8分で、無料駐車場（3台分）がございます。</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">どんな人におすすめですか？</button>
+          <div class="faq-a"><div class="faq-a-inner">地域の暮らしや人とのつながりを大切にしたい方、静かな環境でゆっくり過ごしたい方におすすめです。ホストから鶴岡・庄内の旬な観光情報やおすすめグルメも直接お伝えできるので、ガイドブックには載っていない体験ができます。</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">キャンセル料はかかりますか？</button>
+          <div class="faq-a"><div class="faq-a-inner">キャンセル料は以下の通りです。<br><strong>3日前まで：無料</strong><br><strong>前日：宿泊料の50%</strong><br><strong>当日・無断キャンセル：宿泊料の100%</strong><br>キャンセルの際はできるだけ早めにご連絡ください。</div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- Contact -->
   <section id="contact">
     <div class="section-inner">
@@ -605,7 +667,7 @@
           <h3>ご予約・ご質問は<br>お気軽にどうぞ</h3>
           <p class="pc-only">はじめての方もお気軽にお問い合わせください。心よりお待ち申し上げております。</p>
           <div class="contact-detail">
-            <p><strong>Email</strong>guesthouse.wakana@gmail.com</p>
+            <p><strong>Email</strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4225372731362a2d3731276c352329232c2302252f232b2e6c212d2f">[email&#160;protected]</a></p>
           </div>
         </div>
         <div class="contact-form-replacement">
@@ -630,13 +692,14 @@
       <a href="#rates">料金</a>
       <a href="#calendar">空き状況</a>
       <a href="#access">アクセス</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">ご予約</a>
     </nav>
     <div class="footer-divider"></div>
     <p class="footer-copy">&#169; 2025 Guest House WAKANA. All rights reserved.</p>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // Nav scroll
     window.addEventListener('scroll', function() {
       document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 50);
@@ -739,6 +802,25 @@
       if (e.key === 'ArrowRight' || e.key === 'ArrowDown') lightboxNav(1);
       if (e.key === 'Escape') closeLightbox();
     });
+
+    // FAQ accordion
+    function toggleFaq(btn) {
+      var item = btn.parentElement;
+      var answer = item.querySelector('.faq-a');
+      var isOpen = item.classList.contains('open');
+
+      // Close all
+      document.querySelectorAll('.faq-item').forEach(function(fi) {
+        fi.classList.remove('open');
+        fi.querySelector('.faq-a').style.maxHeight = null;
+      });
+
+      // Open clicked (if it was closed)
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    }
 
     // Gallery filter
     document.querySelectorAll('.gallery-tab').forEach(function(tab) {
