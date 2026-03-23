@@ -164,4 +164,7 @@
     });
 
     // Gallery filter
-    document.querySelectorAll('.gallery-tab').forEach(function(tab){tab.addEventListener('click',function(){var c=this.getAttribute('data-category');document.querySelectorAll('.gallery-tab').forEach(function(t){t.classList.remove('active')});this.classLis
+    document.querySelectorAll('.gallery-tab').forEach(function(tab){tab.addEventListener('click',function(){var c=this.getAttribute('data-category');document.querySelectorAll('.gallery-tab').forEach(function(t){t.classList.remove('active')});this.classList.add('active');document.querySelectorAll('.gallery-item').forEach(function(item){if(c==='all'||item.getAttribute('data-category')===c){item.classList.remove('hidden')}else{item.classList.add('hidden')}})})});
+  </script>
+</body>
+</html>
