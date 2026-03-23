@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>ゲストハウス wakana | 山形・鶴岡 ホストと過ごすゲストハウス ヒノキ風呂・日本庭園</title>
   <meta name="description" content="山形県鶴岡市のホームステイ型ゲストハウス。ホストと暮らすように泊まれる和室。本格ヒノキ風呂・日本庭園・鶴岡駅無料送迎。1泊¥8,000〜。">
-  <!-- OGP -->
   <meta property="og:title" content="ゲストハウス wakana | 山形・鶴岡">
   <meta property="og:description" content="庄内平野の田園に佇むホームステイ型の宿。ヒノキ風呂・サウナと日本庭園。1泊¥8,000〜。">
   <meta property="og:type" content="website">
@@ -13,158 +12,751 @@
   <meta property="og:image" content="https://oritaka5s.github.io/guesthouse_wakana/images/hero.jpg">
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
-  <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>和</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600&family=Shippori+Mincho:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    :root{--ink:#1a1410;--ink-soft:#564a3c;--ink-light:#8a7d6e;--washi:#f6f1e8;--washi-dark:#ede6d6;--sand:#e2d8c4;--rust:#7a3427;--rust-dark:#5e2519;--moss:#3f5235;--gold:#a6873a;--gold-light:rgba(166,135,58,.1);--mist:#d0c9bc;--mist-light:#e8e2d6;--shadow-sm:0 1px 8px rgba(26,20,16,.06);--shadow-md:0 6px 32px rgba(26,20,16,.1);--nav-h:60px;--ease-out:cubic-bezier(.2,0,.1,1)}
+    :root{--ink:#1a1410;--ink-soft:#564a3c;--ink-light:#8a7d6e;--washi:#f6f1e8;--washi-dark:#ede6d6;--sand:#e2d8c4;--rust:#7a3427;--rust-dark:#5e2519;--moss:#3f5235;--gold:#a6873a;--mist:#d0c9bc;--mist-light:#e8e2d6;--shadow-sm:0 1px 8px rgba(26,20,16,.06);--nav-h:60px;--ease-out:cubic-bezier(.2,0,.1,1)}
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{font-family:'Noto Serif JP',serif;background:var(--washi);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased;font-size:16px;line-height:1.9;letter-spacing:.02em}
-    img{max-width:100%;display:block}a{color:inherit;text-decoration:none}ul{list-style:none}button{cursor:pointer;font-family:inherit}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    ul{list-style:none}
+    button{cursor:pointer;font-family:inherit}
     @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
     @keyframes drift{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
-    .fade-in{opacity:0;transform:translateY(16px);transition:opacity .8s var(--ease-out),transform .8s var(--ease-out)}.fade-in.visible{opacity:1;transform:translateY(0)}
-    .sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--rust);display:flex;align-items:center;justify-content:center;gap:1.2rem;padding:.85rem 1.5rem;transform:translateY(100%);transition:transform .5s var(--ease-out);box-shadow:0 -2px 20px rgba(26,20,16,.15)}.sticky-cta.show{transform:translateY(0)}.sticky-cta-text{color:rgba(255,255,255,.8);font-size:.8rem;letter-spacing:.2em;font-weight:300}.sticky-cta-text strong{color:#fff;font-weight:500}.sticky-cta-btn{background:#fff;color:var(--rust);border:none;padding:.65rem 1.8rem;font-size:.8rem;letter-spacing:.25em;font-weight:500;font-family:'Shippori Mincho',serif;transition:all .25s var(--ease-out);white-space:nowrap}.sticky-cta-btn:hover{background:var(--gold);color:#fff}
-    nav{position:fixed;top:0;left:0;right:0;z-index:150;height:var(--nav-h);display:flex;justify-content:space-between;align-items:center;padding:0 2rem;background:rgba(246,241,232,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(208,201,188,.5);transition:box-shadow .3s}nav.scrolled{box-shadow:0 1px 12px rgba(26,20,16,.06)}.nav-logo{font-family:'Shippori Mincho',serif;font-size:1.2rem;letter-spacing:.4em;color:var(--rust);line-height:1}.nav-logo span{font-size:.6rem;color:var(--gold);letter-spacing:.2em;display:block;margin-top:2px;font-weight:400}.nav-links{display:flex;gap:1.6rem;align-items:center}.nav-links a{font-size:.72rem;letter-spacing:.22em;color:var(--ink-soft);transition:color .25s;position:relative;padding-bottom:2px}.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1px;background:var(--rust);transition:width .35s var(--ease-out)}.nav-links a:hover{color:var(--rust)}.nav-links a:hover::after{width:100%}.nav-reserve{background:var(--rust)!important;color:#fff!important;padding:.45rem 1.1rem;letter-spacing:.2em!important;transition:background .25s!important;font-size:.72rem!important}.nav-reserve::after{display:none!important}.nav-reserve:hover{background:var(--rust-dark)!important}
-    .nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:4px}.nav-hamburger span{display:block;width:20px;height:1px;background:var(--ink);transition:all .3s}.nav-hamburger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}.nav-hamburger.open span:nth-child(2){opacity:0}.nav-hamburger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}.nav-drawer{position:fixed;top:var(--nav-h);left:0;right:0;bottom:0;background:rgba(246,241,232,.98);backdrop-filter:blur(16px);z-index:140;display:flex;flex-direction:column;padding:2.5rem 2rem 8rem;transform:translateX(100%);transition:transform .4s var(--ease-out)}.nav-drawer.open{transform:translateX(0)}.nav-drawer a{font-family:'Shippori Mincho',serif;font-size:1.15rem;letter-spacing:.3em;padding:1rem 0;border-bottom:1px solid var(--mist-light);color:var(--ink)}.nav-drawer .drawer-reserve{margin-top:2.5rem;background:var(--rust);color:#fff;text-align:center;padding:1rem;font-size:.9rem;letter-spacing:.35em}
-    #home{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}.hero-bg{position:absolute;inset:0;background-image:url('images/hero.jpg');background-size:cover;background-position:center 30%;background-color:var(--ink);transform:scale(1.03);transition:transform 10s ease}.hero-bg.loaded{transform:scale(1)}.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,20,16,.05) 0%,rgba(26,20,16,.15) 40%,rgba(26,20,16,.7) 85%,rgba(26,20,16,.82) 100%)}.hero-content{position:relative;padding:0 2rem 5.5rem;animation:fadeUp 1.2s .3s both}.hero-badge{display:inline-block;border:1px solid rgba(166,135,58,.4);padding:.45rem 1.2rem;margin-bottom:1.5rem;font-size:.7rem;letter-spacing:.35em;color:var(--gold);font-weight:300}.hero-title{font-family:'Shippori Mincho',serif;font-size:clamp(3.2rem,12vw,7rem);font-weight:600;letter-spacing:.35em;line-height:.85;color:#fff;margin-bottom:.6rem}.hero-subtitle{font-family:'Cormorant Garamond',serif;font-size:clamp(.85rem,2vw,1rem);letter-spacing:.5em;color:rgba(166,135,58,.85);margin-bottom:1.5rem;font-weight:300}.hero-desc{font-size:.9rem;letter-spacing:.08em;line-height:2.2;color:rgba(246,241,232,.85);margin-bottom:2.2rem;max-width:480px;font-weight:300}.hero-ctas{display:flex;gap:.8rem;flex-wrap:wrap}.btn-hero-primary{display:inline-flex;align-items:center;background:var(--rust);color:#fff;padding:.9rem 2rem;font-size:.85rem;letter-spacing:.25em;font-family:'Shippori Mincho',serif;transition:all .3s var(--ease-out);font-weight:500}.btn-hero-primary:hover{background:var(--rust-dark);transform:translateY(-2px);box-shadow:0 6px 24px rgba(122,52,39,.3)}.btn-hero-secondary{display:inline-flex;align-items:center;border:1px solid rgba(246,241,232,.4);color:rgba(246,241,232,.85);padding:.9rem 2rem;font-size:.85rem;letter-spacing:.25em;font-family:'Shippori Mincho',serif;transition:all .3s var(--ease-out);font-weight:400}.btn-hero-secondary:hover{background:rgba(246,241,232,.1);border-color:rgba(246,241,232,.6)}.scroll-hint{position:absolute;bottom:1.8rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.3rem;animation:drift 2.5s 2s infinite;color:rgba(246,241,232,.35);font-size:.6rem;letter-spacing:.4em;font-family:'Cormorant Garamond',serif}.scroll-hint::after{content:'';width:1px;height:36px;background:linear-gradient(to bottom,rgba(246,241,232,.35),transparent)}
-    section{padding:5.5rem 0}.section-inner{max-width:960px;margin:0 auto;padding:0 2rem}.section-header{text-align:center;margin-bottom:3.5rem}.section-en{font-family:'Cormorant Garamond',serif;font-size:.9rem;letter-spacing:.5em;color:var(--gold);display:block;margin-bottom:.6rem;font-weight:300}.section-title{font-family:'Shippori Mincho',serif;font-size:clamp(1.4rem,3.5vw,1.9rem);letter-spacing:.3em;color:var(--ink);line-height:1.4;font-weight:600}.divider{width:32px;height:1px;background:var(--rust);margin:1.2rem auto 0;opacity:.6}
-    #intro{padding:5rem 0}.intro-box{background:var(--washi-dark);padding:3rem 2.5rem;max-width:760px;margin:0 auto;border-left:2px solid var(--rust)}.intro-box h3{font-family:'Shippori Mincho',serif;font-size:1.15rem;letter-spacing:.2em;margin-bottom:1.5rem;color:var(--rust);font-weight:600}.intro-box p{font-size:.95rem;line-height:2.2;margin-bottom:1rem;color:var(--ink-soft)}.intro-list{margin-top:2rem;background:var(--washi);padding:1.5rem 1.5rem 1.5rem 2rem}.intro-list li{font-size:.9rem;line-height:2.2;padding:.3rem 0;position:relative;padding-left:1.2rem;color:var(--ink-soft)}.intro-list li::before{content:'';position:absolute;left:0;top:.85em;width:6px;height:6px;border:1px solid var(--rust);border-radius:50%}.intro-note{margin-top:1.2rem;font-size:.85rem;color:var(--ink-light);line-height:2}.intro-note strong{color:var(--rust);font-weight:500}
-    #features{background:var(--sand)}.features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--mist)}.feature-item{background:var(--washi);padding:2.2rem 1.8rem;transition:background .4s}.feature-item:hover{background:var(--washi-dark)}.feature-icon{width:28px;height:28px;margin-bottom:1.2rem;display:flex;align-items:center;justify-content:center}.feature-icon svg{width:100%;height:100%;stroke:var(--rust);fill:none;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round}.feature-title{font-family:'Shippori Mincho',serif;font-size:.95rem;letter-spacing:.18em;margin-bottom:.8rem;font-weight:600}.feature-desc{font-size:.85rem;line-height:2;color:var(--ink-light)}
-    .room-card{background:var(--washi);box-shadow:var(--shadow-sm);overflow:hidden;margin-bottom:2rem}.room-img{position:relative;height:320px;overflow:hidden}.room-img img{width:100%;height:100%;object-fit:cover}.room-img-placeholder{background:var(--washi-dark);display:flex;align-items:center;justify-content:center}.room-img-empty{font-size:.85rem;color:var(--ink-light);letter-spacing:.15em}.room-badge{position:absolute;top:1.5rem;left:1.5rem;background:rgba(122,52,39,.88);color:#fff;padding:.5rem 1.1rem;font-size:.7rem;letter-spacing:.25em}.room-info{padding:2.5rem 2rem}.room-en{font-family:'Cormorant Garamond',serif;font-size:.75rem;letter-spacing:.35em;color:var(--gold);margin-bottom:.4rem;font-weight:300}.room-name{font-family:'Shippori Mincho',serif;font-size:1.3rem;letter-spacing:.25em;margin-bottom:1.2rem;font-weight:600}.room-desc{font-size:.9rem;line-height:2.2;color:var(--ink-soft);margin-bottom:1.5rem}.room-amenities{display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem;margin-bottom:1.5rem}.room-amenities li{font-size:.82rem;display:flex;align-items:center;gap:.6rem;color:var(--ink-soft)}.room-amenities li::before{content:'';width:4px;height:4px;background:var(--rust);border-radius:50%;flex-shrink:0}.room-price-wrap{border-top:1px solid var(--mist-light);padding-top:1.5rem}.room-price-label{font-size:.75rem;color:var(--ink-light)}.room-price{font-family:'Shippori Mincho',serif;font-size:1.6rem;color:var(--rust);font-weight:600}.room-price span{font-size:.85rem;font-weight:400;color:var(--ink-soft)}.room-checkin{font-size:.78rem;color:var(--ink-light);margin-top:.4rem}.room-cta{margin-top:1.8rem}.btn-room{display:inline-block;background:var(--rust);color:#fff;padding:.85rem 2rem;font-size:.82rem;letter-spacing:.25em;transition:all .3s var(--ease-out);width:100%;text-align:center;font-family:'Shippori Mincho',serif;font-weight:500}.btn-room:hover{background:var(--rust-dark)}
-    .gallery-tabs{display:flex;justify-content:center;gap:.5rem;flex-wrap:wrap;margin-bottom:2rem}.gallery-tab{background:none;border:1px solid var(--mist);color:var(--ink-light);padding:.5rem 1.2rem;font-size:.75rem;letter-spacing:.15em;font-family:'Shippori Mincho',serif;transition:all .3s;cursor:pointer}.gallery-tab:hover{border-color:var(--rust);color:var(--rust)}.gallery-tab.active{background:var(--rust);color:#fff;border-color:var(--rust)}.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem}.gallery-item{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:4/3}.gallery-item.hidden{display:none}.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease-out)}.gallery-item:hover img{transform:scale(1.06)}.gallery-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,20,16,.65) 0%,transparent 50%);display:flex;align-items:flex-end;padding:1rem;opacity:0;transition:opacity .35s}.gallery-item:hover .gallery-overlay{opacity:1}.gallery-label{color:#fff;font-size:.78rem;letter-spacing:.2em;font-weight:300}
-    /* Lightbox with navigation */
-    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:300;display:none;align-items:center;justify-content:center;padding:2rem}.lightbox.open{display:flex}.lightbox img{max-width:85%;max-height:85%;object-fit:contain;user-select:none}.lightbox-close{position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:rgba(255,255,255,.5);font-size:1.8rem;cursor:pointer;line-height:1;transition:color .2s;z-index:2;width:40px;height:40px;display:flex;align-items:center;justify-content:center}.lightbox-close:hover{color:#fff}
+    .fade-in{opacity:0;transform:translateY(16px);transition:opacity .8s var(--ease-out),transform .8s var(--ease-out)}
+    .fade-in.visible{opacity:1;transform:translateY(0)}
+    .sp-only{display:none}
+
+    /* Sticky CTA */
+    .sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--rust);display:flex;align-items:center;justify-content:center;gap:1.2rem;padding:.85rem 1.5rem;transform:translateY(100%);transition:transform .5s var(--ease-out);box-shadow:0 -2px 20px rgba(26,20,16,.15)}
+    .sticky-cta.show{transform:translateY(0)}
+    .sticky-cta-text{color:rgba(255,255,255,.8);font-size:.8rem;letter-spacing:.2em;font-weight:300}
+    .sticky-cta-text strong{color:#fff;font-weight:500}
+    .sticky-cta-btn{background:#fff;color:var(--rust);border:none;padding:.65rem 1.8rem;font-size:.8rem;letter-spacing:.25em;font-weight:500;font-family:'Shippori Mincho',serif;transition:all .25s var(--ease-out);white-space:nowrap}
+    .sticky-cta-btn:hover{background:var(--gold);color:#fff}
+
+    /* Nav */
+    nav{position:fixed;top:0;left:0;right:0;z-index:150;height:var(--nav-h);display:flex;justify-content:space-between;align-items:center;padding:0 2rem;background:rgba(246,241,232,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(208,201,188,.5);transition:box-shadow .3s}
+    nav.scrolled{box-shadow:0 1px 12px rgba(26,20,16,.06)}
+    .nav-logo{font-family:'Shippori Mincho',serif;font-size:1.2rem;letter-spacing:.4em;color:var(--rust);line-height:1}
+    .nav-logo span{font-size:.6rem;color:var(--gold);letter-spacing:.2em;display:block;margin-top:2px;font-weight:400}
+    .nav-links{display:flex;gap:1.6rem;align-items:center}
+    .nav-links a{font-size:.72rem;letter-spacing:.22em;color:var(--ink-soft);transition:color .25s;position:relative;padding-bottom:2px}
+    .nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1px;background:var(--rust);transition:width .35s var(--ease-out)}
+    .nav-links a:hover{color:var(--rust)}
+    .nav-links a:hover::after{width:100%}
+    .nav-reserve{background:var(--rust)!important;color:#fff!important;padding:.45rem 1.1rem;letter-spacing:.2em!important;transition:background .25s!important;font-size:.72rem!important}
+    .nav-reserve::after{display:none!important}
+    .nav-reserve:hover{background:var(--rust-dark)!important}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:4px}
+    .nav-hamburger span{display:block;width:20px;height:1px;background:var(--ink);transition:all .3s}
+    .nav-hamburger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+    .nav-hamburger.open span:nth-child(2){opacity:0}
+    .nav-hamburger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+    .nav-drawer{position:fixed;top:var(--nav-h);left:0;right:0;bottom:0;background:rgba(246,241,232,.98);backdrop-filter:blur(16px);z-index:140;display:flex;flex-direction:column;padding:2.5rem 2rem 8rem;transform:translateX(100%);transition:transform .4s var(--ease-out)}
+    .nav-drawer.open{transform:translateX(0)}
+    .nav-drawer a{font-family:'Shippori Mincho',serif;font-size:1.15rem;letter-spacing:.3em;padding:1rem 0;border-bottom:1px solid var(--mist-light);color:var(--ink)}
+    .nav-drawer .drawer-reserve{margin-top:2.5rem;background:var(--rust);color:#fff;text-align:center;padding:1rem;font-size:.9rem;letter-spacing:.35em}
+
+    /* Hero */
+    #home{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
+    .hero-bg{position:absolute;inset:0;background-image:url('images/hero.jpg');background-size:cover;background-position:center 30%;background-color:var(--ink);transform:scale(1.03);transition:transform 10s ease}
+    .hero-bg.loaded{transform:scale(1)}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,20,16,.05) 0%,rgba(26,20,16,.15) 40%,rgba(26,20,16,.7) 85%,rgba(26,20,16,.82) 100%)}
+    .hero-content{position:relative;padding:0 2rem 5.5rem;animation:fadeUp 1.2s .3s both}
+    .hero-badge{display:inline-block;border:1px solid rgba(166,135,58,.4);padding:.45rem 1.2rem;margin-bottom:1.5rem;font-size:.7rem;letter-spacing:.35em;color:var(--gold);font-weight:300}
+    .hero-title{font-family:'Shippori Mincho',serif;font-size:clamp(3.2rem,12vw,7rem);font-weight:600;letter-spacing:.35em;line-height:.85;color:#fff;margin-bottom:.6rem}
+    .hero-subtitle{font-family:'Cormorant Garamond',serif;font-size:clamp(.85rem,2vw,1rem);letter-spacing:.5em;color:rgba(166,135,58,.85);margin-bottom:1.5rem;font-weight:300}
+    .hero-desc{font-size:.9rem;letter-spacing:.08em;line-height:2.2;color:rgba(246,241,232,.85);margin-bottom:2.2rem;max-width:480px;font-weight:300}
+    .hero-ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+    .btn-hero-primary{display:inline-flex;align-items:center;background:var(--rust);color:#fff;padding:.9rem 2rem;font-size:.85rem;letter-spacing:.25em;font-family:'Shippori Mincho',serif;transition:all .3s var(--ease-out);font-weight:500}
+    .btn-hero-primary:hover{background:var(--rust-dark);transform:translateY(-2px);box-shadow:0 6px 24px rgba(122,52,39,.3)}
+    .btn-hero-secondary{display:inline-flex;align-items:center;border:1px solid rgba(246,241,232,.4);color:rgba(246,241,232,.85);padding:.9rem 2rem;font-size:.85rem;letter-spacing:.25em;font-family:'Shippori Mincho',serif;transition:all .3s var(--ease-out);font-weight:400}
+    .btn-hero-secondary:hover{background:rgba(246,241,232,.1);border-color:rgba(246,241,232,.6)}
+    .scroll-hint{position:absolute;bottom:1.8rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.3rem;animation:drift 2.5s 2s infinite;color:rgba(246,241,232,.35);font-size:.6rem;letter-spacing:.4em;font-family:'Cormorant Garamond',serif}
+    .scroll-hint::after{content:'';width:1px;height:36px;background:linear-gradient(to bottom,rgba(246,241,232,.35),transparent)}
+
+    /* Section */
+    section{padding:5.5rem 0}
+    .section-inner{max-width:960px;margin:0 auto;padding:0 2rem}
+    .section-header{text-align:center;margin-bottom:3.5rem}
+    .section-en{font-family:'Cormorant Garamond',serif;font-size:.9rem;letter-spacing:.5em;color:var(--gold);display:block;margin-bottom:.6rem;font-weight:300}
+    .section-title{font-family:'Shippori Mincho',serif;font-size:clamp(1.4rem,3.5vw,1.9rem);letter-spacing:.3em;color:var(--ink);line-height:1.4;font-weight:600}
+    .divider{width:32px;height:1px;background:var(--rust);margin:1.2rem auto 0;opacity:.6}
+
+    /* Intro */
+    #intro{padding:5rem 0}
+    .intro-box{background:var(--washi-dark);padding:3rem 2.5rem;max-width:760px;margin:0 auto;border-left:2px solid var(--rust)}
+    .intro-box h3{font-family:'Shippori Mincho',serif;font-size:1.15rem;letter-spacing:.2em;margin-bottom:1.5rem;color:var(--rust);font-weight:600}
+    .intro-box p{font-size:.95rem;line-height:2.2;margin-bottom:1rem;color:var(--ink-soft)}
+    .intro-list{margin-top:2rem;background:var(--washi);padding:1.5rem 1.5rem 1.5rem 2rem}
+    .intro-list li{font-size:.9rem;line-height:2.2;padding:.3rem 0;position:relative;padding-left:1.2rem;color:var(--ink-soft)}
+    .intro-list li::before{content:'';position:absolute;left:0;top:.85em;width:6px;height:6px;border:1px solid var(--rust);border-radius:50%}
+    .intro-note{margin-top:1.2rem;font-size:.85rem;color:var(--ink-light);line-height:2}
+    .intro-note strong{color:var(--rust);font-weight:500}
+
+    /* Features */
+    #features{background:var(--sand)}
+    .features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--mist)}
+    .feature-item{background:var(--washi);padding:2.2rem 1.8rem;transition:background .4s}
+    .feature-item:hover{background:var(--washi-dark)}
+    .feature-icon{width:28px;height:28px;margin-bottom:1.2rem}
+    .feature-icon svg{width:100%;height:100%;stroke:var(--rust);fill:none;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round}
+    .feature-title{font-family:'Shippori Mincho',serif;font-size:.95rem;letter-spacing:.18em;margin-bottom:.8rem;font-weight:600}
+    .feature-desc{font-size:.85rem;line-height:2;color:var(--ink-light)}
+
+    /* Rooms */
+    .room-card{background:var(--washi);box-shadow:var(--shadow-sm);overflow:hidden;margin-bottom:2rem}
+    .room-img{position:relative;height:320px;overflow:hidden}
+    .room-img-placeholder{background:var(--washi-dark);display:flex;align-items:center;justify-content:center}
+    .room-img-empty{font-size:.85rem;color:var(--ink-light);letter-spacing:.15em}
+    .room-badge{position:absolute;top:1.5rem;left:1.5rem;background:rgba(122,52,39,.88);color:#fff;padding:.5rem 1.1rem;font-size:.7rem;letter-spacing:.25em}
+    .room-info{padding:2.5rem 2rem}
+    .room-en{font-family:'Cormorant Garamond',serif;font-size:.75rem;letter-spacing:.35em;color:var(--gold);margin-bottom:.4rem;font-weight:300}
+    .room-name{font-family:'Shippori Mincho',serif;font-size:1.3rem;letter-spacing:.25em;margin-bottom:1.2rem;font-weight:600}
+    .room-desc{font-size:.9rem;line-height:2.2;color:var(--ink-soft);margin-bottom:1.5rem}
+    .room-amenities{display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem;margin-bottom:1.5rem}
+    .room-amenities li{font-size:.82rem;display:flex;align-items:center;gap:.6rem;color:var(--ink-soft)}
+    .room-amenities li::before{content:'';width:4px;height:4px;background:var(--rust);border-radius:50%;flex-shrink:0}
+    .room-price-wrap{border-top:1px solid var(--mist-light);padding-top:1.5rem}
+    .room-price-label{font-size:.75rem;color:var(--ink-light)}
+    .room-price{font-family:'Shippori Mincho',serif;font-size:1.6rem;color:var(--rust);font-weight:600}
+    .room-price span{font-size:.85rem;font-weight:400;color:var(--ink-soft)}
+    .room-checkin{font-size:.78rem;color:var(--ink-light);margin-top:.4rem}
+    .room-cta{margin-top:1.8rem}
+    .btn-room{display:inline-block;background:var(--rust);color:#fff;padding:.85rem 2rem;font-size:.82rem;letter-spacing:.25em;transition:all .3s var(--ease-out);width:100%;text-align:center;font-family:'Shippori Mincho',serif;font-weight:500}
+    .btn-room:hover{background:var(--rust-dark)}
+
+    /* Gallery */
+    .gallery-tabs{display:flex;justify-content:center;gap:.5rem;flex-wrap:wrap;margin-bottom:2rem}
+    .gallery-tab{background:none;border:1px solid var(--mist);color:var(--ink-light);padding:.5rem 1.2rem;font-size:.75rem;letter-spacing:.15em;font-family:'Shippori Mincho',serif;transition:all .3s;cursor:pointer}
+    .gallery-tab:hover{border-color:var(--rust);color:var(--rust)}
+    .gallery-tab.active{background:var(--rust);color:#fff;border-color:var(--rust)}
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem}
+    .gallery-item{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:4/3}
+    .gallery-item.hidden{display:none}
+    .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease-out)}
+    .gallery-item:hover img{transform:scale(1.06)}
+    .gallery-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,20,16,.65) 0%,transparent 50%);display:flex;align-items:flex-end;padding:1rem;opacity:0;transition:opacity .35s}
+    .gallery-item:hover .gallery-overlay{opacity:1}
+    .gallery-label{color:#fff;font-size:.78rem;letter-spacing:.2em;font-weight:300}
+
+    /* Lightbox */
+    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:300;display:none;align-items:center;justify-content:center;padding:2rem}
+    .lightbox.open{display:flex}
+    .lightbox img{max-width:85%;max-height:85%;object-fit:contain;user-select:none}
+    .lightbox-close{position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:rgba(255,255,255,.5);font-size:1.8rem;cursor:pointer;line-height:1;transition:color .2s;z-index:2;width:40px;height:40px;display:flex;align-items:center;justify-content:center}
+    .lightbox-close:hover{color:#fff}
     .lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,.4);font-size:1.5rem;cursor:pointer;transition:color .2s;z-index:2;width:48px;height:48px;display:flex;align-items:center;justify-content:center}
     .lightbox-nav:hover{color:rgba(255,255,255,.9)}
     .lightbox-prev{left:1rem}
     .lightbox-next{right:1rem}
     .lightbox-counter{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.4);font-size:.75rem;letter-spacing:.3em;font-family:'Cormorant Garamond',serif}
-    .flow-steps{max-width:700px;margin:0 auto}.flow-item{display:flex;gap:2rem;margin-bottom:2.5rem;position:relative}.flow-item:not(:last-child)::after{content:'';position:absolute;left:1.15rem;top:3.5rem;width:1px;height:calc(100% + .5rem);background:var(--mist)}.flow-num-wrap{flex-shrink:0}.flow-num{display:flex;align-items:center;justify-content:center;width:2.4rem;height:2.4rem;border:1px solid var(--rust);color:var(--rust);font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:400;position:relative;z-index:1;background:var(--washi)}.flow-body{flex:1;padding-top:.3rem}.flow-title{font-family:'Shippori Mincho',serif;font-size:1rem;letter-spacing:.15em;margin-bottom:.6rem;font-weight:600}.flow-desc{font-size:.88rem;line-height:2;color:var(--ink-light)}
-    #rates{background:var(--washi-dark)}.rate-box{background:var(--washi);padding:3rem 2.5rem;max-width:640px;margin:0 auto;box-shadow:var(--shadow-sm)}.rate-header{text-align:center;border-bottom:1px solid var(--mist-light);padding-bottom:1.5rem;margin-bottom:2rem}.rate-type{font-family:'Cormorant Garamond',serif;font-size:.8rem;letter-spacing:.35em;color:var(--gold);margin-bottom:.4rem;font-weight:300}.rate-name{font-family:'Shippori Mincho',serif;font-size:1.2rem;letter-spacing:.25em;font-weight:600}.rate-price-box{text-align:center;margin-bottom:2rem}.rate-price{font-family:'Shippori Mincho',serif;font-size:2.6rem;color:var(--rust);font-weight:600;line-height:1}.rate-price-unit{font-size:.95rem;font-weight:400;color:var(--ink-light)}.rate-badge{display:inline-block;border:1px solid var(--gold);color:var(--rust);padding:.35rem 1rem;font-size:.75rem;letter-spacing:.2em;margin-top:1rem}.rate-amenities{margin-bottom:2rem}.rate-amenities li{font-size:.88rem;line-height:2.2;padding-left:1.2rem;position:relative;color:var(--ink-soft)}.rate-amenities li::before{content:'';position:absolute;left:0;top:.9em;width:4px;height:4px;background:var(--rust);border-radius:50%}.rate-note{font-size:.85rem;line-height:2;color:var(--ink-light);text-align:center;margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--mist-light)}.book-wrap{text-align:center;margin-top:2.5rem}.btn-gold{display:inline-block;background:var(--gold);color:#fff;padding:.9rem 2.8rem;font-size:.88rem;letter-spacing:.2em;transition:all .3s var(--ease-out);font-family:'Shippori Mincho',serif;font-weight:500}.btn-gold:hover{background:#917530;transform:translateY(-2px)}
-    #calendar{background:var(--sand)}.calendar-wrap{max-width:760px;margin:0 auto;text-align:center;padding:1rem 0}.calendar-wrap>p{font-size:.95rem;line-height:2.2;margin-bottom:2rem;color:var(--ink-soft)}.calendar-embed{width:100%;overflow:hidden;border:1px solid var(--mist);background:#fff;margin-bottom:1.5rem}.calendar-embed iframe{width:100%;height:500px;border:0}.calendar-note{font-size:.8rem;color:var(--ink-light);margin-bottom:2rem;line-height:1.9}.calendar-legend{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-bottom:1.5rem;padding:1rem 1.5rem}.legend-item{display:flex;align-items:center;gap:.5rem;font-size:.82rem;color:var(--ink-light)}.legend-item strong{color:var(--ink-soft);font-weight:500}.legend-dot{width:12px;height:12px;flex-shrink:0;border-radius:2px}.legend-dot-available{background:var(--washi);border:1px solid var(--moss)}.legend-dot-booked{background:#8e99a4;border:1px solid #6b7681}
-    .access-wrap{display:flex;flex-direction:column;gap:2.5rem}.access-map{width:100%;height:380px;border:1px solid var(--mist)}.access-map iframe{width:100%;height:100%}.access-info h3{font-family:'Shippori Mincho',serif;font-size:1.05rem;letter-spacing:.15em;margin-bottom:1.5rem;color:var(--rust);font-weight:600;line-height:1.8}.access-list{margin-top:1.5rem}.access-list li{margin-bottom:1.2rem;display:flex;gap:1rem}.access-label{flex-shrink:0;font-weight:500;font-size:.85rem;color:var(--rust);min-width:3.5rem;letter-spacing:.1em}.access-list li>span:not(.access-label){font-size:.9rem;line-height:2;color:var(--ink-soft)}.access-dir-btn{display:inline-block;margin-top:1.5rem;border:1px solid var(--rust);color:var(--rust);padding:.7rem 1.8rem;font-size:.82rem;letter-spacing:.2em;transition:all .3s var(--ease-out);font-family:'Shippori Mincho',serif}.access-dir-btn:hover{background:var(--rust);color:#fff}
-    #contact{background:var(--washi-dark)}.contact-cta-wrap{display:flex;flex-direction:column;gap:3rem}.contact-info h3{font-family:'Shippori Mincho',serif;font-size:1.2rem;letter-spacing:.2em;margin-bottom:1rem;line-height:1.7;font-weight:600}.contact-info p{font-size:.9rem;line-height:2.2;color:var(--ink-soft);margin-bottom:2rem}.contact-detail{background:var(--washi);padding:1.5rem;border-left:2px solid var(--rust)}.contact-detail p{margin:.6rem 0;font-size:.88rem;color:var(--ink-soft)}.contact-detail strong{color:var(--rust);display:inline-block;min-width:4.5rem;font-weight:500}.contact-form-replacement{flex:1}.contact-form-card{background:var(--washi);padding:3rem 2rem;text-align:center;box-shadow:var(--shadow-sm)}.contact-form-lead{font-size:.95rem;line-height:2.2;color:var(--ink-soft);margin-bottom:2.5rem}.btn-reserve-large{display:inline-block;background:var(--rust);color:#fff;padding:1.1rem 3rem;font-size:1rem;letter-spacing:.3em;font-family:'Shippori Mincho',serif;transition:all .3s var(--ease-out);font-weight:500}.btn-reserve-large:hover{background:var(--rust-dark);transform:translateY(-2px);box-shadow:0 8px 28px rgba(122,52,39,.2)}.contact-form-sub{font-size:.75rem;color:var(--ink-light);margin-top:1.2rem;letter-spacing:.1em}
-    footer{background:var(--ink);color:var(--washi);padding:3.5rem 2rem 2.5rem;text-align:center}.footer-logo{font-family:'Shippori Mincho',serif;font-size:1.6rem;letter-spacing:.5em;color:var(--washi);margin-bottom:.4rem;font-weight:400}.footer-sub{font-family:'Cormorant Garamond',serif;font-size:.75rem;color:var(--gold);letter-spacing:.4em;margin-bottom:2.5rem;font-weight:300}.footer-nav{display:flex;justify-content:center;flex-wrap:wrap;gap:.6rem 1.6rem;margin-bottom:2.5rem}.footer-nav a{color:rgba(208,201,188,.6);font-size:.72rem;letter-spacing:.2em;transition:color .25s}.footer-nav a:hover{color:var(--gold)}.footer-divider{width:32px;height:1px;background:rgba(255,255,255,.08);margin:0 auto 2rem}.footer-copy{font-size:.65rem;color:rgba(90,80,72,.6);letter-spacing:.15em}
-    @media(min-width:768px){:root{--nav-h:64px}nav{padding:0 3.5rem}.nav-hamburger{display:none}.nav-links{display:flex}.nav-drawer{display:none}.hero-content{padding:0 4.5rem 6.5rem;max-width:560px}.section-inner{padding:0 3rem}.features-grid{grid-template-columns:repeat(4,1fr)}.gallery-grid{grid-template-columns:repeat(4,1fr)}.access-wrap{flex-direction:row;gap:3.5rem}.access-map{flex:1;height:340px}.access-info{flex:1}.contact-cta-wrap{flex-direction:row}.contact-info{flex:0 0 280px}.calendar-embed iframe{height:580px}footer{padding-bottom:4rem}}
-    @media(min-width:1024px){.room-card{display:grid;grid-template-columns:1fr 1fr}.room-img{height:100%;max-height:none}}
-    @media(max-width:767px){.nav-links{display:none}.nav-hamburger{display:flex}.pc-only{display:none}.sp-only{display:block}span.sp-only{display:inline}.gallery-grid{grid-template-columns:repeat(2,1fr)}.gallery-tab{font-size:.68rem;padding:.45rem .8rem}section{padding:4rem 0}.section-header{margin-bottom:2.5rem}.calendar-embed iframe{height:380px}.intro-box{padding:2rem 1.5rem}.rate-box{padding:2rem 1.5rem}.lightbox-nav{width:36px;height:36px;font-size:1.2rem}}
-    .sp-only{display:none}
+
+    /* Flow */
+    .flow-steps{max-width:700px;margin:0 auto}
+    .flow-item{display:flex;gap:2rem;margin-bottom:2.5rem;position:relative}
+    .flow-item:not(:last-child)::after{content:'';position:absolute;left:1.15rem;top:3.5rem;width:1px;height:calc(100% + .5rem);background:var(--mist)}
+    .flow-num{display:flex;align-items:center;justify-content:center;width:2.4rem;height:2.4rem;border:1px solid var(--rust);color:var(--rust);font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:400;position:relative;z-index:1;background:var(--washi);flex-shrink:0}
+    .flow-body{flex:1;padding-top:.3rem}
+    .flow-title{font-family:'Shippori Mincho',serif;font-size:1rem;letter-spacing:.15em;margin-bottom:.6rem;font-weight:600}
+    .flow-desc{font-size:.88rem;line-height:2;color:var(--ink-light)}
+
+    /* Rates */
+    #rates{background:var(--washi-dark)}
+    .rate-box{background:var(--washi);padding:3rem 2.5rem;max-width:640px;margin:0 auto;box-shadow:var(--shadow-sm)}
+    .rate-header{text-align:center;border-bottom:1px solid var(--mist-light);padding-bottom:1.5rem;margin-bottom:2rem}
+    .rate-type{font-family:'Cormorant Garamond',serif;font-size:.8rem;letter-spacing:.35em;color:var(--gold);margin-bottom:.4rem;font-weight:300}
+    .rate-name{font-family:'Shippori Mincho',serif;font-size:1.2rem;letter-spacing:.25em;font-weight:600}
+    .rate-price-box{text-align:center;margin-bottom:2rem}
+    .rate-price{font-family:'Shippori Mincho',serif;font-size:2.6rem;color:var(--rust);font-weight:600;line-height:1}
+    .rate-price-unit{font-size:.95rem;font-weight:400;color:var(--ink-light)}
+    .rate-badge{display:inline-block;border:1px solid var(--gold);color:var(--rust);padding:.35rem 1rem;font-size:.75rem;letter-spacing:.2em;margin-top:1rem}
+    .rate-amenities{margin-bottom:2rem}
+    .rate-amenities li{font-size:.88rem;line-height:2.2;padding-left:1.2rem;position:relative;color:var(--ink-soft)}
+    .rate-amenities li::before{content:'';position:absolute;left:0;top:.9em;width:4px;height:4px;background:var(--rust);border-radius:50%}
+    .rate-note{font-size:.85rem;line-height:2;color:var(--ink-light);text-align:center;margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--mist-light)}
+    .book-wrap{text-align:center;margin-top:2.5rem}
+    .btn-gold{display:inline-block;background:var(--gold);color:#fff;padding:.9rem 2.8rem;font-size:.88rem;letter-spacing:.2em;transition:all .3s var(--ease-out);font-family:'Shippori Mincho',serif;font-weight:500}
+    .btn-gold:hover{background:#917530;transform:translateY(-2px)}
+
+    /* Calendar */
+    #calendar{background:var(--sand)}
+    .calendar-wrap{max-width:760px;margin:0 auto;text-align:center;padding:1rem 0}
+    .calendar-wrap>p{font-size:.95rem;line-height:2.2;margin-bottom:2rem;color:var(--ink-soft)}
+    .calendar-embed{width:100%;overflow:hidden;border:1px solid var(--mist);background:#fff;margin-bottom:1.5rem}
+    .calendar-embed iframe{width:100%;height:500px;border:0}
+    .calendar-note{font-size:.8rem;color:var(--ink-light);margin-bottom:2rem;line-height:1.9}
+    .calendar-legend{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-bottom:1.5rem;padding:1rem 1.5rem}
+    .legend-item{display:flex;align-items:center;gap:.5rem;font-size:.82rem;color:var(--ink-light)}
+    .legend-item strong{color:var(--ink-soft);font-weight:500}
+    .legend-dot{width:12px;height:12px;flex-shrink:0;border-radius:2px}
+    .legend-dot-available{background:var(--washi);border:1px solid var(--moss)}
+    .legend-dot-booked{background:#8e99a4;border:1px solid #6b7681}
+
+    /* Access */
+    .access-wrap{display:flex;flex-direction:column;gap:2.5rem}
+    .access-map{width:100%;height:380px;border:1px solid var(--mist)}
+    .access-map iframe{width:100%;height:100%}
+    .access-info h3{font-family:'Shippori Mincho',serif;font-size:1.05rem;letter-spacing:.15em;margin-bottom:1.5rem;color:var(--rust);font-weight:600;line-height:1.8}
+    .access-list{margin-top:1.5rem}
+    .access-list li{margin-bottom:1.2rem;display:flex;gap:1rem}
+    .access-label{flex-shrink:0;font-weight:500;font-size:.85rem;color:var(--rust);min-width:3.5rem;letter-spacing:.1em}
+    .access-list li>span:not(.access-label){font-size:.9rem;line-height:2;color:var(--ink-soft)}
+    .access-dir-btn{display:inline-block;margin-top:1.5rem;border:1px solid var(--rust);color:var(--rust);padding:.7rem 1.8rem;font-size:.82rem;letter-spacing:.2em;transition:all .3s var(--ease-out);font-family:'Shippori Mincho',serif}
+    .access-dir-btn:hover{background:var(--rust);color:#fff}
+
+    /* Contact */
+    #contact{background:var(--washi-dark)}
+    .contact-cta-wrap{display:flex;flex-direction:column;gap:3rem}
+    .contact-info h3{font-family:'Shippori Mincho',serif;font-size:1.2rem;letter-spacing:.2em;margin-bottom:1rem;line-height:1.7;font-weight:600}
+    .contact-info p{font-size:.9rem;line-height:2.2;color:var(--ink-soft);margin-bottom:2rem}
+    .contact-detail{background:var(--washi);padding:1.5rem;border-left:2px solid var(--rust)}
+    .contact-detail p{margin:.6rem 0;font-size:.88rem;color:var(--ink-soft)}
+    .contact-detail strong{color:var(--rust);display:inline-block;min-width:4.5rem;font-weight:500}
+    .contact-form-card{background:var(--washi);padding:3rem 2rem;text-align:center;box-shadow:var(--shadow-sm)}
+    .contact-form-lead{font-size:.95rem;line-height:2.2;color:var(--ink-soft);margin-bottom:2.5rem}
+    .btn-reserve-large{display:inline-block;background:var(--rust);color:#fff;padding:1.1rem 3rem;font-size:1rem;letter-spacing:.3em;font-family:'Shippori Mincho',serif;transition:all .3s var(--ease-out);font-weight:500}
+    .btn-reserve-large:hover{background:var(--rust-dark);transform:translateY(-2px);box-shadow:0 8px 28px rgba(122,52,39,.2)}
+    .contact-form-sub{font-size:.75rem;color:var(--ink-light);margin-top:1.2rem;letter-spacing:.1em}
+
+    /* Footer */
+    footer{background:var(--ink);color:var(--washi);padding:3.5rem 2rem 2.5rem;text-align:center}
+    .footer-logo{font-family:'Shippori Mincho',serif;font-size:1.6rem;letter-spacing:.5em;margin-bottom:.4rem;font-weight:400}
+    .footer-sub{font-family:'Cormorant Garamond',serif;font-size:.75rem;color:var(--gold);letter-spacing:.4em;margin-bottom:2.5rem;font-weight:300}
+    .footer-nav{display:flex;justify-content:center;flex-wrap:wrap;gap:.6rem 1.6rem;margin-bottom:2.5rem}
+    .footer-nav a{color:rgba(208,201,188,.6);font-size:.72rem;letter-spacing:.2em;transition:color .25s}
+    .footer-nav a:hover{color:var(--gold)}
+    .footer-divider{width:32px;height:1px;background:rgba(255,255,255,.08);margin:0 auto 2rem}
+    .footer-copy{font-size:.65rem;color:rgba(90,80,72,.6);letter-spacing:.15em}
+
+    /* Responsive */
+    @media(min-width:768px){
+      :root{--nav-h:64px}
+      nav{padding:0 3.5rem}
+      .nav-hamburger{display:none}
+      .nav-links{display:flex}
+      .nav-drawer{display:none}
+      .hero-content{padding:0 4.5rem 6.5rem;max-width:560px}
+      .section-inner{padding:0 3rem}
+      .features-grid{grid-template-columns:repeat(4,1fr)}
+      .gallery-grid{grid-template-columns:repeat(4,1fr)}
+      .access-wrap{flex-direction:row;gap:3.5rem}
+      .access-map{flex:1;height:340px}
+      .access-info{flex:1}
+      .contact-cta-wrap{flex-direction:row}
+      .contact-info{flex:0 0 280px}
+      .calendar-embed iframe{height:580px}
+      footer{padding-bottom:4rem}
+    }
+    @media(min-width:1024px){
+      .room-card{display:grid;grid-template-columns:1fr 1fr}
+      .room-img{height:100%;max-height:none}
+    }
+    @media(max-width:767px){
+      .nav-links{display:none}
+      .nav-hamburger{display:flex}
+      .pc-only{display:none}
+      .sp-only{display:block}
+      span.sp-only{display:inline}
+      .gallery-grid{grid-template-columns:repeat(2,1fr)}
+      .gallery-tab{font-size:.68rem;padding:.45rem .8rem}
+      section{padding:4rem 0}
+      .section-header{margin-bottom:2.5rem}
+      .calendar-embed iframe{height:380px}
+      .intro-box{padding:2rem 1.5rem}
+      .rate-box{padding:2rem 1.5rem}
+      .lightbox-nav{width:36px;height:36px;font-size:1.2rem}
+    }
   </style>
 </head>
 <body>
-  <div class="sticky-cta" id="stickyCta"><div class="sticky-cta-text"><strong>ゲストハウス wakana</strong></div><a href="https://forms.gle/5RPoq7CwafFoZ2NFA" target="_blank" rel="noopener" class="sticky-cta-btn" onclick="closeMobileNav()">予約フォームへ</a></div>
 
-  <!-- Lightbox with prev/next -->
+  <!-- Sticky CTA -->
+  <div class="sticky-cta" id="stickyCta">
+    <div class="sticky-cta-text"><strong>ゲストハウス wakana</strong></div>
+    <a href="https://forms.gle/5RPoq7CwafFoZ2NFA" target="_blank" rel="noopener" class="sticky-cta-btn" onclick="closeMobileNav()">予約フォームへ</a>
+  </div>
+
+  <!-- Lightbox -->
   <div class="lightbox" id="lightbox">
-    <button class="lightbox-close" onclick="closeLightbox()">×</button>
-    <button class="lightbox-nav lightbox-prev" onclick="lightboxNav(-1)">‹</button>
-    <button class="lightbox-nav lightbox-next" onclick="lightboxNav(1)">›</button>
+    <button class="lightbox-close" onclick="closeLightbox()">&#215;</button>
+    <button class="lightbox-nav lightbox-prev" onclick="lightboxNav(-1)">&#8249;</button>
+    <button class="lightbox-nav lightbox-next" onclick="lightboxNav(1)">&#8250;</button>
     <img id="lightboxImg" src="" alt="">
     <div class="lightbox-counter" id="lightboxCounter"></div>
   </div>
 
-  <nav id="mainNav"><div class="nav-logo">wakana<span>ゲストハウス和奏</span></div><ul class="nav-links"><li><a href="#rooms">お部屋</a></li><li><a href="#gallery">写真</a></li><li><a href="#rates">料金</a></li><li><a href="#access">アクセス</a></li><li><a href="https://forms.gle/5RPoq7CwafFoZ2NFA" target="_blank" rel="noopener" class="nav-reserve">予約する</a></li></ul><button class="nav-hamburger" id="hamburger" onclick="toggleMobileNav()"><span></span><span></span><span></span></button></nav>
-  <div class="nav-drawer" id="navDrawer"><a href="#rooms" onclick="closeMobileNav()">お部屋</a><a href="#gallery" onclick="closeMobileNav()">写真</a><a href="#rates" onclick="closeMobileNav()">料金</a><a href="#calendar" onclick="closeMobileNav()">空き状況</a><a href="#access" onclick="closeMobileNav()">アクセス</a><a href="https://forms.gle/5RPoq7CwafFoZ2NFA" target="_blank" rel="noopener" class="drawer-reserve" onclick="closeMobileNav()">予約フォームへ</a></div>
+  <!-- Nav -->
+  <nav id="mainNav">
+    <div class="nav-logo">wakana<span>ゲストハウス和奏</span></div>
+    <ul class="nav-links">
+      <li><a href="#rooms">お部屋</a></li>
+      <li><a href="#gallery">写真</a></li>
+      <li><a href="#rates">料金</a></li>
+      <li><a href="#access">アクセス</a></li>
+      <li><a href="https://forms.gle/5RPoq7CwafFoZ2NFA" target="_blank" rel="noopener" class="nav-reserve">予約する</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" onclick="toggleMobileNav()"><span></span><span></span><span></span></button>
+  </nav>
 
-  <section id="home"><div class="hero-bg" id="heroBg"></div><div class="hero-overlay"></div><div class="hero-content"><div class="hero-badge">ホスト同居型ゲストハウス</div><h1 class="hero-title">wakana</h1><p class="hero-subtitle">Guest House Wakana — Tsuruoka</p><p class="hero-desc pc-only">庄内平野の田園に佇む、ホームステイ型の宿。ホストと過ごす温かな滞在。ヒノキ風呂・サウナと日本庭園が、旅の疲れを静かに癒します。</p><p class="hero-desc sp-only">庄内平野の田園に佇む、ホームステイ型の宿。ヒノキ風呂・サウナと日本庭園でくつろぐ滞在を。</p><div class="hero-ctas"><a href="https://forms.gle/5RPoq7CwafFoZ2NFA" target="_blank" rel="noopener" class="btn-hero-primary">予約フォームへ</a><a href="#gallery" class="btn-hero-secondary">写真を見る</a></div></div><div class="scroll-hint">SCROLL</div></section>
+  <!-- Mobile Drawer -->
+  <div class="nav-drawer" id="navDrawer">
+    <a href="#rooms" onclick="closeMobileNav()">お部屋</a>
+    <a href="#gallery" onclick="closeMobileNav()">写真</a>
+    <a href="#rates" onclick="closeMobileNav()">料金</a>
+    <a href="#calendar" onclick="closeMobileNav()">空き状況</a>
+    <a href="#access" onclick="closeMobileNav()">アクセス</a>
+    <a href="https://forms.gle/5RPoq7CwafFoZ2NFA" target="_blank" rel="noopener" class="drawer-reserve" onclick="closeMobileNav()">予約フォームへ</a>
+  </div>
 
-  <section id="intro"><div class="section-inner"><div class="intro-box fade-in"><h3>ホストと過ごす、ホームステイスタイルの宿です</h3><p>wakana はオーナー（ホスト）が同じ建物に住みながら運営するゲストハウスです。ご宿泊いただくのは和室1部屋で、ヒノキ風呂・サウナ・キッチン・リビング・日本庭園はホストと共用でお使いいただけます。</p><p class="pc-only">完全な貸し切りではありませんが、その分ホストから鶴岡・庄内の旬な情報をたっぷり聞けるのが魅力です。地元の人だからこそ知っている、とっておきのお店や季節の見どころをお教えします。</p><ul class="intro-list"><li>和室の個室でプライベート空間を確保</li><li>ヒノキ風呂・サウナ・庭園・キッチンをご自由にご利用可能</li><li>ホストから地元の観光情報やおすすめグルメを直接聞ける</li></ul><p class="intro-note pc-only"><strong>※ ご注意：</strong>建物の完全貸し切りではありません。ホストと交流しながら過ごすスタイルをご理解の上、ご予約ください。</p></div></div></section>
+  <!-- Hero -->
+  <section id="home">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">ホスト同居型ゲストハウス</div>
+      <h1 class="hero-title">wakana</h1>
+      <p class="hero-subtitle">Guest House Wakana &#8212; Tsuruoka</p>
+      <p class="hero-desc pc-only">庄内平野の田園に佇む、ホームステイ型の宿。ホストと過ごす温かな滞在。ヒノキ風呂・サウナと日本庭園が、旅の疲れを静かに癒します。</p>
+      <p class="hero-desc sp-only">庄内平野の田園に佇む、ホームステイ型の宿。ヒノキ風呂・サウナと日本庭園でくつろぐ滞在を。</p>
+      <div class="hero-ctas">
+        <a href="https://forms.gle/5RPoq7CwafFoZ2NFA" target="_blank" rel="noopener" class="btn-hero-primary">予約フォームへ</a>
+        <a href="#gallery" class="btn-hero-secondary">写真を見る</a>
+      </div>
+    </div>
+    <div class="scroll-hint">SCROLL</div>
+  </section>
 
-  <section id="features"><div class="section-inner"><div class="section-header fade-in"><span class="section-en">Features</span><h2 class="section-title">wakana の特徴</h2><div class="divider"></div></div><div class="features-grid"><div class="feature-item fade-in"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div><h3 class="feature-title">ホストと暮らすように泊まる</h3><p class="feature-desc pc-only">オーナーと同じ建物で過ごす、ホームステイスタイルの滞在。観光情報やご当地グルメもお気軽にどうぞ。</p><p class="feature-desc sp-only">ホームステイスタイルの滞在。地元情報もお気軽に。</p></div><div class="feature-item fade-in"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M4 12h16M4 12c0 4.418 3.582 8 8 8s8-3.582 8-8M6 8c0-2.21 2.686-4 6-4s6 1.79 6 4"/><path d="M7 12v-1M17 12v-1"/></svg></div><h3 class="feature-title">本格ヒノキ風呂</h3><p class="feature-desc pc-only">ヒノキの香りが漂う贅沢な浴槽。旅の疲れをゆっくりほぐしてください。庭を眺めながらの入浴は格別です。</p><p class="feature-desc sp-only">ヒノキの香り漂う贅沢な浴槽で、旅の疲れを癒します。</p></div><div class="feature-item fade-in"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8 2 4 6.5 4 11c0 3.5 3 7 8 11 5-4 8-7.5 8-11 0-4.5-4-9-8-9z"/><circle cx="12" cy="11" r="2.5" fill="none"/></svg></div><h3 class="feature-title">四季の日本庭園</h3><p class="feature-desc pc-only">春の水仙、夏の緑、秋の紅葉、冬の雪景色。季節ごとに表情を変える庭園をお楽しみください。</p><p class="feature-desc sp-only">四季折々の美しさを楽しめる庭園。</p></div><div class="feature-item fade-in"><div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div><h3 class="feature-title">鶴岡駅 無料送迎</h3><p class="feature-desc pc-only">JR鶴岡駅からの無料送迎サービス。ご予約時にお申し付けください。お車でお越しの方は無料駐車場もございます。</p><p class="feature-desc sp-only">鶴岡駅から無料送迎。駐車場もあります。</p></div></div></div></section>
+  <!-- Intro -->
+  <section id="intro">
+    <div class="section-inner">
+      <div class="intro-box fade-in">
+        <h3>ホストと過ごす、ホームステイスタイルの宿です</h3>
+        <p>wakana はオーナー（ホスト）が同じ建物に住みながら運営するゲストハウスです。ご宿泊いただくのは和室1部屋で、ヒノキ風呂・サウナ・キッチン・リビング・日本庭園はホストと共用でお使いいただけます。</p>
+        <p class="pc-only">完全な貸し切りではありませんが、その分ホストから鶴岡・庄内の旬な情報をたっぷり聞けるのが魅力です。地元の人だからこそ知っている、とっておきのお店や季節の見どころをお教えします。</p>
+        <ul class="intro-list">
+          <li>和室の個室でプライベート空間を確保</li>
+          <li>ヒノキ風呂・サウナ・庭園・キッチンをご自由にご利用可能</li>
+          <li>ホストから地元の観光情報やおすすめグルメを直接聞ける</li>
+        </ul>
+        <p class="intro-note pc-only"><strong>※ ご注意：</strong>建物の完全貸し切りではありません。ホストと交流しながら過ごすスタイルをご理解の上、ご予約ください。</p>
+      </div>
+    </div>
+  </section>
 
-  <section id="rooms"><div class="section-inner"><div class="section-header fade-in"><span class="section-en">Room</span><h2 class="section-title">お部屋</h2><div class="divider"></div></div><div class="room-card fade-in"><div class="room-img room-img-placeholder"><div class="room-img-empty">お部屋の写真は準備中です</div><div class="room-badge">和室 1部屋</div></div><div class="room-info"><p class="room-en">Japanese Style Room</p><h3 class="room-name">和室</h3><p class="room-desc pc-only">畳の香り漂う和室で、ゆったりとお過ごしください。ヒノキ風呂・サウナ・日本庭園・リビング・キッチンはホストと共用でご利用いただけます。窓からは四季折々の庭園が望めます。</p><p class="room-desc sp-only">畳の和室でゆったり。ヒノキ風呂・サウナ・庭園などはホストと共用です。</p><ul class="room-amenities"><li>ヒノキ風呂（共用）</li><li>サウナ（共用）</li><li>日本庭園（共用）</li><li>キッチン（共用）</li><li>Wi-Fi</li><li>タオル・歯ブラシ完備</li><li>パジャマ等はご持参ください</li><li>無料送迎</li></ul><div class="room-price-wrap"><div><p class="room-price-label">1泊あたり</p><p class="room-price">¥8,000<span> / 泊</span></p><p class="room-checkin">チェックイン 15:00〜20:00 / チェックアウト 10:00</p></div></div><div class="room-cta"><a href="https://forms.gle/5RPoq7CwafFoZ2NFA" target="_blank" rel="noopener" class="btn-room">予約する</a></div></div></div></div></section>
+  <!-- Features -->
+  <section id="features">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <span class="section-en">Features</span>
+        <h2 class="section-title">wakana の特徴</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="features-grid">
+        <div class="feature-item fade-in">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
+          <h3 class="feature-title">ホストと暮らすように泊まる</h3>
+          <p class="feature-desc pc-only">オーナーと同じ建物で過ごす、ホームステイスタイルの滞在。観光情報やご当地グルメもお気軽にどうぞ。</p>
+          <p class="feature-desc sp-only">ホームステイスタイルの滞在。地元情報もお気軽に。</p>
+        </div>
+        <div class="feature-item fade-in">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M4 12h16M4 12c0 4.418 3.582 8 8 8s8-3.582 8-8M6 8c0-2.21 2.686-4 6-4s6 1.79 6 4"/><path d="M7 12v-1M17 12v-1"/></svg></div>
+          <h3 class="feature-title">本格ヒノキ風呂</h3>
+          <p class="feature-desc pc-only">ヒノキの香りが漂う贅沢な浴槽。旅の疲れをゆっくりほぐしてください。庭を眺めながらの入浴は格別です。</p>
+          <p class="feature-desc sp-only">ヒノキの香り漂う贅沢な浴槽で、旅の疲れを癒します。</p>
+        </div>
+        <div class="feature-item fade-in">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8 2 4 6.5 4 11c0 3.5 3 7 8 11 5-4 8-7.5 8-11 0-4.5-4-9-8-9z"/><circle cx="12" cy="11" r="2.5" fill="none"/></svg></div>
+          <h3 class="feature-title">四季の日本庭園</h3>
+          <p class="feature-desc pc-only">春の水仙、夏の緑、秋の紅葉、冬の雪景色。季節ごとに表情を変える庭園をお楽しみください。</p>
+          <p class="feature-desc sp-only">四季折々の美しさを楽しめる庭園。</p>
+        </div>
+        <div class="feature-item fade-in">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+          <h3 class="feature-title">鶴岡駅 無料送迎</h3>
+          <p class="feature-desc pc-only">JR鶴岡駅からの無料送迎サービス。ご予約時にお申し付けください。お車でお越しの方は無料駐車場もございます。</p>
+          <p class="feature-desc sp-only">鶴岡駅から無料送迎。駐車場もあります。</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <section id="gallery"><div class="section-inner"><div class="section-header fade-in"><span class="section-en">Gallery</span><h2 class="section-title">ギャラリー</h2><div class="divider"></div></div><div class="gallery-tabs fade-in"><button class="gallery-tab active" data-category="all">すべて</button><button class="gallery-tab" data-category="garden">庭園・外観</button><button class="gallery-tab" data-category="indoor">お部屋・室内</button><button class="gallery-tab" data-category="outdoor">焚き火</button><button class="gallery-tab" data-category="scenery">周辺の風景</button></div><div class="gallery-grid fade-in" id="galleryGrid"><div class="gallery-item" data-category="garden" onclick="openLightbox(0)"><img src="images/garden.jpg" alt="日本庭園" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">日本庭園</span></div></div><div class="gallery-item" data-category="garden" onclick="openLightbox(1)"><img src="images/gallery-1.jpg" alt="庭園の夕景" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">庭園の夕景</span></div></div><div class="gallery-item" data-category="scenery" onclick="openLightbox(2)"><img src="images/gallery-2.jpg" alt="冬の庭" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">冬の庭</span></div></div><div class="gallery-item" data-category="garden" onclick="openLightbox(3)"><img src="images/exterior.jpg" alt="外観" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">外観</span></div></div><div class="gallery-item" data-category="indoor" onclick="openLightbox(4)"><img src="images/living.jpg" alt="オーディオルーム" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">オーディオルーム</span></div></div><div class="gallery-item" data-category="indoor" onclick="openLightbox(5)"><img src="images/kitchen.jpg" alt="キッチン" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">キッチン</span></div></div><div class="gallery-item" data-category="outdoor" onclick="openLightbox(6)"><img src="images/bonfire.jpg" alt="焚き火スペース" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">焚き火</span></div></div><div class="gallery-item" data-category="scenery" onclick="openLightbox(7)"><img src="images/chokai_mountain.jpg" alt="鳥海山と田んぼ" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">鳥海山</span></div></div><div class="gallery-item" data-category="scenery" onclick="openLightbox(8)"><img src="images/winter_mountain.jpg" alt="冬の鳥海山" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">冬の鳥海山</span></div></div><div class="gallery-item" data-category="garden" onclick="openLightbox(9)"><img src="images/DSC_0932-EFFECTS%20(3).jpg" alt="春の水仙" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">春の水仙</span></div></div><div class="gallery-item" data-category="indoor" onclick="openLightbox(10)"><img src="images/DSC_1828%20(1).JPG" alt="廊下の光" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">廊下の光</span></div></div><div class="gallery-item" data-category="garden" onclick="openLightbox(11)"><img src="images/IMG20220713185327%20(1).jpg" alt="建物外観" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">建物外観</span></div></div><div class="gallery-item" data-category="garden" onclick="openLightbox(12)"><img src="images/IMG20240505070955%20(1).jpg" alt="庭園と縁側" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">庭園と縁側</span></div></div><div class="gallery-item" data-category="scenery" onclick="openLightbox(13)"><img src="images/IMG20240615065733%20(2).jpg" alt="庄内平野の田園風景" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">庄内平野の田園</span></div></div><div class="gallery-item" data-category="indoor" onclick="openLightbox(14)"><img src="images/PAP_0067%20(1).JPG" alt="ティータイム" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">ティータイム</span></div></div><div class="gallery-item" data-category="indoor" onclick="openLightbox(15)"><img src="images/IMG20220629065029%20(1).jpg" alt="紫陽花とリビング" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">紫陽花とリビング</span></div></div></div></div></section>
+  <!-- Rooms -->
+  <section id="rooms">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <span class="section-en">Room</span>
+        <h2 class="section-title">お部屋</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="room-card fade-in">
+        <div class="room-img room-img-placeholder">
+          <div class="room-img-empty">お部屋の写真は準備中です</div>
+          <div class="room-badge">和室 1部屋</div>
+        </div>
+        <div class="room-info">
+          <p class="room-en">Japanese Style Room</p>
+          <h3 class="room-name">和室</h3>
+          <p class="room-desc pc-only">畳の香り漂う和室で、ゆったりとお過ごしください。ヒノキ風呂・サウナ・日本庭園・リビング・キッチンはホストと共用でご利用いただけます。窓からは四季折々の庭園が望めます。</p>
+          <p class="room-desc sp-only">畳の和室でゆったり。ヒノキ風呂・サウナ・庭園などはホストと共用です。</p>
+          <ul class="room-amenities">
+            <li>ヒノキ風呂（共用）</li>
+            <li>サウナ（共用）</li>
+            <li>日本庭園（共用）</li>
+            <li>キッチン（共用）</li>
+            <li>Wi-Fi</li>
+            <li>タオル・歯ブラシ完備</li>
+            <li>パジャマ等はご持参ください</li>
+            <li>無料送迎</li>
+          </ul>
+          <div class="room-price-wrap">
+            <div>
+              <p class="room-price-label">1泊あたり</p>
+              <p class="room-price">&#165;8,000<span> / 泊</span></p>
+              <p class="room-checkin">チェックイン 15:00〜20:00 / チェックアウト 10:00</p>
+            </div>
+          </div>
+          <div class="room-cta">
+            <a href="https://forms.gle/5RPoq7CwafFoZ2NFA" target="_blank" rel="noopener" class="btn-room">予約する</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <section id="flow"><div class="section-inner"><div class="section-header fade-in"><span class="section-en">How to Book</span><h2 class="section-title">ご予約の流れ</h2><div class="divider"></div></div><div class="flow-steps"><div class="flow-item fade-in"><div class="flow-num-wrap"><span class="flow-num">01</span></div><div class="flow-body"><h3 class="flow-title">空き日程を確認</h3><p class="flow-desc pc-only">下部のカレンダーで空き状況をご確認ください。ご希望の日程がございましたら、お早めのご予約をおすすめします。</p><p class="flow-desc sp-only">カレンダーで空き状況をご確認ください。</p></div></div><div class="flow-item fade-in"><div class="flow-num-wrap"><span class="flow-num">02</span></div><div class="flow-body"><h3 class="flow-title">Googleフォームからご予約</h3><p class="flow-desc">「予約フォームへ」ボタンからGoogleフォームにてご予約ください。</p></div></div><div class="flow-item fade-in"><div class="flow-num-wrap"><span class="flow-num">03</span></div><div class="flow-body"><h3 class="flow-title">チェックイン（15:00〜20:00）</h3><p class="flow-desc pc-only">鶴岡駅からの送迎をご希望の方は事前にお申し付けください。当日はゆっくりとお寛ぎください。</p><p class="flow-desc sp-only">送迎ご希望の方は事前にお知らせください。</p></div></div><div class="flow-item fade-in"><div class="flow-num-wrap"><span class="flow-num">04</span></div><div class="flow-body"><h3 class="flow-title">ゆっくりとお過ごしください</h3><p class="flow-desc pc-only">ヒノキ風呂・サウナ・庭園・キッチンをご自由にお使いください。ご不明な点はホストにお気軽にお声がけください。</p><p class="flow-desc sp-only">ヒノキ風呂・サウナ・庭園をご自由にお楽しみください。</p></div></div></div></div></section>
+  <!-- Gallery -->
+  <section id="gallery">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <span class="section-en">Gallery</span>
+        <h2 class="section-title">ギャラリー</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="gallery-tabs fade-in">
+        <button class="gallery-tab active" data-category="all">すべて</button>
+        <button class="gallery-tab" data-category="garden">庭園・外観</button>
+        <button class="gallery-tab" data-category="indoor">お部屋・室内</button>
+        <button class="gallery-tab" data-category="outdoor">焚き火</button>
+        <button class="gallery-tab" data-category="scenery">周辺の風景</button>
+      </div>
+      <div class="gallery-grid fade-in" id="galleryGrid">
+        <div class="gallery-item" data-category="garden" onclick="openLightbox(0)"><img src="images/garden.jpg" alt="日本庭園" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">日本庭園</span></div></div>
+        <div class="gallery-item" data-category="garden" onclick="openLightbox(1)"><img src="images/gallery-1.jpg" alt="庭園の夕景" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">庭園の夕景</span></div></div>
+        <div class="gallery-item" data-category="scenery" onclick="openLightbox(2)"><img src="images/gallery-2.jpg" alt="冬の庭" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">冬の庭</span></div></div>
+        <div class="gallery-item" data-category="garden" onclick="openLightbox(3)"><img src="images/exterior.jpg" alt="外観" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">外観</span></div></div>
+        <div class="gallery-item" data-category="indoor" onclick="openLightbox(4)"><img src="images/living.jpg" alt="オーディオルーム" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">オーディオルーム</span></div></div>
+        <div class="gallery-item" data-category="indoor" onclick="openLightbox(5)"><img src="images/kitchen.jpg" alt="キッチン" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">キッチン</span></div></div>
+        <div class="gallery-item" data-category="outdoor" onclick="openLightbox(6)"><img src="images/bonfire.jpg" alt="焚き火スペース" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">焚き火</span></div></div>
+        <div class="gallery-item" data-category="scenery" onclick="openLightbox(7)"><img src="images/chokai_mountain.jpg" alt="鳥海山と田んぼ" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">鳥海山</span></div></div>
+        <div class="gallery-item" data-category="scenery" onclick="openLightbox(8)"><img src="images/winter_mountain.jpg" alt="冬の鳥海山" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">冬の鳥海山</span></div></div>
+        <div class="gallery-item" data-category="garden" onclick="openLightbox(9)"><img src="images/DSC_0932-EFFECTS%20(3).jpg" alt="春の水仙" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">春の水仙</span></div></div>
+        <div class="gallery-item" data-category="indoor" onclick="openLightbox(10)"><img src="images/DSC_1828%20(1).JPG" alt="廊下の光" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">廊下の光</span></div></div>
+        <div class="gallery-item" data-category="garden" onclick="openLightbox(11)"><img src="images/IMG20220713185327%20(1).jpg" alt="建物外観" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">建物外観</span></div></div>
+        <div class="gallery-item" data-category="garden" onclick="openLightbox(12)"><img src="images/IMG20240505070955%20(1).jpg" alt="庭園と縁側" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">庭園と縁側</span></div></div>
+        <div class="gallery-item" data-category="scenery" onclick="openLightbox(13)"><img src="images/IMG20240615065733%20(2).jpg" alt="庄内平野の田園風景" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">庄内平野の田園</span></div></div>
+        <div class="gallery-item" data-category="indoor" onclick="openLightbox(14)"><img src="images/PAP_0067%20(1).JPG" alt="ティータイム" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">ティータイム</span></div></div>
+        <div class="gallery-item" data-category="indoor" onclick="openLightbox(15)"><img src="images/IMG20220629065029%20(1).jpg" alt="紫陽花とリビング" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">紫陽花とリビング</span></div></div>
+      </div>
+    </div>
+  </section>
 
-  <section id="rates"><div class="section-inner"><div class="section-header fade-in"><span class="section-en">Rates</span><h2 class="section-title">料金・ご予約</h2><div class="divider"></div></div><div class="rate-box fade-in"><div class="rate-header"><p class="rate-type">Japanese Style Room — Host Homestay</p><h3 class="rate-name">和室 1部屋プラン</h3></div><div class="rate-price-box"><p class="rate-price">¥8,000<span class="rate-price-unit"> / 泊〜（税込）</span></p><div class="rate-badge">ホストと過ごすホームステイスタイル</div></div><ul class="rate-amenities"><li>和室（畳）個室</li><li>ヒノキ風呂（ホストと共用）</li><li>サウナ（ホストと共用）</li><li>日本庭園</li><li>リビング・キッチン完備</li><li>Wi-Fi（無料）</li><li>タオル・歯ブラシ完備（パジャマ等はご持参ください）</li><li>鶴岡駅 無料送迎（要予約）</li></ul><p class="rate-note pc-only">チェックイン 15:00〜20:00　／　チェックアウト 〜10:00<br>※ 早期・遅延はご相談ください</p><p class="rate-note sp-only">CI 15:00〜20:00 ／ CO 〜10:00</p></div><div class="book-wrap fade-in"><a href="https://forms.gle/5RPoq7CwafFoZ2NFA" target="_blank" rel="noopener" class="btn-gold">予約フォームへ</a></div></div></section>
+  <!-- Flow -->
+  <section id="flow">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <span class="section-en">How to Book</span>
+        <h2 class="section-title">ご予約の流れ</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="flow-steps">
+        <div class="flow-item fade-in">
+          <span class="flow-num">01</span>
+          <div class="flow-body">
+            <h3 class="flow-title">空き日程を確認</h3>
+            <p class="flow-desc pc-only">下部のカレンダーで空き状況をご確認ください。ご希望の日程がございましたら、お早めのご予約をおすすめします。</p>
+            <p class="flow-desc sp-only">カレンダーで空き状況をご確認ください。</p>
+          </div>
+        </div>
+        <div class="flow-item fade-in">
+          <span class="flow-num">02</span>
+          <div class="flow-body">
+            <h3 class="flow-title">Googleフォームからご予約</h3>
+            <p class="flow-desc">「予約フォームへ」ボタンからGoogleフォームにてご予約ください。</p>
+          </div>
+        </div>
+        <div class="flow-item fade-in">
+          <span class="flow-num">03</span>
+          <div class="flow-body">
+            <h3 class="flow-title">チェックイン（15:00〜20:00）</h3>
+            <p class="flow-desc pc-only">鶴岡駅からの送迎をご希望の方は事前にお申し付けください。当日はゆっくりとお寛ぎください。</p>
+            <p class="flow-desc sp-only">送迎ご希望の方は事前にお知らせください。</p>
+          </div>
+        </div>
+        <div class="flow-item fade-in">
+          <span class="flow-num">04</span>
+          <div class="flow-body">
+            <h3 class="flow-title">ゆっくりとお過ごしください</h3>
+            <p class="flow-desc pc-only">ヒノキ風呂・サウナ・庭園・キッチンをご自由にお使いください。ご不明な点はホストにお気軽にお声がけください。</p>
+            <p class="flow-desc sp-only">ヒノキ風呂・サウナ・庭園をご自由にお楽しみください。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <section id="calendar"><div class="section-inner"><div class="section-header fade-in"><span class="section-en">Availability</span><h2 class="section-title">空室状況</h2><div class="divider"></div></div><div class="calendar-wrap fade-in"><p>カレンダーで空き状況をご確認のうえ、ご予約フォームへお進みください。</p><div class="calendar-legend"><div class="legend-item"><span class="legend-dot legend-dot-available"></span><span>空欄の日 ＝ <strong>空室</strong></span></div><div class="legend-item"><span class="legend-dot legend-dot-booked"></span><span>色付きの日 ＝ <strong>予約済み</strong></span></div></div><div class="calendar-embed"><iframe src="https://calendar.google.com/calendar/embed?src=e5248b8388064b1c0f1cfb2785563eac2830f8f43c3e41f9402292608fb97670%40group.calendar.google.com&ctz=Asia%2FTokyo&hl=ja&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=MONTH" style="border:0" width="100%" height="600" frameborder="0" scrolling="no" loading="lazy"></iframe></div><p class="calendar-note">※ カレンダーに予定が表示されている日は予約済みです。空欄の日はご予約いただけます。</p><a href="https://forms.gle/5RPoq7CwafFoZ2NFA" target="_blank" rel="noopener" class="btn-gold">予約フォームへ</a></div></div></section>
+  <!-- Rates -->
+  <section id="rates">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <span class="section-en">Rates</span>
+        <h2 class="section-title">料金・ご予約</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="rate-box fade-in">
+        <div class="rate-header">
+          <p class="rate-type">Japanese Style Room &#8212; Host Homestay</p>
+          <h3 class="rate-name">和室 1部屋プラン</h3>
+        </div>
+        <div class="rate-price-box">
+          <p class="rate-price">&#165;8,000<span class="rate-price-unit"> / 泊〜（税込）</span></p>
+          <div class="rate-badge">ホストと過ごすホームステイスタイル</div>
+        </div>
+        <ul class="rate-amenities">
+          <li>和室（畳）個室</li>
+          <li>ヒノキ風呂（ホストと共用）</li>
+          <li>サウナ（ホストと共用）</li>
+          <li>日本庭園</li>
+          <li>リビング・キッチン完備</li>
+          <li>Wi-Fi（無料）</li>
+          <li>タオル・歯ブラシ完備（パジャマ等はご持参ください）</li>
+          <li>鶴岡駅 無料送迎（要予約）</li>
+        </ul>
+        <p class="rate-note pc-only">チェックイン 15:00〜20:00 ／ チェックアウト 〜10:00<br>※ 早期・遅延はご相談ください</p>
+        <p class="rate-note sp-only">CI 15:00〜20:00 ／ CO 〜10:00</p>
+      </div>
+      <div class="book-wrap fade-in">
+        <a href="https://forms.gle/5RPoq7CwafFoZ2NFA" target="_blank" rel="noopener" class="btn-gold">予約フォームへ</a>
+      </div>
+    </div>
+  </section>
 
-  <section id="access"><div class="section-inner"><div class="section-header fade-in"><span class="section-en">Access</span><h2 class="section-title">アクセス</h2><div class="divider"></div></div><div class="access-wrap"><div class="access-map fade-in"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6230.0!2d139.81271913773594!3d38.748856063080716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sjp!4v1771854525264!5m2!1sen!2sjp" width="100%" height="100%" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="wakana アクセスマップ"></iframe></div><div class="access-info fade-in"><h3>〒997-0054<br>山形県鶴岡市高田下村25-2</h3><ul class="access-list"><li><span class="access-label">電車</span><span>JR「鶴岡」駅より無料送迎（要予約）／タクシー約10分</span></li><li><span class="access-label">お車</span><span>山形道「鶴岡IC」より約8分 ／ 無料駐車場（3台）</span></li></ul><a href="https://maps.google.com?q=38.748856,139.812719" target="_blank" rel="noopener" class="access-dir-btn">Google マップで開く</a></div></div></div></section>
+  <!-- Calendar -->
+  <section id="calendar">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <span class="section-en">Availability</span>
+        <h2 class="section-title">空室状況</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="calendar-wrap fade-in">
+        <p>カレンダーで空き状況をご確認のうえ、ご予約フォームへお進みください。</p>
+        <div class="calendar-legend">
+          <div class="legend-item"><span class="legend-dot legend-dot-available"></span><span>空欄の日 ＝ <strong>空室</strong></span></div>
+          <div class="legend-item"><span class="legend-dot legend-dot-booked"></span><span>色付きの日 ＝ <strong>予約済み</strong></span></div>
+        </div>
+        <div class="calendar-embed">
+          <iframe src="https://calendar.google.com/calendar/embed?src=e5248b8388064b1c0f1cfb2785563eac2830f8f43c3e41f9402292608fb97670%40group.calendar.google.com&ctz=Asia%2FTokyo&hl=ja&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=MONTH" style="border:0" width="100%" height="600" frameborder="0" scrolling="no" loading="lazy"></iframe>
+        </div>
+        <p class="calendar-note">※ カレンダーに予定が表示されている日は予約済みです。空欄の日はご予約いただけます。</p>
+        <a href="https://forms.gle/5RPoq7CwafFoZ2NFA" target="_blank" rel="noopener" class="btn-gold">予約フォームへ</a>
+      </div>
+    </div>
+  </section>
 
-  <section id="contact"><div class="section-inner"><div class="section-header fade-in"><span class="section-en">Contact</span><h2 class="section-title">ご予約・お問い合わせ</h2><div class="divider"></div></div><div class="contact-cta-wrap fade-in"><div class="contact-info"><h3>ご予約・ご質問は<br>お気軽にどうぞ</h3><p class="pc-only">はじめての方もお気軽にお問い合わせください。心よりお待ち申し上げております。</p><div class="contact-detail"><p><strong>Email</strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="89eefcecfafde1e6fcfaeca7fee8e2e8e7e8c9eee4e8e0e5a7eae6e4">[email&#160;protected]</a></p></div></div><div class="contact-form-replacement"><div class="contact-form-card"><p class="contact-form-lead">ご予約はGoogleフォームにて承っております。<br>下記のボタンよりお進みください。</p><a href="https://forms.gle/5RPoq7CwafFoZ2NFA" target="_blank" rel="noopener" class="btn-reserve-large">予約フォームへ</a><p class="contact-form-sub">Googleフォームの予約ページが開きます</p></div></div></div></div></section>
+  <!-- Access -->
+  <section id="access">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <span class="section-en">Access</span>
+        <h2 class="section-title">アクセス</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="access-wrap">
+        <div class="access-map fade-in">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6230.0!2d139.81271913773594!3d38.748856063080716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sjp!4v1771854525264!5m2!1sen!2sjp" width="100%" height="100%" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="wakana アクセスマップ"></iframe>
+        </div>
+        <div class="access-info fade-in">
+          <h3>〒997-0054<br>山形県鶴岡市高田下村25-2</h3>
+          <ul class="access-list">
+            <li><span class="access-label">電車</span><span>JR「鶴岡」駅より無料送迎（要予約）／タクシー約10分</span></li>
+            <li><span class="access-label">お車</span><span>山形道「鶴岡IC」より約8分 ／ 無料駐車場（3台）</span></li>
+          </ul>
+          <a href="https://maps.google.com?q=38.748856,139.812719" target="_blank" rel="noopener" class="access-dir-btn">Google マップで開く</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <footer><div class="footer-logo">wakana</div><div class="footer-sub">Guest House Wakana — Tsuruoka, Yamagata</div><nav class="footer-nav"><a href="#home">ホーム</a><a href="#rooms">お部屋</a><a href="#gallery">写真</a><a href="#rates">料金</a><a href="#calendar">空き状況</a><a href="#access">アクセス</a><a href="#contact">ご予約</a></nav><div class="footer-divider"></div><p class="footer-copy">© 2025 Guest House WAKANA. All rights reserved.</p></footer>
+  <!-- Contact -->
+  <section id="contact">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <span class="section-en">Contact</span>
+        <h2 class="section-title">ご予約・お問い合わせ</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="contact-cta-wrap fade-in">
+        <div class="contact-info">
+          <h3>ご予約・ご質問は<br>お気軽にどうぞ</h3>
+          <p class="pc-only">はじめての方もお気軽にお問い合わせください。心よりお待ち申し上げております。</p>
+          <div class="contact-detail">
+            <p><strong>Email</strong>guesthouse.wakana@gmail.com</p>
+          </div>
+        </div>
+        <div class="contact-form-replacement">
+          <div class="contact-form-card">
+            <p class="contact-form-lead">ご予約はGoogleフォームにて承っております。<br>下記のボタンよりお進みください。</p>
+            <a href="https://forms.gle/5RPoq7CwafFoZ2NFA" target="_blank" rel="noopener" class="btn-reserve-large">予約フォームへ</a>
+            <p class="contact-form-sub">Googleフォームの予約ページが開きます</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo">wakana</div>
+    <div class="footer-sub">Guest House Wakana &#8212; Tsuruoka, Yamagata</div>
+    <nav class="footer-nav">
+      <a href="#home">ホーム</a>
+      <a href="#rooms">お部屋</a>
+      <a href="#gallery">写真</a>
+      <a href="#rates">料金</a>
+      <a href="#calendar">空き状況</a>
+      <a href="#access">アクセス</a>
+      <a href="#contact">ご予約</a>
+    </nav>
+    <div class="footer-divider"></div>
+    <p class="footer-copy">&#169; 2025 Guest House WAKANA. All rights reserved.</p>
+  </footer>
+
+  <script>
     // Nav scroll
-    window.addEventListener('scroll',function(){document.getElementById('mainNav').classList.toggle('scrolled',window.scrollY>50)});
+    window.addEventListener('scroll', function() {
+      document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
     // Sticky CTA
-    window.addEventListener('scroll',function(){var s=document.getElementById('stickyCta'),h=document.getElementById('home').offsetHeight;s.classList.toggle('show',window.scrollY>h*.6)});
+    window.addEventListener('scroll', function() {
+      var s = document.getElementById('stickyCta');
+      var h = document.getElementById('home').offsetHeight;
+      s.classList.toggle('show', window.scrollY > h * 0.6);
+    });
+
     // Hero bg
-    window.addEventListener('load',function(){document.getElementById('heroBg').classList.add('loaded')});
+    window.addEventListener('load', function() {
+      document.getElementById('heroBg').classList.add('loaded');
+    });
+
     // Mobile nav
-    function toggleMobileNav(){document.getElementById('hamburger').classList.toggle('open');document.getElementById('navDrawer').classList.toggle('open');document.body.style.overflow=document.getElementById('navDrawer').classList.contains('open')?'hidden':''}
-    function closeMobileNav(){document.getElementById('hamburger').classList.remove('open');document.getElementById('navDrawer').classList.remove('open');document.body.style.overflow=''}
+    function toggleMobileNav() {
+      document.getElementById('hamburger').classList.toggle('open');
+      document.getElementById('navDrawer').classList.toggle('open');
+      document.body.style.overflow = document.getElementById('navDrawer').classList.contains('open') ? 'hidden' : '';
+    }
+    function closeMobileNav() {
+      document.getElementById('hamburger').classList.remove('open');
+      document.getElementById('navDrawer').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
     // Fade in
-    var observer=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.1});
-    document.querySelectorAll('.fade-in').forEach(function(el){observer.observe(el)});
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) e.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(function(el) {
+      observer.observe(el);
+    });
 
     // Lightbox with navigation
-    var lbImages=[];var lbIndex=0;
-    (function(){
-      var items=document.querySelectorAll('.gallery-item');
-      items.forEach(function(item){
-        var img=item.querySelector('img');
-        if(img)lbImages.push(img.src);
+    var lbImages = [];
+    var lbIndex = 0;
+    (function() {
+      var items = document.querySelectorAll('.gallery-item');
+      items.forEach(function(item) {
+        var img = item.querySelector('img');
+        if (img) lbImages.push(img.src);
       });
     })();
-    function openLightbox(idx){
-      // Find visible (non-hidden) items and map to global index
-      var visible=[];
-      document.querySelectorAll('.gallery-item').forEach(function(item,i){
-        if(!item.classList.contains('hidden'))visible.push(i);
-      });
-      // If idx is in visible list, use it; otherwise find closest
-      lbIndex=idx;
-      showLightboxImage();
-      document.getElementById('lightbox').classList.add('open');
-      document.body.style.overflow='hidden';
-    }
-    function showLightboxImage(){
-      var visible=getVisibleIndices();
-      if(visible.length===0)return;
-      var pos=visible.indexOf(lbIndex);
-      if(pos===-1){lbIndex=visible[0];pos=0;}
-      document.getElementById('lightboxImg').src=lbImages[lbIndex];
-      document.getElementById('lightboxCounter').textContent=(pos+1)+' / '+visible.length;
-    }
-    function getVisibleIndices(){
-      var visible=[];
-      document.querySelectorAll('.gallery-item').forEach(function(item,i){
-        if(!item.classList.contains('hidden'))visible.push(i);
+
+    function getVisibleIndices() {
+      var visible = [];
+      document.querySelectorAll('.gallery-item').forEach(function(item, i) {
+        if (!item.classList.contains('hidden')) visible.push(i);
       });
       return visible;
     }
-    function lightboxNav(dir){
-      var visible=getVisibleIndices();
-      if(visible.length===0)return;
-      var pos=visible.indexOf(lbIndex);
-      if(pos===-1)pos=0;
-      pos+=dir;
-      if(pos<0)pos=visible.length-1;
-      if(pos>=visible.length)pos=0;
-      lbIndex=visible[pos];
+
+    function showLightboxImage() {
+      var visible = getVisibleIndices();
+      if (visible.length === 0) return;
+      var pos = visible.indexOf(lbIndex);
+      if (pos === -1) { lbIndex = visible[0]; pos = 0; }
+      document.getElementById('lightboxImg').src = lbImages[lbIndex];
+      document.getElementById('lightboxCounter').textContent = (pos + 1) + ' / ' + visible.length;
+    }
+
+    function openLightbox(idx) {
+      lbIndex = idx;
+      showLightboxImage();
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function lightboxNav(dir) {
+      var visible = getVisibleIndices();
+      if (visible.length === 0) return;
+      var pos = visible.indexOf(lbIndex);
+      if (pos === -1) pos = 0;
+      pos += dir;
+      if (pos < 0) pos = visible.length - 1;
+      if (pos >= visible.length) pos = 0;
+      lbIndex = visible[pos];
       showLightboxImage();
     }
-    function closeLightbox(){document.getElementById('lightbox').classList.remove('open');document.body.style.overflow=''}
-    document.getElementById('lightbox').addEventListener('click',function(e){if(e.target===e.currentTarget)closeLightbox()});
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+      if (e.target === e.currentTarget) closeLightbox();
+    });
+
     // Keyboard navigation
-    document.addEventListener('keydown',function(e){
-      if(!document.getElementById('lightbox').classList.contains('open'))return;
-      if(e.key==='ArrowLeft'||e.key==='ArrowUp')lightboxNav(-1);
-      if(e.key==='ArrowRight'||e.key==='ArrowDown')lightboxNav(1);
-      if(e.key==='Escape')closeLightbox();
+    document.addEventListener('keydown', function(e) {
+      if (!document.getElementById('lightbox').classList.contains('open')) return;
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') lightboxNav(-1);
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') lightboxNav(1);
+      if (e.key === 'Escape') closeLightbox();
     });
 
     // Gallery filter
-    document.querySelectorAll('.gallery-tab').forEach(function(tab){tab.addEventListener('click',function(){var c=this.getAttribute('data-category');document.querySelectorAll('.gallery-tab').forEach(function(t){t.classList.remove('active')});this.classList.add('active');document.querySelectorAll('.gallery-item').forEach(function(item){if(c==='all'||item.getAttribute('data-category')===c){item.classList.remove('hidden')}else{item.classList.add('hidden')}})})});
+    document.querySelectorAll('.gallery-tab').forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        var c = this.getAttribute('data-category');
+        document.querySelectorAll('.gallery-tab').forEach(function(t) {
+          t.classList.remove('active');
+        });
+        this.classList.add('active');
+        document.querySelectorAll('.gallery-item').forEach(function(item) {
+          if (c === 'all' || item.getAttribute('data-category') === c) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      });
+    });
   </script>
 </body>
 </html>
