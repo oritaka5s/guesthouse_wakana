@@ -185,10 +185,12 @@
 
     /* CALENDAR */
     #calendar{background:var(--sand)}
-    .calendar-wrap{max-width:600px;margin:0 auto;text-align:center;padding:3rem 1.5rem}
-    .calendar-wrap p{font-size:1.1rem;line-height:2.2;margin-bottom:2rem;color:var(--ink-soft)}
-    .calendar-wrap a{display:inline-block;background:var(--rust);color:#fff;padding:1.1rem 2.5rem;font-size:1.05rem;letter-spacing:.2em;font-family:'Shippori Mincho',serif;transition:all .3s;text-decoration:none}
-    .calendar-wrap a:hover{background:var(--rust-dark);transform:translateY(-2px)}
+    .calendar-wrap{max-width:800px;margin:0 auto;text-align:center;padding:1rem 0}
+    .calendar-wrap>p{font-size:1.1rem;line-height:2.2;margin-bottom:2rem;color:var(--ink-soft)}
+    .calendar-embed{width:100%;overflow:hidden;border:1px solid var(--mist);background:#fff;margin-bottom:2rem}
+    .calendar-embed iframe{width:100%;height:500px;border:0}
+    .calendar-note{font-size:.9rem;color:var(--ink-soft);margin-bottom:2rem;line-height:1.8}
+    .calendar-wrap .btn-gold{display:inline-block}
 
     /* ACCESS */
     .access-wrap{display:flex;flex-direction:column;gap:2rem}
@@ -245,6 +247,7 @@
       .contact-cta-wrap{flex-direction:row}
       .contact-info{flex:0 0 300px}
       footer{padding-bottom:4rem}
+      .calendar-embed iframe{height:600px}
     }
     @media(min-width:1024px){
       .room-card{display:grid;grid-template-columns:1fr 1fr}
@@ -258,7 +261,6 @@
       .gallery-grid{grid-template-columns:repeat(2,1fr)}
       .gallery-tab{font-size:.75rem;padding:.5rem .9rem}
       .hero-trust{display:none}
-      /* モバイル文字量削減 */
       .pc-only{display:none}
       .sp-only{display:block}
       span.sp-only{display:inline}
@@ -270,8 +272,8 @@
       .contact-info p{font-size:.95rem}
       section{padding:3.5rem 0}
       .section-header{margin-bottom:2.5rem}
+      .calendar-embed iframe{height:400px}
     }
-    /* デフォルトではsp-onlyを非表示 */
     .sp-only{display:none}
   </style>
 </head>
@@ -279,7 +281,7 @@
 
   <div class="sticky-cta" id="stickyCta">
     <div class="sticky-cta-text">🏡 <strong>ゲストハウス wakana</strong></div>
-    <a href="https://airrsv.net/guesthouse-wakana/calendar" target="_blank" rel="noopener" class="sticky-cta-btn" onclick="closeMobileNav()">予約カレンダーを見る</a>
+    <a href="https://forms.gle/5RPoq7CwafFoZ2NFA" target="_blank" rel="noopener" class="sticky-cta-btn" onclick="closeMobileNav()">予約フォームへ</a>
   </div>
 
   <div class="lightbox" id="lightbox">
@@ -294,7 +296,7 @@
       <li><a href="#gallery">写真</a></li>
       <li><a href="#rates">料金</a></li>
       <li><a href="#access">アクセス</a></li>
-      <li><a href="https://airrsv.net/guesthouse-wakana/calendar" target="_blank" rel="noopener" class="nav-reserve">予約する</a></li>
+      <li><a href="https://forms.gle/5RPoq7CwafFoZ2NFA" target="_blank" rel="noopener" class="nav-reserve">予約する</a></li>
     </ul>
     <button class="nav-hamburger" id="hamburger" onclick="toggleMobileNav()">
       <span></span><span></span><span></span>
@@ -307,7 +309,7 @@
     <a href="#rates" onclick="closeMobileNav()">料金</a>
     <a href="#calendar" onclick="closeMobileNav()">空き状況</a>
     <a href="#access" onclick="closeMobileNav()">アクセス</a>
-    <a href="https://airrsv.net/guesthouse-wakana/calendar" target="_blank" rel="noopener" class="drawer-reserve" onclick="closeMobileNav()">予約カレンダーを見る</a>
+    <a href="https://forms.gle/5RPoq7CwafFoZ2NFA" target="_blank" rel="noopener" class="drawer-reserve" onclick="closeMobileNav()">予約フォームへ</a>
   </div>
 
   <!-- HERO -->
@@ -321,7 +323,7 @@
       <p class="hero-desc pc-only">庄内平野の田園に佇む、ホームステイ型の宿。ホストと過ごす温かな滞在。ヒノキ風呂・サウナと日本庭園が、旅の疲れを静かに癒します。</p>
       <p class="hero-desc sp-only">庄内平野の田園に佇む、ホームステイ型の宿。ヒノキ風呂・サウナと日本庭園でくつろぐ滞在を。</p>
       <div class="hero-ctas">
-        <a href="https://airrsv.net/guesthouse-wakana/calendar" target="_blank" rel="noopener" class="btn-hero-primary">📅 予約カレンダーを見る</a>
+        <a href="https://forms.gle/5RPoq7CwafFoZ2NFA" target="_blank" rel="noopener" class="btn-hero-primary">📝 予約フォームへ</a>
         <a href="#gallery" class="btn-hero-secondary">写真を見る →</a>
       </div>
     </div>
@@ -418,7 +420,7 @@
             </div>
           </div>
           <div class="room-cta">
-            <a href="https://airrsv.net/guesthouse-wakana/calendar" target="_blank" rel="noopener" class="btn-room">予約する →</a>
+            <a href="https://forms.gle/5RPoq7CwafFoZ2NFA" target="_blank" rel="noopener" class="btn-room">予約する →</a>
           </div>
         </div>
       </div>
@@ -434,7 +436,6 @@
         <div class="divider"></div>
       </div>
 
-      <!-- タブ -->
       <div class="gallery-tabs fade-in">
         <button class="gallery-tab active" data-category="all">すべて</button>
         <button class="gallery-tab" data-category="garden">庭園・外観</button>
@@ -444,7 +445,6 @@
       </div>
 
       <div class="gallery-grid fade-in" id="galleryGrid">
-        <!-- 庭園・外観 -->
         <div class="gallery-item" data-category="garden" onclick="openLightbox('images/garden.jpg')">
           <img src="images/garden.jpg" alt="日本庭園" loading="lazy">
           <div class="gallery-overlay"><span class="gallery-label">日本庭園</span></div>
@@ -461,8 +461,6 @@
           <img src="images/exterior.jpg" alt="外観" loading="lazy">
           <div class="gallery-overlay"><span class="gallery-label">外観</span></div>
         </div>
-
-        <!-- お部屋・室内 -->
         <div class="gallery-item" data-category="indoor" onclick="openLightbox('images/living.jpg')">
           <img src="images/living.jpg" alt="オーディオルーム" loading="lazy">
           <div class="gallery-overlay"><span class="gallery-label">オーディオルーム</span></div>
@@ -471,14 +469,10 @@
           <img src="images/kitchen.jpg" alt="キッチン" loading="lazy">
           <div class="gallery-overlay"><span class="gallery-label">キッチン</span></div>
         </div>
-
-        <!-- 焚き火・アウトドア -->
         <div class="gallery-item" data-category="outdoor" onclick="openLightbox('images/bonfire.jpg')">
           <img src="images/bonfire.jpg" alt="焚き火スペース" loading="lazy">
           <div class="gallery-overlay"><span class="gallery-label">焚き火</span></div>
         </div>
-
-        <!-- 周辺の風景 -->
         <div class="gallery-item" data-category="scenery" onclick="openLightbox('images/chokai_mountain.jpg')">
           <img src="images/chokai_mountain.jpg" alt="鳥海山と田んぼ" loading="lazy">
           <div class="gallery-overlay"><span class="gallery-label">鳥海山</span></div>
@@ -487,10 +481,31 @@
           <img src="images/winter_mountain.jpg" alt="冬の鳥海山" loading="lazy">
           <div class="gallery-overlay"><span class="gallery-label">冬の鳥海山</span></div>
         </div>
+
+        <!-- 追加写真 -->
+        <div class="gallery-item" data-category="garden" onclick="openLightbox('images/DSC_0932-EFFECTS (3).jpg')">
+          <img src="images/DSC_0932-EFFECTS (3).jpg" alt="春の水仙" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-label">春の水仙</span></div>
+        </div>
+        <div class="gallery-item" data-category="indoor" onclick="openLightbox('images/DSC_1828 (1).JPG')">
+          <img src="images/DSC_1828 (1).JPG" alt="廊下の光" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-label">廊下の光</span></div>
+        </div>
+        <div class="gallery-item" data-category="garden" onclick="openLightbox('images/IMG20220713185327 (1).jpg')">
+          <img src="images/IMG20220713185327 (1).jpg" alt="建物外観" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-label">建物外観</span></div>
+        </div>
+        <div class="gallery-item" data-category="garden" onclick="openLightbox('images/IMG20240505070955 (1).jpg')">
+          <img src="images/IMG20240505070955 (1).jpg" alt="庭園と縁側" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-label">庭園と縁側</span></div>
+        </div>
+        <div class="gallery-item" data-category="scenery" onclick="openLightbox('images/IMG20240615065733 (2).jpg')">
+          <img src="images/IMG20240615065733 (2).jpg" alt="庄内平野の田園風景" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-label">庄内平野の田園</span></div>
+        </div>
       </div>
     </div>
   </section>
-
 
   <!-- FLOW -->
   <section id="flow">
@@ -513,9 +528,9 @@
         <div class="flow-item fade-in">
           <div class="flow-num-wrap"><span class="flow-num">02</span></div>
           <div class="flow-body">
-            <div class="flow-icon-s">📩</div>
-            <h3 class="flow-title">AirRESERVEからご予約</h3>
-            <p class="flow-desc">「予約カレンダーを見る」ボタンからAirRESERVEにてご予約ください。</p>
+            <div class="flow-icon-s">📝</div>
+            <h3 class="flow-title">Googleフォームからご予約</h3>
+            <p class="flow-desc">「予約フォームへ」ボタンからGoogleフォームにてご予約ください。</p>
           </div>
         </div>
         <div class="flow-item fade-in">
@@ -571,7 +586,7 @@
         <p class="rate-note sp-only">CI 15:00〜20:00 ／ CO 〜10:00</p>
       </div>
       <div class="book-wrap fade-in">
-        <a href="https://airrsv.net/guesthouse-wakana/calendar" target="_blank" rel="noopener" class="btn-gold">予約カレンダーを見る</a>
+        <a href="https://forms.gle/5RPoq7CwafFoZ2NFA" target="_blank" rel="noopener" class="btn-gold">予約フォームへ</a>
       </div>
     </div>
   </section>
@@ -580,13 +595,17 @@
   <section id="calendar">
     <div class="section-inner">
       <div class="section-header fade-in">
-        <span class="section-en">Reservation</span>
-        <h2 class="section-title">ご予約</h2>
+        <span class="section-en">Availability</span>
+        <h2 class="section-title">空室状況</h2>
         <div class="divider"></div>
       </div>
       <div class="calendar-wrap fade-in">
-        <p>ご予約はAirRESERVEにて承っております。<br>下記のボタンより空室状況の確認と予約が可能です。</p>
-        <a href="https://airrsv.net/guesthouse-wakana/calendar" target="_blank" rel="noopener">📅 予約カレンダーを見る</a>
+        <p>カレンダーで空き状況をご確認のうえ、ご予約フォームへお進みください。</p>
+        <div class="calendar-embed">
+          <iframe src="https://calendar.google.com/calendar/embed?src=e5248b8388064b1c0f1cfb2785563eac2830f8f43c3e41f9402292608fb97670%40group.calendar.google.com&ctz=Asia%2FTokyo&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=MONTH" style="border:0" width="100%" height="600" frameborder="0" scrolling="no" loading="lazy"></iframe>
+        </div>
+        <p class="calendar-note">※ 予約済みの日程が表示されています。空いている日程でご予約いただけます。</p>
+        <a href="https://forms.gle/5RPoq7CwafFoZ2NFA" target="_blank" rel="noopener" class="btn-gold">📝 予約フォームへ</a>
       </div>
     </div>
   </section>
@@ -639,9 +658,9 @@
         </div>
         <div class="contact-form-replacement">
           <div class="contact-form-card">
-            <p class="contact-form-lead">ご予約はAirRESERVEにて承っております。<br>下記のボタンより空室状況の確認と予約が可能です。</p>
-            <a href="https://airrsv.net/guesthouse-wakana/calendar" target="_blank" rel="noopener" class="btn-reserve-large">📅 予約カレンダーを見る</a>
-            <p class="contact-form-sub">※ AirRESERVEの予約ページが開きます</p>
+            <p class="contact-form-lead">ご予約はGoogleフォームにて承っております。<br>下記のボタンよりお進みください。</p>
+            <a href="https://forms.gle/5RPoq7CwafFoZ2NFA" target="_blank" rel="noopener" class="btn-reserve-large">📝 予約フォームへ</a>
+            <p class="contact-form-sub">※ Googleフォームの予約ページが開きます</p>
           </div>
         </div>
       </div>
@@ -724,20 +743,18 @@
       }
     });
 
-    // GALLERY FILTER - 修正版
+    // GALLERY FILTER
     document.querySelectorAll('.gallery-tab').forEach(function(tab) {
       tab.addEventListener('click', function() {
         var category = this.getAttribute('data-category');
         var items = document.querySelectorAll('.gallery-item');
         var tabs = document.querySelectorAll('.gallery-tab');
         
-        // タブのアクティブ状態を更新
         tabs.forEach(function(t) {
           t.classList.remove('active');
         });
         this.classList.add('active');
         
-        // アイテムの表示/非表示
         items.forEach(function(item) {
           if (category === 'all' || item.getAttribute('data-category') === category) {
             item.classList.remove('hidden');
