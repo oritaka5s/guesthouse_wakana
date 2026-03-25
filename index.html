@@ -5,13 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>ゲストハウス wakana | 山形・鶴岡 ホストと過ごすゲストハウス ヒノキ風呂・日本庭園</title>
   <meta name="description" content="山形県鶴岡市のホームステイ型ゲストハウス。ホストと暮らすように泊まれる和室。本格ヒノキ風呂・日本庭園・鶴岡駅無料送迎。1泊¥8,000〜。">
-  <meta property="og:title" content="ゲストハウス wakana | 山形・鶴岡">
-  <meta property="og:description" content="庄内平野の田園に佇むホームステイ型の宿。ヒノキ風呂・サウナと日本庭園。1泊¥8,000〜。">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://oritaka5s.github.io/guesthouse_wakana/">
-  <meta property="og:image" content="https://oritaka5s.github.io/guesthouse_wakana/images/hero.jpg">
-  <meta property="og:locale" content="ja_JP">
-  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>和</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,7 +57,7 @@
 
     /* Hero */
     #home{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
-    .hero-bg{position:absolute;inset:0;background-image:url('images/hero.jpg');background-size:cover;background-position:center 30%;background-color:var(--ink);transform:scale(1.03);transition:transform 10s ease}
+    .hero-bg{position:absolute;inset:0;background:linear-gradient(135deg, #2d3a2e 0%, #3f5235 25%, #4a6340 50%, #3f5235 75%, #2d3a2e 100%);background-size:cover;background-position:center 30%;transform:scale(1.03);transition:transform 10s ease}
     .hero-bg.loaded{transform:scale(1)}
     .hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,20,16,.05) 0%,rgba(26,20,16,.15) 40%,rgba(26,20,16,.7) 85%,rgba(26,20,16,.82) 100%)}
     .hero-content{position:relative;padding:0 2rem 5.5rem;animation:fadeUp 1.2s .3s both}
@@ -93,9 +86,6 @@
     .intro-box{background:var(--washi-dark);padding:3rem 2.5rem;max-width:760px;margin:0 auto;border-left:2px solid var(--rust)}
     .intro-box h3{font-family:'Shippori Mincho',serif;font-size:1.15rem;letter-spacing:.2em;margin-bottom:1.5rem;color:var(--rust);font-weight:600}
     .intro-box p{font-size:.95rem;line-height:2.2;margin-bottom:1rem;color:var(--ink-soft)}
-    .intro-list{margin-top:2rem;background:var(--washi);padding:1.5rem 1.5rem 1.5rem 2rem}
-    .intro-list li{font-size:.9rem;line-height:2.2;padding:.3rem 0;position:relative;padding-left:1.2rem;color:var(--ink-soft)}
-    .intro-list li::before{content:'';position:absolute;left:0;top:.85em;width:6px;height:6px;border:1px solid var(--rust);border-radius:50%}
     .intro-note{margin-top:1.2rem;font-size:.85rem;color:var(--ink-light);line-height:2}
     .intro-note strong{color:var(--rust);font-weight:500}
 
@@ -131,19 +121,20 @@
     .btn-room{display:inline-block;background:var(--rust);color:#fff;padding:.85rem 2rem;font-size:.82rem;letter-spacing:.25em;transition:all .3s var(--ease-out);width:100%;text-align:center;font-family:'Shippori Mincho',serif;font-weight:500}
     .btn-room:hover{background:var(--rust-dark)}
 
-    /* Gallery */
-    .gallery-tabs{display:flex;justify-content:center;gap:.5rem;flex-wrap:wrap;margin-bottom:2rem}
-    .gallery-tab{background:none;border:1px solid var(--mist);color:var(--ink-light);padding:.5rem 1.2rem;font-size:.75rem;letter-spacing:.15em;font-family:'Shippori Mincho',serif;transition:all .3s;cursor:pointer}
-    .gallery-tab:hover{border-color:var(--rust);color:var(--rust)}
-    .gallery-tab.active{background:var(--rust);color:#fff;border-color:var(--rust)}
+    /* Gallery placeholder */
     .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem}
-    .gallery-item{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:4/3}
+    .gallery-item{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:4/3;background:var(--washi-dark);display:flex;align-items:center;justify-content:center}
     .gallery-item.hidden{display:none}
     .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease-out)}
     .gallery-item:hover img{transform:scale(1.06)}
     .gallery-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,20,16,.65) 0%,transparent 50%);display:flex;align-items:flex-end;padding:1rem;opacity:0;transition:opacity .35s}
     .gallery-item:hover .gallery-overlay{opacity:1}
     .gallery-label{color:#fff;font-size:.78rem;letter-spacing:.2em;font-weight:300}
+    .gallery-tabs{display:flex;justify-content:center;gap:.5rem;flex-wrap:wrap;margin-bottom:2rem}
+    .gallery-tab{background:none;border:1px solid var(--mist);color:var(--ink-light);padding:.5rem 1.2rem;font-size:.75rem;letter-spacing:.15em;font-family:'Shippori Mincho',serif;transition:all .3s;cursor:pointer}
+    .gallery-tab:hover{border-color:var(--rust);color:var(--rust)}
+    .gallery-tab.active{background:var(--rust);color:#fff;border-color:var(--rust)}
+    .gallery-placeholder{color:var(--ink-light);font-size:.8rem;letter-spacing:.1em;text-align:center;padding:1rem}
 
     /* Lightbox */
     .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:300;display:none;align-items:center;justify-content:center;padding:2rem}
@@ -234,6 +225,19 @@
     .footer-divider{width:32px;height:1px;background:rgba(255,255,255,.08);margin:0 auto 2rem}
     .footer-copy{font-size:.65rem;color:rgba(90,80,72,.6);letter-spacing:.15em}
 
+    /* FAQ */
+    #faq{background:var(--washi)}
+    .faq-list{max-width:720px;margin:0 auto}
+    .faq-item{border-bottom:1px solid var(--mist-light);padding:0}
+    .faq-item:first-child{border-top:1px solid var(--mist-light)}
+    .faq-q{width:100%;background:none;border:none;text-align:left;padding:1.4rem 2.5rem 1.4rem 0;font-family:'Shippori Mincho',serif;font-size:.92rem;letter-spacing:.08em;line-height:1.8;color:var(--ink);font-weight:500;position:relative;cursor:pointer;transition:color .2s}
+    .faq-q:hover{color:var(--rust)}
+    .faq-q::after{content:'+';position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:1.2rem;color:var(--ink-light);font-weight:300;transition:transform .3s var(--ease-out)}
+    .faq-item.open .faq-q::after{transform:translateY(-50%) rotate(45deg)}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease-out),padding .4s var(--ease-out)}
+    .faq-a-inner{padding:0 0 1.4rem;font-size:.88rem;line-height:2.2;color:var(--ink-soft)}
+    .faq-a-inner strong{color:var(--rust);font-weight:500}
+
     /* Responsive */
     @media(min-width:768px){
       :root{--nav-h:64px}
@@ -272,20 +276,6 @@
       .rate-box{padding:2rem 1.5rem}
       .lightbox-nav{width:36px;height:36px;font-size:1.2rem}
     }
-    /* FAQ */
-    #faq{background:var(--washi)}
-    .faq-list{max-width:720px;margin:0 auto}
-    .faq-item{border-bottom:1px solid var(--mist-light);padding:0}
-    .faq-item:first-child{border-top:1px solid var(--mist-light)}
-    .faq-q{width:100%;background:none;border:none;text-align:left;padding:1.4rem 2.5rem 1.4rem 0;font-family:'Shippori Mincho',serif;font-size:.92rem;letter-spacing:.08em;line-height:1.8;color:var(--ink);font-weight:500;position:relative;cursor:pointer;transition:color .2s}
-    .faq-q:hover{color:var(--rust)}
-    .faq-q::after{content:'+';position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:1.2rem;color:var(--ink-light);font-weight:300;transition:transform .3s var(--ease-out)}
-    .faq-item.open .faq-q::after{transform:translateY(-50%) rotate(45deg)}
-    .faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease-out),padding .4s var(--ease-out)}
-    .faq-a-inner{padding:0 0 1.4rem;font-size:.88rem;line-height:2.2;color:var(--ink-soft)}
-    .faq-a-inner strong{color:var(--rust);font-weight:500}
-    .faq-category{font-family:'Shippori Mincho',serif;font-size:.78rem;letter-spacing:.25em;color:var(--gold);margin:2.5rem 0 1rem;padding-bottom:.5rem;border-bottom:1px solid var(--mist)}
-    .faq-category:first-child{margin-top:0}
   </style>
 </head>
 <body>
@@ -336,8 +326,7 @@
       <div class="hero-badge">ホスト同居型ゲストハウス</div>
       <h1 class="hero-title">wakana</h1>
       <p class="hero-subtitle">Guest House Wakana &#8212; Tsuruoka</p>
-      <p class="hero-desc pc-only">庄内平野の田園に佇む、ホームステイ型の宿。ホストと過ごす温かな滞在。ヒノキ風呂・サウナと日本庭園が、旅の疲れを静かに癒します。</p>
-      <p class="hero-desc sp-only">庄内平野の田園に佇む、ホームステイ型の宿。ヒノキ風呂・サウナと日本庭園でくつろぐ滞在を。</p>
+      <p class="hero-desc">庄内平野の田園に佇む、ホームステイ型の宿。ホストと過ごす温かな滞在。ヒノキ風呂・サウナと日本庭園が、旅の疲れを静かに癒します。</p>
       <div class="hero-ctas">
         <a href="https://forms.gle/5RPoq7CwafFoZ2NFA" target="_blank" rel="noopener" class="btn-hero-primary">予約フォームへ</a>
         <a href="#gallery" class="btn-hero-secondary">写真を見る</a>
@@ -369,26 +358,22 @@
         <div class="feature-item fade-in">
           <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
           <h3 class="feature-title">ホストと暮らすように泊まる</h3>
-          <p class="feature-desc pc-only">オーナーと同じ建物で過ごす、ホームステイスタイルの滞在。観光情報やご当地グルメもお気軽にどうぞ。</p>
-          <p class="feature-desc sp-only">ホームステイスタイルの滞在。地元情報もお気軽に。</p>
+          <p class="feature-desc">オーナーと同じ建物で過ごす、ホームステイスタイルの滞在。観光情報やご当地グルメもお気軽にどうぞ。</p>
         </div>
         <div class="feature-item fade-in">
           <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M4 12h16M4 12c0 4.418 3.582 8 8 8s8-3.582 8-8M6 8c0-2.21 2.686-4 6-4s6 1.79 6 4"/><path d="M7 12v-1M17 12v-1"/></svg></div>
           <h3 class="feature-title">本格ヒノキ風呂</h3>
-          <p class="feature-desc pc-only">ヒノキの香りが漂う贅沢な浴槽。旅の疲れをゆっくりほぐしてください。庭を眺めながらの入浴は格別です。</p>
-          <p class="feature-desc sp-only">ヒノキの香り漂う贅沢な浴槽で、旅の疲れを癒します。</p>
+          <p class="feature-desc">ヒノキの香りが漂う贅沢な浴槽。旅の疲れをゆっくりほぐしてください。庭を眺めながらの入浴は格別です。</p>
         </div>
         <div class="feature-item fade-in">
           <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8 2 4 6.5 4 11c0 3.5 3 7 8 11 5-4 8-7.5 8-11 0-4.5-4-9-8-9z"/><circle cx="12" cy="11" r="2.5" fill="none"/></svg></div>
           <h3 class="feature-title">四季の日本庭園</h3>
-          <p class="feature-desc pc-only">春の水仙、夏の緑、秋の紅葉、冬の雪景色。季節ごとに表情を変える庭園をお楽しみください。</p>
-          <p class="feature-desc sp-only">四季折々の美しさを楽しめる庭園。</p>
+          <p class="feature-desc">春の水仙、夏の緑、秋の紅葉、冬の雪景色。季節ごとに表情を変える庭園をお楽しみください。</p>
         </div>
         <div class="feature-item fade-in">
           <div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
           <h3 class="feature-title">鶴岡駅 無料送迎</h3>
-          <p class="feature-desc pc-only">JR鶴岡駅からの無料送迎サービス。ご予約時にお申し付けください。お車でお越しの方は無料駐車場もございます。</p>
-          <p class="feature-desc sp-only">鶴岡駅から無料送迎。駐車場もあります。</p>
+          <p class="feature-desc">JR鶴岡駅からの無料送迎サービス。ご予約時にお申し付けください。お車でお越しの方は無料駐車場もございます。</p>
         </div>
       </div>
     </div>
@@ -403,15 +388,14 @@
         <div class="divider"></div>
       </div>
       <div class="room-card fade-in">
-        <div class="room-img room-img-placeholder">
-          <div class="room-img-empty">お部屋の写真は準備中です</div>
+        <div class="room-img">
+          <img src="images/washitsu_futon.jpg" alt="和室・お布団" style="width:100%;height:100%;object-fit:cover;">
           <div class="room-badge">和室 1部屋</div>
         </div>
         <div class="room-info">
           <p class="room-en">Japanese Style Room</p>
           <h3 class="room-name">和室</h3>
-          <p class="room-desc pc-only">畳の香り漂う和室で、ゆったりとお過ごしください。ヒノキ風呂・サウナ・日本庭園・キッチンもご自由にお使いいただけます。窓からは四季折々の庭園が望めます。</p>
-          <p class="room-desc sp-only">畳の和室でゆったり。ヒノキ風呂・サウナ・庭園もご利用いただけます。</p>
+          <p class="room-desc">畳の香り漂う和室で、ゆったりとお過ごしください。ヒノキ風呂・サウナ・日本庭園・キッチンもご自由にお使いいただけます。窓からは四季折々の庭園が望めます。</p>
           <ul class="room-amenities">
             <li>ヒノキ風呂・サウナ</li>
             <li>日本庭園</li>
@@ -452,23 +436,23 @@
         <button class="gallery-tab" data-category="scenery">周辺の風景</button>
       </div>
       <div class="gallery-grid fade-in" id="galleryGrid">
-        <div class="gallery-item" data-category="garden" onclick="openLightbox(0)"><img src="images/garden.jpg" alt="日本庭園" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">日本庭園</span></div></div>
-        <div class="gallery-item" data-category="garden" onclick="openLightbox(1)"><img src="images/gallery-1.jpg" alt="庭園の夕景" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">庭園の夕景</span></div></div>
-        <div class="gallery-item" data-category="scenery" onclick="openLightbox(2)"><img src="images/gallery-2.jpg" alt="冬の庭" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">冬の庭</span></div></div>
-        <div class="gallery-item" data-category="garden" onclick="openLightbox(3)"><img src="images/exterior.jpg" alt="外観" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">外観</span></div></div>
-        <div class="gallery-item" data-category="indoor" onclick="openLightbox(4)"><img src="images/living.jpg" alt="オーディオルーム" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">オーディオルーム</span></div></div>
-        <div class="gallery-item" data-category="outdoor" onclick="openLightbox(5)"><img src="images/bonfire.jpg" alt="焚き火スペース" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">焚き火</span></div></div>
-        <div class="gallery-item" data-category="scenery" onclick="openLightbox(6)"><img src="images/chokai_mountain.jpg" alt="鳥海山と田んぼ" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">鳥海山</span></div></div>
-        <div class="gallery-item" data-category="scenery" onclick="openLightbox(7)"><img src="images/winter_mountain.jpg" alt="冬の鳥海山" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">冬の鳥海山</span></div></div>
-        <div class="gallery-item" data-category="garden" onclick="openLightbox(8)"><img src="images/DSC_0932-EFFECTS%20(3).jpg" alt="春の水仙" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">春の水仙</span></div></div>
-        <div class="gallery-item" data-category="garden" onclick="openLightbox(9)"><img src="images/IMG20220713185327%20(1).jpg" alt="建物外観" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">建物外観</span></div></div>
-        <div class="gallery-item" data-category="garden" onclick="openLightbox(10)"><img src="images/IMG20240505070955%20(1).jpg" alt="庭園と縁側" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">庭園と縁側</span></div></div>
-        <div class="gallery-item" data-category="scenery" onclick="openLightbox(11)"><img src="images/IMG20240615065733%20(2).jpg" alt="庄内平野の田園風景" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">庄内平野の田園</span></div></div>
-        <div class="gallery-item" data-category="indoor" onclick="openLightbox(12)"><img src="images/PAP_0067%20(1).JPG" alt="ティータイム" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">ティータイム</span></div></div>
-        <div class="gallery-item" data-category="indoor" onclick="openLightbox(13)"><img src="images/hinoki_bath.jpg" alt="ヒノキ風呂" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">ヒノキ風呂</span></div></div>
-        <div class="gallery-item" data-category="indoor" onclick="openLightbox(14)"><img src="images/engawa_chair.jpg" alt="縁側のくつろぎスペース" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">縁側のくつろぎスペース</span></div></div>
-        <div class="gallery-item" data-category="indoor" onclick="openLightbox(15)"><img src="images/washitsu_futon.jpg" alt="和室・お布団" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">和室・お布団</span></div></div>
-        <div class="gallery-item" data-category="indoor" onclick="openLightbox(16)"><img src="images/kitchen.jpg" alt="キッチン" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">キッチン</span></div></div>
+        <div class="gallery-item" data-category="garden"><div class="gallery-placeholder">日本庭園</div></div>
+        <div class="gallery-item" data-category="garden"><div class="gallery-placeholder">庭園の夕景</div></div>
+        <div class="gallery-item" data-category="scenery"><div class="gallery-placeholder">冬の庭</div></div>
+        <div class="gallery-item" data-category="garden"><div class="gallery-placeholder">外観</div></div>
+        <div class="gallery-item" data-category="indoor"><div class="gallery-placeholder">オーディオルーム</div></div>
+        <div class="gallery-item" data-category="outdoor"><div class="gallery-placeholder">焚き火スペース</div></div>
+        <div class="gallery-item" data-category="scenery"><div class="gallery-placeholder">鳥海山</div></div>
+        <div class="gallery-item" data-category="scenery"><div class="gallery-placeholder">冬の鳥海山</div></div>
+        <div class="gallery-item" data-category="garden"><div class="gallery-placeholder">春の水仙</div></div>
+        <div class="gallery-item" data-category="garden"><div class="gallery-placeholder">建物外観</div></div>
+        <div class="gallery-item" data-category="garden"><div class="gallery-placeholder">庭園と縁側</div></div>
+        <div class="gallery-item" data-category="scenery"><div class="gallery-placeholder">庄内平野の田園</div></div>
+        <div class="gallery-item" data-category="indoor"><div class="gallery-placeholder">ティータイム</div></div>
+        <div class="gallery-item" data-category="indoor"><div class="gallery-placeholder">ヒノキ風呂</div></div>
+        <div class="gallery-item" data-category="indoor"><div class="gallery-placeholder">縁側のくつろぎスペース</div></div>
+
+        <div class="gallery-item" data-category="indoor"><div class="gallery-placeholder">キッチン</div></div>
       </div>
     </div>
   </section>
@@ -486,8 +470,7 @@
           <span class="flow-num">01</span>
           <div class="flow-body">
             <h3 class="flow-title">空き日程を確認</h3>
-            <p class="flow-desc pc-only">下部のカレンダーで空き状況をご確認ください。ご希望の日程がございましたら、お早めのご予約をおすすめします。</p>
-            <p class="flow-desc sp-only">カレンダーで空き状況をご確認ください。</p>
+            <p class="flow-desc">下部のカレンダーで空き状況をご確認ください。ご希望の日程がございましたら、お早めのご予約をおすすめします。</p>
           </div>
         </div>
         <div class="flow-item fade-in">
@@ -501,16 +484,14 @@
           <span class="flow-num">03</span>
           <div class="flow-body">
             <h3 class="flow-title">チェックイン（15:00〜20:00）</h3>
-            <p class="flow-desc pc-only">鶴岡駅からの送迎をご希望の方は事前にお申し付けください。当日はゆっくりとお寛ぎください。</p>
-            <p class="flow-desc sp-only">送迎ご希望の方は事前にお知らせください。</p>
+            <p class="flow-desc">鶴岡駅からの送迎をご希望の方は事前にお申し付けください。当日はゆっくりとお寛ぎください。</p>
           </div>
         </div>
         <div class="flow-item fade-in">
           <span class="flow-num">04</span>
           <div class="flow-body">
             <h3 class="flow-title">ゆっくりとお過ごしください</h3>
-            <p class="flow-desc pc-only">ヒノキ風呂・サウナ・庭園・キッチンをご自由にお使いください。ご不明な点はホストにお気軽にお声がけください。</p>
-            <p class="flow-desc sp-only">ヒノキ風呂・サウナ・庭園をご自由にお楽しみください。</p>
+            <p class="flow-desc">ヒノキ風呂・サウナ・庭園・キッチンをご自由にお使いください。ご不明な点はホストにお気軽にお声がけください。</p>
           </div>
         </div>
       </div>
@@ -543,8 +524,7 @@
           <li>タオル・歯ブラシ完備（パジャマ等はご持参ください）</li>
           <li>鶴岡駅 無料送迎（要予約）</li>
         </ul>
-        <p class="rate-note pc-only">チェックイン 15:00〜20:00 ／ チェックアウト 〜10:00<br>※ 早期・遅延はご相談ください</p>
-        <p class="rate-note sp-only">CI 15:00〜20:00 ／ CO 〜10:00</p>
+        <p class="rate-note">チェックイン 15:00〜20:00 ／ チェックアウト 〜10:00<br>※ 早期・遅延はご相談ください</p>
       </div>
       <div class="book-wrap fade-in">
         <a href="https://forms.gle/5RPoq7CwafFoZ2NFA" target="_blank" rel="noopener" class="btn-gold">予約フォームへ</a>
@@ -608,42 +588,34 @@
         <div class="divider"></div>
       </div>
       <div class="faq-list fade-in">
-
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">予約はどのようにすればいいですか？</button>
           <div class="faq-a"><div class="faq-a-inner">サイト内の「予約フォームへ」ボタンからGoogleフォームでお申し込みください。空室状況を確認後、<strong>48時間以内</strong>に確定のご連絡をいたします。フォーム送信の時点では予約は確定しておりませんのでご了承ください。</div></div>
         </div>
-
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">ホスト同居とはどういう意味ですか？</button>
           <div class="faq-a"><div class="faq-a-inner">オーナーが同じ建物に暮らしながら運営するスタイルです。お部屋は和室の個室ですが、ヒノキ風呂・サウナ・キッチン・日本庭園はオーナーと一緒にお使いいただく形になります。<strong>建物の完全貸し切りではありません</strong>のでご了承ください。</div></div>
         </div>
-
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">一人でも泊まれますか？女性一人でも安心ですか？</button>
           <div class="faq-a"><div class="faq-a-inner">もちろんです。おひとり様のご利用も大歓迎で、一人旅の方も多くいらっしゃいます。お部屋は個室で、ホストも同じ建物におりますので、女性おひとりでも安心してお過ごしいただけます。</div></div>
         </div>
-
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">食事はついていますか？</button>
           <div class="faq-a"><div class="faq-a-inner">基本的には素泊まりです。キッチンをご自由にお使いいただけますので、自炊も可能です。鶴岡には美味しいお店がたくさんありますので、ホストにおすすめを聞いてみてください。</div></div>
         </div>
-
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">最寄り駅からどうやって行けばいいですか？</button>
           <div class="faq-a"><div class="faq-a-inner">JR鶴岡駅から<strong>無料送迎</strong>をご利用いただけます（要事前予約）。タクシーの場合は約10分です。お車の場合は山形道「鶴岡IC」より約8分で、無料駐車場（3台分）がございます。</div></div>
         </div>
-
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">どんな人におすすめですか？</button>
           <div class="faq-a"><div class="faq-a-inner">地域の暮らしや人とのつながりを大切にしたい方、静かな環境でゆっくり過ごしたい方におすすめです。ホストから鶴岡・庄内の旬な観光情報やおすすめグルメも直接お伝えできるので、ガイドブックには載っていない体験ができます。</div></div>
         </div>
-
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">キャンセル料はかかりますか？</button>
           <div class="faq-a"><div class="faq-a-inner">キャンセル料は以下の通りです。<br><strong>3日前まで：無料</strong><br><strong>前日：宿泊料の50%</strong><br><strong>当日・無断キャンセル：宿泊料の100%</strong><br>キャンセルの際はできるだけ早めにご連絡ください。</div></div>
         </div>
-
       </div>
     </div>
   </section>
@@ -659,9 +631,9 @@
       <div class="contact-cta-wrap fade-in">
         <div class="contact-info">
           <h3>ご予約・ご質問は<br>お気軽にどうぞ</h3>
-          <p class="pc-only">はじめての方もお気軽にお問い合わせください。心よりお待ち申し上げております。</p>
+          <p>はじめての方もお気軽にお問い合わせください。心よりお待ち申し上げております。</p>
           <div class="contact-detail">
-            <p><strong>Email</strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b8dfcdddcbccd0d7cdcbdd96cfd9d3d9d6d9f8dfd5d9d1d496dbd7d5">[email&#160;protected]</a></p>
+            <p><strong>Email</strong>guesthouse.wakana@gmail.com</p>
           </div>
         </div>
         <div class="contact-form-replacement">
@@ -693,7 +665,7 @@
     <p class="footer-copy">&#169; 2025 Guest House WAKANA. All rights reserved.</p>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     // Nav scroll
     window.addEventListener('scroll', function() {
       document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 50);
@@ -733,83 +705,15 @@
       observer.observe(el);
     });
 
-    // Lightbox with navigation
-    var lbImages = [];
-    var lbIndex = 0;
-    (function() {
-      var items = document.querySelectorAll('.gallery-item');
-      items.forEach(function(item) {
-        var img = item.querySelector('img');
-        if (img) lbImages.push(img.src);
-      });
-    })();
-
-    function getVisibleIndices() {
-      var visible = [];
-      document.querySelectorAll('.gallery-item').forEach(function(item, i) {
-        if (!item.classList.contains('hidden')) visible.push(i);
-      });
-      return visible;
-    }
-
-    function showLightboxImage() {
-      var visible = getVisibleIndices();
-      if (visible.length === 0) return;
-      var pos = visible.indexOf(lbIndex);
-      if (pos === -1) { lbIndex = visible[0]; pos = 0; }
-      document.getElementById('lightboxImg').src = lbImages[lbIndex];
-      document.getElementById('lightboxCounter').textContent = (pos + 1) + ' / ' + visible.length;
-    }
-
-    function openLightbox(idx) {
-      lbIndex = idx;
-      showLightboxImage();
-      document.getElementById('lightbox').classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function lightboxNav(dir) {
-      var visible = getVisibleIndices();
-      if (visible.length === 0) return;
-      var pos = visible.indexOf(lbIndex);
-      if (pos === -1) pos = 0;
-      pos += dir;
-      if (pos < 0) pos = visible.length - 1;
-      if (pos >= visible.length) pos = 0;
-      lbIndex = visible[pos];
-      showLightboxImage();
-    }
-
-    function closeLightbox() {
-      document.getElementById('lightbox').classList.remove('open');
-      document.body.style.overflow = '';
-    }
-
-    document.getElementById('lightbox').addEventListener('click', function(e) {
-      if (e.target === e.currentTarget) closeLightbox();
-    });
-
-    // Keyboard navigation
-    document.addEventListener('keydown', function(e) {
-      if (!document.getElementById('lightbox').classList.contains('open')) return;
-      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') lightboxNav(-1);
-      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') lightboxNav(1);
-      if (e.key === 'Escape') closeLightbox();
-    });
-
     // FAQ accordion
     function toggleFaq(btn) {
       var item = btn.parentElement;
       var answer = item.querySelector('.faq-a');
       var isOpen = item.classList.contains('open');
-
-      // Close all
       document.querySelectorAll('.faq-item').forEach(function(fi) {
         fi.classList.remove('open');
         fi.querySelector('.faq-a').style.maxHeight = null;
       });
-
-      // Open clicked (if it was closed)
       if (!isOpen) {
         item.classList.add('open');
         answer.style.maxHeight = answer.scrollHeight + 'px';
@@ -833,6 +737,14 @@
         });
       });
     });
+
+    // Lightbox (placeholder)
+    function openLightbox() {}
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function lightboxNav() {}
   </script>
 </body>
 </html>
