@@ -836,4 +836,14 @@
         });
         this.classList.add('active');
         document.querySelectorAll('.gallery-item').forEach(function(item) {
-          i
+          if (c === 'all' || item.getAttribute('data-category') === c) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
