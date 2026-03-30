@@ -111,7 +111,7 @@
 
     /* Rooms */
     .room-card{background:var(--washi);box-shadow:var(--shadow-sm);overflow:hidden;margin-bottom:2rem}
-    .room-img{height:360px;overflow:hidden;}.room-img img{width:100%;height:100%;object-fit:cover;object-position:center bottom;}
+    .room-img{height:360px;overflow:hidden;position:relative;}.room-img img{width:100%;height:100%;object-fit:cover;object-position:center center;}
     .room-img-placeholder{background:var(--washi-dark);display:flex;align-items:center;justify-content:center}
     .room-img-empty{font-size:.85rem;color:var(--ink-light);letter-spacing:.15em}
     .room-badge{position:absolute;top:1.5rem;left:1.5rem;background:rgba(122,52,39,.88);color:#fff;padding:.5rem 1.1rem;font-size:.7rem;letter-spacing:.25em}
@@ -404,7 +404,8 @@
       </div>
       <div class="room-card fade-in">
         <div class="room-img">
-          <img src="images/washitsu_futon.jpg" alt="和室・お布団">
+          <!-- ★ 和室の画像を差し替え ★ -->
+          <img src="images/washitsu_room.jpg" alt="和室">
           <div class="room-badge">和室 1部屋</div>
         </div>
         <div class="room-info">
@@ -448,6 +449,7 @@
         <button class="gallery-tab active" data-category="all">すべて</button>
         <button class="gallery-tab" data-category="garden">庭園・外観</button>
         <button class="gallery-tab" data-category="indoor">お部屋・室内</button>
+        <button class="gallery-tab" data-category="stove">薪ストーブ</button>
         <button class="gallery-tab" data-category="outdoor">焚き火</button>
         <button class="gallery-tab" data-category="scenery">周辺の風景</button>
       </div>
@@ -468,6 +470,8 @@
         <div class="gallery-item" data-category="indoor" onclick="openLightbox(13)"><img src="images/hinoki_bath.jpg" alt="ヒノキ風呂" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">ヒノキ風呂</span></div></div>
         <div class="gallery-item" data-category="indoor" onclick="openLightbox(14)"><img src="images/engawa_chair.jpg" alt="縁側のくつろぎスペース" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">縁側のくつろぎスペース</span></div></div>
         <div class="gallery-item" data-category="indoor" onclick="openLightbox(15)"><img src="images/kitchen.jpg" alt="キッチン" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">キッチン</span></div></div>
+        <!-- ★ 薪ストーブ追加 ★ -->
+        <div class="gallery-item" data-category="stove" onclick="openLightbox(16)"><img src="images/woodstove.jpg" alt="薪ストーブ" loading="lazy"><div class="gallery-overlay"><span class="gallery-label">薪ストーブ</span></div></div>
       </div>
     </div>
   </section>
@@ -615,59 +619,38 @@
         <div class="divider"></div>
       </div>
       <div class="faq-list fade-in">
-
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">予約はどのようにすればいいですか？</button>
           <div class="faq-a"><div class="faq-a-inner">サイト内の「予約フォームへ」ボタンからGoogleフォームでお申し込みください。空室状況を確認後、<strong>48時間以内</strong>に確定のご連絡をいたします。フォーム送信の時点では予約は確定しておりませんのでご了承ください。</div></div>
         </div>
-
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">ホスト同居とはどういう意味ですか？</button>
           <div class="faq-a"><div class="faq-a-inner">オーナーが同じ建物に暮らしながら運営するスタイルです。お部屋は和室の個室ですが、ヒノキ風呂・サウナ・キッチン・日本庭園はオーナーと一緒にお使いいただく形になります。<strong>建物の完全貸し切りではありません</strong>のでご了承ください。</div></div>
         </div>
-
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">一人でも泊まれますか？女性一人でも安心ですか？</button>
           <div class="faq-a"><div class="faq-a-inner">もちろんです。おひとり様のご利用も大歓迎で、一人旅の方も多くいらっしゃいます。お部屋は個室で、ホストも同じ建物におりますので、女性おひとりでも安心してお過ごしいただけます。</div></div>
         </div>
-
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">食事はついていますか？</button>
           <div class="faq-a"><div class="faq-a-inner">基本的には素泊まりです。キッチンをご自由にお使いいただけますので、自炊も可能です。鶴岡には美味しいお店がたくさんありますので、ホストにおすすめを聞いてみてください。</div></div>
         </div>
-
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">最寄り駅からどうやって行けばいいですか？</button>
           <div class="faq-a"><div class="faq-a-inner">JR鶴岡駅から<strong>無料送迎</strong>をご利用いただけます（要事前予約）。タクシーの場合は約10分です。お車の場合は山形道「鶴岡IC」より約8分で、無料駐車場（3台分）がございます。<br><br>送迎をご希望の方は、<strong>予約フォーム内の送迎希望欄で「希望する」を選択のうえ、ご到着時間等をご記入ください。</strong></div></div>
         </div>
-
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">どんな人におすすめですか？</button>
           <div class="faq-a"><div class="faq-a-inner">地域の暮らしや人とのつながりを大切にしたい方、静かな環境でゆっくり過ごしたい方におすすめです。ホストから鶴岡・庄内の旬な観光情報やおすすめグルメも直接お伝えできるので、ガイドブックには載っていない体験ができます。</div></div>
         </div>
-
         <div class="faq-item">
-  <button class="faq-q" onclick="toggleFaq(this)">何人まで泊まれますか？</button>
-  <div class="faq-a">
-    <div class="faq-a-inner">
-      最大大人2名までご宿泊いただけます。<br>
-      未就学児は、大人の人数まで無料でご宿泊いただけます。<br>
-      未就学児は寝具のご用意がなく、添い寝でのご利用となります。<br>
-      小学生以上は大人としてカウントいたします。<br><br>
-
-      （例）<br>
-      ・大人1名＋未就学児1名<br>
-      ・大人2名＋未就学児2名 まで可能です<br><br>
-
-    </div>
-  </div>
-</div>
-
+          <button class="faq-q" onclick="toggleFaq(this)">何人まで泊まれますか？</button>
+          <div class="faq-a"><div class="faq-a-inner">最大大人2名までご宿泊いただけます。<br>未就学児は、大人の人数まで無料でご宿泊いただけます。<br>未就学児は寝具のご用意がなく、添い寝でのご利用となります。<br>小学生以上は大人としてカウントいたします。<br><br>（例）<br>・大人1名＋未就学児1名<br>・大人2名＋未就学児2名 まで可能です</div></div>
+        </div>
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">連泊割引はありますか？</button>
           <div class="faq-a"><div class="faq-a-inner">連泊の場合、お得な割引料金でご利用いただけます。<br><strong>1泊目：¥8,000</strong><br><strong>2泊目：¥7,000</strong><br><strong>3泊目以降：¥6,000</strong><br>鶴岡・庄内をゆっくり楽しみたい方にもおすすめです。</div></div>
         </div>
-
       </div>
     </div>
   </section>
@@ -718,24 +701,17 @@
   </footer>
 
   <script>
-    // Nav scroll
     window.addEventListener('scroll', function() {
       document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 50);
     });
-
-    // Sticky CTA
     window.addEventListener('scroll', function() {
       var s = document.getElementById('stickyCta');
       var h = document.getElementById('home').offsetHeight;
       s.classList.toggle('show', window.scrollY > h * 0.6);
     });
-
-    // Hero bg
     window.addEventListener('load', function() {
       document.getElementById('heroBg').classList.add('loaded');
     });
-
-    // Mobile nav
     function toggleMobileNav() {
       document.getElementById('hamburger').classList.toggle('open');
       document.getElementById('navDrawer').classList.toggle('open');
@@ -746,8 +722,6 @@
       document.getElementById('navDrawer').classList.remove('open');
       document.body.style.overflow = '';
     }
-
-    // Fade in
     var observer = new IntersectionObserver(function(entries) {
       entries.forEach(function(e) {
         if (e.isIntersecting) e.target.classList.add('visible');
@@ -756,8 +730,6 @@
     document.querySelectorAll('.fade-in').forEach(function(el) {
       observer.observe(el);
     });
-
-    // Lightbox with navigation
     var lbImages = [];
     var lbIndex = 0;
     (function() {
@@ -767,7 +739,6 @@
         if (img) lbImages.push(img.src);
       });
     })();
-
     function getVisibleIndices() {
       var visible = [];
       document.querySelectorAll('.gallery-item').forEach(function(item, i) {
@@ -775,7 +746,6 @@
       });
       return visible;
     }
-
     function showLightboxImage() {
       var visible = getVisibleIndices();
       if (visible.length === 0) return;
@@ -784,14 +754,12 @@
       document.getElementById('lightboxImg').src = lbImages[lbIndex];
       document.getElementById('lightboxCounter').textContent = (pos + 1) + ' / ' + visible.length;
     }
-
     function openLightbox(idx) {
       lbIndex = idx;
       showLightboxImage();
       document.getElementById('lightbox').classList.add('open');
       document.body.style.overflow = 'hidden';
     }
-
     function lightboxNav(dir) {
       var visible = getVisibleIndices();
       if (visible.length === 0) return;
@@ -803,44 +771,32 @@
       lbIndex = visible[pos];
       showLightboxImage();
     }
-
     function closeLightbox() {
       document.getElementById('lightbox').classList.remove('open');
       document.body.style.overflow = '';
     }
-
     document.getElementById('lightbox').addEventListener('click', function(e) {
       if (e.target === e.currentTarget) closeLightbox();
     });
-
-    // Keyboard navigation
     document.addEventListener('keydown', function(e) {
       if (!document.getElementById('lightbox').classList.contains('open')) return;
       if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') lightboxNav(-1);
       if (e.key === 'ArrowRight' || e.key === 'ArrowDown') lightboxNav(1);
       if (e.key === 'Escape') closeLightbox();
     });
-
-    // FAQ accordion
     function toggleFaq(btn) {
       var item = btn.parentElement;
       var answer = item.querySelector('.faq-a');
       var isOpen = item.classList.contains('open');
-
-      // Close all
       document.querySelectorAll('.faq-item').forEach(function(fi) {
         fi.classList.remove('open');
         fi.querySelector('.faq-a').style.maxHeight = null;
       });
-
-      // Open clicked (if it was closed)
       if (!isOpen) {
         item.classList.add('open');
         answer.style.maxHeight = answer.scrollHeight + 'px';
       }
     }
-
-    // Gallery filter
     document.querySelectorAll('.gallery-tab').forEach(function(tab) {
       tab.addEventListener('click', function() {
         var c = this.getAttribute('data-category');
